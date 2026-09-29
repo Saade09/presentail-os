@@ -1,0 +1,46 @@
+appId: com.presentail.osmobile
+env:
+  MAESTRO_EMAIL: ${MAESTRO_EMAIL}
+  MAESTRO_PASSWORD: ${MAESTRO_PASSWORD}
+---
+- launchApp:
+    clearState: true
+
+- assertVisible:
+    id: "welcome-headline"
+
+- tapOn: "Sign in"
+
+- assertVisible:
+    id: "email-input"
+
+- tapOn:
+    id: "email-input"
+
+- inputText: ${MAESTRO_EMAIL}
+
+- tapOn:
+    id: "password-input"
+
+- inputText: ${MAESTRO_PASSWORD}
+
+- tapOn: "Sign in"
+
+- assertVisible:
+    id: "dashboard-title"
+
+- assertVisible: "Dashboard"
+
+- assertVisible: "Attendance"
+
+- tapOn: "Attendance"
+
+- assertVisible: "Tap punch to verify location"
+
+- tapOn: "Dashboard"
+
+- assertVisible:
+    id: "dashboard-title"
+
+- assertVisible:
+    id: "dashboard-subtitle"

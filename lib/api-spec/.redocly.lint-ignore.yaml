@@ -1,0 +1,3113 @@
+# This file instructs Redocly's linter to ignore the rules contained for specific parts of your API.
+# See https://redocly.com/docs/cli/ for more information.
+openapi.yaml:
+  info-license:
+    - '#/info'
+  operation-4xx-response:
+    - '#/paths/~1healthz/get/responses'
+    - '#/paths/~1time-off~1requests/get/responses'
+    - '#/paths/~1time-off~1team~1balances/get/responses'
+    - '#/paths/~1time-off~1notifications/get/responses'
+    - '#/paths/~1time-off~1notifications~1seen/post/responses'
+    - '#/paths/~1time-off~1notifications~1seen-all/post/responses'
+    - '#/paths/~1time-off~1team/get/responses'
+    - '#/paths/~1time-off~1requests~1{id}~1approve/post/responses'
+    - '#/paths/~1time-off~1requests~1{id}~1decline/post/responses'
+    - '#/paths/~1time-off~1policies/get/responses'
+    - '#/paths/~1time-off~1policies/post/responses'
+    - '#/paths/~1time-off~1policies~1{id}/patch/responses'
+    - '#/paths/~1time-off~1policies~1{id}~1assign/post/responses'
+    - '#/paths/~1time-off~1policies~1{id}~1assignees/get/responses'
+    - '#/paths/~1time-off~1policies~1{id}~1balance-adjustment/post/responses'
+    - '#/paths/~1time-off~1calendar/get/responses'
+    - '#/paths/~1public-holidays~1calendars/get/responses'
+    - '#/paths/~1public-holidays~1calendars/post/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}/delete/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}/patch/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1holidays/get/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1holidays/post/responses'
+    - >-
+      #/paths/~1public-holidays~1calendars~1{id}~1holidays~1{holidayId}/delete/responses
+    - >-
+      #/paths/~1public-holidays~1calendars~1{id}~1holidays~1{holidayId}/patch/responses
+    - '#/paths/~1public-holidays~1calendars~1{id}~1assign/post/responses'
+    - '#/paths/~1public-holidays~1import~1countries/get/responses'
+    - '#/paths/~1public-holidays~1import~1regions~1{countryCode}/get/responses'
+    - '#/paths/~1public-holidays~1import~1types/get/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1import~1preview/post/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1import~1approve/post/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1export-csv/get/responses'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1import-csv/post/responses'
+    - '#/paths/~1public-holidays~1my/get/responses'
+    - '#/paths/~1base-items/get/responses'
+    - '#/paths/~1base-items~1summary/get/responses'
+    - '#/paths/~1roles/get/responses'
+    - '#/paths/~1suppliers/get/responses'
+    - '#/paths/~1purchase-orders/get/responses'
+    - '#/paths/~1channel-product-dimensions/get/responses'
+    - '#/paths/~1fleet~1docs/get/responses'
+    - '#/paths/~1fleet~1spec/get/responses'
+    - '#/paths/~1fleet~1assignments/get/responses'
+    - '#/paths/~1fleet~1delivery-events/get/responses'
+    - '#/paths/~1fleet~1proof-of-delivery/get/responses'
+    - '#/paths/~1fleet~1me~1orders/get/responses'
+    - '#/paths/~1fleet~1vehicle-types/get/responses'
+    - '#/paths/~1fleet~1orders/get/responses'
+    - '#/paths/~1customers/get/responses'
+    - '#/paths/~1admin~1settings~1countries/get/responses'
+    - '#/paths/~1delivery-overrides/get/responses'
+    - '#/paths/~1products/get/responses'
+    - '#/paths/~1occasion-campaigns~1plans/get/responses'
+    - '#/paths/~1occasion-campaigns~1actions/get/responses'
+    - '#/paths/~1occasion-campaigns~1summary/get/responses'
+    - '#/paths/~1exchange-rate-settings/get/responses'
+    - '#/paths/~1publish/post/responses'
+    - '#/paths/~1occasions/get/responses'
+    - '#/paths/~1catalog_categories/get/responses'
+    - '#/paths/~1catalog_brands/get/responses'
+    - '#/paths/~1recipients/get/responses'
+    - '#/paths/~1omnichannel~1saved-replies/get/responses'
+    - '#/paths/~1store-analytics~1customer-insights/get/responses'
+    - '#/paths/~1store-analytics~1executive-overview/get/responses'
+    - '#/paths/~1store-analytics~1net-revenue-breakdown/get/responses'
+    - '#/paths/~1store-analytics~1performance-summary/get/responses'
+    - '#/paths/~1store-analytics~1product-performance/get/responses'
+    - '#/paths/~1store-analytics~1cart-checkout/get/responses'
+    - '#/paths/~1store-analytics~1delivery/get/responses'
+    - '#/paths/~1store-analytics~1operations/get/responses'
+    - '#/paths/~1store-analytics~1funnel/get/responses'
+    - '#/paths/~1store-analytics~1sales/get/responses'
+    - '#/paths/~1store-analytics~1time-slots/get/responses'
+    - '#/paths/~1store-analytics~1payment-methods/get/responses'
+    - '#/paths/~1store-analytics~1marketing/get/responses'
+    - '#/paths/~1store-analytics~1search-discovery/get/responses'
+    - '#/paths/~1store-analytics~1seo/get/responses'
+    - '#/paths/~1store-analytics~1inventory-cogs/get/responses'
+    - '#/paths/~1inventory-analytics~1overview/get/responses'
+    - '#/paths/~1inventory-analytics~1movements/get/responses'
+    - '#/paths/~1inventory-analytics~1variance/get/responses'
+    - '#/paths/~1inventory-analytics~1wastage/get/responses'
+    - '#/paths/~1inventory-analytics~1procurement/get/responses'
+    - '#/paths/~1inventory-analytics~1transfers/get/responses'
+    - '#/paths/~1inventory-analytics~1theoretical-cost/get/responses'
+    - '#/paths/~1inventory-analytics~1actual-cost/get/responses'
+    - '#/paths/~1inventory-analytics~1cogs-target/get/responses'
+    - '#/paths/~1inventory-analytics~1cogs-target/put/responses'
+    - '#/paths/~1base-items~1wastage/post/responses'
+    - '#/paths/~1store-analytics~1insights/get/responses'
+    - '#/paths/~1store-analytics~1marketplace/get/responses'
+    - '#/paths/~1store-analytics~1marketplace~1commission-rates/put/responses'
+    - '#/paths/~1people/get/responses'
+    - '#/paths/~1contacts~1{id}/get/responses'
+  struct:
+    - '#/components/schemas/Brand/properties/description/nullable'
+    - '#/components/schemas/Brand/properties/target_cogs/nullable'
+    - '#/components/schemas/Brand/properties/updated_at/nullable'
+    - '#/components/schemas/TimeOffBalanceResponse/properties/balance/nullable'
+    - >-
+      #/components/schemas/TimeOffBalance/properties/sick_leave_entitled/nullable
+    - '#/components/schemas/TimeOffBalance/properties/manager_name/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/half_day_period/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/reason/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/manager_note/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/reviewed_at/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/reviewed_by_name/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/cancelled_at/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/cancelled_by/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/cancelled_by_name/nullable'
+    - '#/components/schemas/TimeOffRequest/properties/cancelled_by_self/nullable'
+    - >-
+      #/components/schemas/TimeOffRequest/properties/cancellation_reason/nullable
+    - >-
+      #/components/schemas/CreateTimeOffRequest/properties/halfDayPeriod/nullable
+    - '#/components/schemas/CreateTimeOffRequest/properties/startPartial/nullable'
+    - '#/components/schemas/CreateTimeOffRequest/properties/endPartial/nullable'
+    - '#/components/schemas/CreateTimeOffRequest/properties/reason/nullable'
+    - >-
+      #/components/schemas/CancelTimeOffRequestInput/properties/cancellation_reason/nullable
+    - '#/components/schemas/TeamTimeOffBalance/properties/policy_year/nullable'
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/vacation_entitled/nullable
+    - '#/components/schemas/TeamTimeOffBalance/properties/vacation_used/nullable'
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/vacation_pending/nullable
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/vacation_carryover/nullable
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/vacation_remaining/nullable
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/sick_leave_entitled/nullable
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/sick_leave_used/nullable
+    - >-
+      #/components/schemas/TeamTimeOffBalance/properties/sick_leave_pending/nullable
+    - '#/components/schemas/ReviewTimeOffRequest/properties/managerNote/nullable'
+    - '#/components/schemas/TimeOffNotification/properties/entity_id/nullable'
+    - '#/components/schemas/TimeOffNotification/properties/actor_name/nullable'
+    - >-
+      #/components/schemas/TeamTimeOffRequest/properties/member_image_url/nullable
+    - >-
+      #/components/schemas/TeamTimeOffRequest/properties/half_day_period/nullable
+    - '#/components/schemas/TeamTimeOffRequest/properties/reason/nullable'
+    - '#/components/schemas/TeamTimeOffRequest/properties/manager_note/nullable'
+    - >-
+      #/components/schemas/TeamTimeOffRequest/properties/vacation_remaining/nullable
+    - '#/components/schemas/TeamTimeOffRequest/properties/reviewed_at/nullable'
+    - >-
+      #/components/schemas/TeamTimeOffRequest/properties/reviewed_by_name/nullable
+    - >-
+      #/components/schemas/TeamTimeOffRequest/properties/reviewed_by_image_url/nullable
+    - >-
+      #/components/schemas/TeamTimeOffRequest/properties/member_working_days/nullable
+    - '#/components/schemas/TimeOffDeclineInput/properties/managerNote/nullable'
+    - '#/components/schemas/TimeOffPolicy/properties/description/nullable'
+    - >-
+      #/components/schemas/TimeOffPolicy/properties/sick_leave_days_per_year/nullable
+    - '#/components/schemas/TimeOffPolicy/properties/max_carryover_days/nullable'
+    - '#/components/schemas/TimeOffPolicyInput/properties/description/nullable'
+    - >-
+      #/components/schemas/TimeOffPolicyInput/properties/sick_leave_days_per_year/nullable
+    - >-
+      #/components/schemas/TimeOffPolicyInput/properties/max_carryover_days/nullable
+    - >-
+      #/components/schemas/TimeOffPolicyAssignInput/properties/memberIds/nullable
+    - >-
+      #/components/schemas/TimeOffPolicyAssignInput/properties/locationId/nullable
+    - '#/components/schemas/TimeOffPolicyAssignInput/properties/userId/nullable'
+    - >-
+      #/components/schemas/TimeOffPolicyAssignee/properties/member_image_url/nullable
+    - '#/components/schemas/TimeOffPolicyAssignee/properties/department/nullable'
+    - >-
+      #/components/schemas/TimeOffPolicyAssignee/properties/location_name/nullable
+    - >-
+      #/components/schemas/TimeOffPolicyAssignee/properties/manager_name/nullable
+    - >-
+      #/components/schemas/TimeOffPolicyAssignee/properties/vacation_remaining/nullable
+    - '#/components/schemas/TimeOffCalendarEvent/properties/status/nullable'
+    - '#/components/schemas/TimeOffCalendarEvent/properties/color/nullable'
+    - '#/components/schemas/TimeOffCalendarEvent/properties/member_name/nullable'
+    - '#/components/schemas/TimeOffCalendarEvent/properties/is_paid/nullable'
+    - >-
+      #/components/schemas/PublicHolidayCalendar/properties/country_code/nullable
+    - '#/components/schemas/PublicHolidayCalendar/properties/location_id/nullable'
+    - >-
+      #/components/schemas/PublicHolidayCalendar/properties/location_name/nullable
+    - >-
+      #/components/schemas/CreatePublicHolidayCalendarInput/properties/location_id/nullable
+    - >-
+      #/components/schemas/PublicHolidayCalendarInput/properties/country_code/nullable
+    - >-
+      #/components/schemas/PublicHolidayCalendarInput/properties/location_id/nullable
+    - '#/components/schemas/PublicHolidayItem/properties/end_date/nullable'
+    - '#/components/schemas/PublicHolidayItem/properties/description/nullable'
+    - '#/components/schemas/PublicHolidayInput/properties/end_date/nullable'
+    - '#/components/schemas/PublicHolidayInput/properties/description/nullable'
+    - >-
+      #/components/schemas/HolidayCalendarAssignInput/properties/memberIds/nullable
+    - >-
+      #/components/schemas/HolidayCalendarAssignInput/properties/locationId/nullable
+    - >-
+      #/components/schemas/HolidayCalendarAssignInput/properties/filterValue/nullable
+    - '#/components/schemas/HolidayCalendarAssignInput/properties/dryRun/nullable'
+    - >-
+      #/components/schemas/HolidayCalendarAssignResponse/properties/assigned/nullable
+    - >-
+      #/components/schemas/HolidayCalendarAssignResponse/properties/dry_run/nullable
+    - >-
+      #/components/schemas/HolidayCalendarAssignResponse/properties/affected_count/nullable
+    - >-
+      #/components/schemas/HolidayCalendarAssignResponse/properties/members/nullable
+    - >-
+      #/components/schemas/HolidayImportPreviewInput/properties/regionCode/nullable
+    - '#/components/schemas/HolidayImportPreviewInput/properties/types/nullable'
+    - '#/components/schemas/NormalizedHolidayItem/properties/local_name/nullable'
+    - >-
+      #/components/schemas/NormalizedHolidayItem/properties/observed_date/nullable
+    - '#/components/schemas/NormalizedHolidayItem/properties/region_code/nullable'
+    - '#/components/schemas/NormalizedHolidayItem/properties/notes/nullable'
+    - >-
+      #/components/schemas/HolidayImportPreviewResponse/properties/errors/nullable
+    - >-
+      #/components/schemas/HolidayImportApproveItem/properties/local_name/nullable
+    - >-
+      #/components/schemas/HolidayImportApproveItem/properties/observed_date/nullable
+    - '#/components/schemas/HolidayImportApproveItem/properties/type/nullable'
+    - '#/components/schemas/HolidayImportApproveItem/properties/status/nullable'
+    - '#/components/schemas/HolidayImportApproveItem/properties/source/nullable'
+    - >-
+      #/components/schemas/HolidayImportApproveItem/properties/country_code/nullable
+    - >-
+      #/components/schemas/HolidayImportApproveItem/properties/region_code/nullable
+    - '#/components/schemas/HolidayImportApproveItem/properties/notes/nullable'
+    - '#/components/schemas/BaseItemCategoryRow/properties/parent_id/nullable'
+    - '#/components/schemas/BaseItemCategoryRow/properties/description/nullable'
+    - '#/components/schemas/BaseItemCategoryRow/properties/category_type/nullable'
+    - '#/components/schemas/BaseItemCategoryRow/properties/updated_at/nullable'
+    - '#/components/schemas/BaseItemCategoryRow/properties/created_by/nullable'
+    - '#/components/schemas/BaseItemCategoryRow/properties/updated_by/nullable'
+    - >-
+      #/components/schemas/CreateBaseItemCategoryInput/properties/parent_id/nullable
+    - >-
+      #/components/schemas/CreateBaseItemCategoryInput/properties/description/nullable
+    - >-
+      #/components/schemas/CreateBaseItemCategoryInput/properties/category_type/nullable
+    - >-
+      #/components/schemas/UpdateBaseItemCategoryInput/properties/description/nullable
+    - >-
+      #/components/schemas/UpdateBaseItemCategoryInput/properties/category_type/nullable
+    - >-
+      #/components/schemas/ReorderBaseItemCategoryInput/properties/new_parent_id/nullable
+    - >-
+      #/components/schemas/CategoryBaseItemsResponse/properties/items/items/properties/image_url/nullable
+    - >-
+      #/components/schemas/CategoryBaseItemsResponse/properties/items/items/properties/supplier_name/nullable
+    - >-
+      #/components/schemas/CategoryBaseItemsResponse/properties/items/items/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/BaseItemBulkCategoryInput/properties/category_id/nullable
+    - '#/components/schemas/BaseItemBulkTypeInput/properties/type/nullable'
+    - '#/components/schemas/BaseItemListItem/properties/image_url/nullable'
+    - '#/components/schemas/BaseItemListItem/properties/category_id/nullable'
+    - '#/components/schemas/BaseItemListItem/properties/alternate_name/nullable'
+    - >-
+      #/components/schemas/BaseItemListItem/properties/accounting_category/nullable
+    - '#/components/schemas/BaseItemListItem/properties/tax_rate/nullable'
+    - >-
+      #/components/schemas/BaseItemListItem/properties/main_category_name/nullable
+    - >-
+      #/components/schemas/BaseItemListItem/properties/sub_category_name/nullable
+    - '#/components/schemas/BaseItemListItem/properties/type/nullable'
+    - >-
+      #/components/schemas/BaseItemListItem/properties/merged_into_base_item_id/nullable
+    - '#/components/schemas/BaseItemListItem/properties/merged_into_name/nullable'
+    - >-
+      #/components/schemas/BaseItemNameCheckResponse/properties/exactMatch/nullable
+    - '#/components/schemas/BaseItemDetail/properties/image_url/nullable'
+    - '#/components/schemas/BaseItemDetail/properties/category_id/nullable'
+    - '#/components/schemas/BaseItemDetail/properties/alternate_name/nullable'
+    - >-
+      #/components/schemas/BaseItemDetail/properties/accounting_category/nullable
+    - '#/components/schemas/BaseItemDetail/properties/tax_rate/nullable'
+    - '#/components/schemas/BaseItemDetail/properties/main_category_name/nullable'
+    - '#/components/schemas/BaseItemDetail/properties/sub_category_name/nullable'
+    - '#/components/schemas/BaseItemUpdate/properties/alternate_name/nullable'
+    - '#/components/schemas/BaseItemUpdate/properties/category_id/nullable'
+    - >-
+      #/components/schemas/BaseItemUpdate/properties/accounting_category/nullable
+    - '#/components/schemas/BaseItemUpdate/properties/tax_rate/nullable'
+    - '#/components/schemas/BaseItemUpdate/properties/tax_category/nullable'
+    - '#/components/schemas/BaseItemUpdate/properties/image_url/nullable'
+    - '#/components/schemas/BaseItemUpdate/properties/stock/nullable'
+    - >-
+      #/components/schemas/BaseItemUpdate/properties/low_stock_threshold/nullable
+    - >-
+      #/components/schemas/ProductsSummaryResponse/properties/avg_cogs_pct/nullable
+    - '#/components/schemas/ProductSalesHistoryItem/properties/date/nullable'
+    - >-
+      #/components/schemas/ProductSalesHistoryItem/properties/unit_price/nullable
+    - >-
+      #/components/schemas/ProductSalesHistoryItem/properties/line_total/nullable
+    - '#/components/schemas/ProductSalesHistoryItem/properties/currency/nullable'
+    - '#/components/schemas/ProductCogsItem/properties/image_url/nullable'
+    - '#/components/schemas/ProductCogsItem/properties/unit_price/nullable'
+    - '#/components/schemas/ProductCogsItem/properties/currency/nullable'
+    - '#/components/schemas/ProductCogsItem/properties/pricing_uom/nullable'
+    - '#/components/schemas/ProductCogsItem/properties/line_cost/nullable'
+    - '#/components/schemas/ProductCogsTotals/properties/total_cogs/nullable'
+    - '#/components/schemas/ProductCogsTotals/properties/currency/nullable'
+    - >-
+      #/components/schemas/ProductCogsTotals/properties/brand_target_cogs/nullable
+    - '#/components/schemas/BaseItemUsageProduct/properties/brand/nullable'
+    - '#/components/schemas/BaseItemProductLink/properties/sku/nullable'
+    - '#/components/schemas/BaseItemProductLink/properties/category/nullable'
+    - '#/components/schemas/BaseItemProductLink/properties/image_url/nullable'
+    - '#/components/schemas/BaseItemProductLink/properties/brand_id/nullable'
+    - '#/components/schemas/BaseItemProductLink/properties/brand_logo_id/nullable'
+    - '#/components/schemas/BaseItemProductLink/properties/unit/nullable'
+    - '#/components/schemas/BaseItemPackage/properties/unit/nullable'
+    - '#/components/schemas/BaseItemPackage/properties/barcode/nullable'
+    - '#/components/schemas/BaseItemPackageCreate/properties/unit/nullable'
+    - '#/components/schemas/BaseItemPackageCreate/properties/barcode/nullable'
+    - '#/components/schemas/BaseItemPackageUpdate/properties/unit/nullable'
+    - '#/components/schemas/BaseItemPackageUpdate/properties/barcode/nullable'
+    - '#/components/schemas/BaseItemSupplier/properties/package_id/nullable'
+    - >-
+      #/components/schemas/BaseItemSupplier/properties/supplier_item_name/nullable
+    - >-
+      #/components/schemas/BaseItemSupplier/properties/supplier_item_code/nullable
+    - '#/components/schemas/BaseItemSupplier/properties/pricing_uom/nullable'
+    - '#/components/schemas/BaseItemSupplier/properties/price/nullable'
+    - '#/components/schemas/BaseItemSupplier/properties/package_name/nullable'
+    - '#/components/schemas/BaseItemSupplierCreate/properties/package_id/nullable'
+    - >-
+      #/components/schemas/BaseItemSupplierCreate/properties/supplier_item_name/nullable
+    - >-
+      #/components/schemas/BaseItemSupplierCreate/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/BaseItemSupplierCreate/properties/pricing_uom/nullable
+    - '#/components/schemas/BaseItemSupplierCreate/properties/price/nullable'
+    - '#/components/schemas/BaseItemSupplierUpdate/properties/package_id/nullable'
+    - >-
+      #/components/schemas/BaseItemSupplierUpdate/properties/supplier_item_name/nullable
+    - >-
+      #/components/schemas/BaseItemSupplierUpdate/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/BaseItemSupplierUpdate/properties/pricing_uom/nullable
+    - '#/components/schemas/BaseItemSupplierUpdate/properties/price/nullable'
+    - '#/components/schemas/StockMovementRow/properties/note/nullable'
+    - '#/components/schemas/StockMovementRow/properties/movement_type/nullable'
+    - '#/components/schemas/StockMovementRow/properties/location_id/nullable'
+    - '#/components/schemas/StockMovementRow/properties/location_name/nullable'
+    - >-
+      #/components/schemas/StockMovementRow/properties/created_by_user_id/nullable
+    - '#/components/schemas/StockMovementRow/properties/order_id/nullable'
+    - >-
+      #/components/schemas/StockMovementRow/properties/order_line_item_id/nullable
+    - '#/components/schemas/StockMovementRow/properties/product_id/nullable'
+    - '#/components/schemas/StockMovementRow/properties/product_name/nullable'
+    - >-
+      #/components/schemas/StockMovementRow/properties/purchase_order_id/nullable
+    - '#/components/schemas/StockMovementRow/properties/transfer_id/nullable'
+    - '#/components/schemas/StockMovementRow/properties/reversal_of_id/nullable'
+    - '#/components/schemas/StockMovementRow/properties/recipe_snapshot/nullable'
+    - '#/components/schemas/StockMovementRow/properties/idempotency_key/nullable'
+    - '#/components/schemas/BaseItemTransferCreate/properties/note/nullable'
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/movement_type/nullable
+    - '#/components/schemas/BaseItemStockAdjustment/properties/note/nullable'
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/created_by_user_id/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/location_id/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/location_name/nullable
+    - '#/components/schemas/BaseItemStockAdjustment/properties/country/nullable'
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/transfer_id/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/from_location_id/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/from_location_name/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/to_location_id/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/to_location_name/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/purchase_order_id/nullable
+    - >-
+      #/components/schemas/BaseItemStockAdjustment/properties/po_number_label/nullable
+    - >-
+      #/components/schemas/BaseItemAdjustmentCreate/properties/movement_type/nullable
+    - '#/components/schemas/BaseItemAdjustmentCreate/properties/country/nullable'
+    - '#/components/schemas/BaseItemAdjustmentCreate/properties/note/nullable'
+    - '#/components/schemas/BaseItemInvoice/properties/invoice_number/nullable'
+    - '#/components/schemas/BaseItemInvoice/properties/paid_at/nullable'
+    - '#/components/schemas/BaseItemInvoice/properties/notes/nullable'
+    - '#/components/schemas/BaseItemAuditLogEntry/properties/actor_name/nullable'
+    - >-
+      #/components/schemas/BaseItemAuditLogEntry/properties/previous_values/nullable
+    - '#/components/schemas/BaseItemAuditLogEntry/properties/new_values/nullable'
+    - >-
+      #/components/schemas/ImportBaseItemsResponse/properties/preview_rows/nullable
+    - '#/components/schemas/ImportBaseItemsPreviewRow/properties/code/nullable'
+    - >-
+      #/components/schemas/ImportBaseItemsPreviewRow/properties/category/nullable
+    - >-
+      #/components/schemas/ImportBaseItemsPreviewRow/properties/skip_reason/nullable
+    - >-
+      #/components/schemas/BaseItemDeletionHistoryEntry/properties/actor_name/nullable
+    - >-
+      #/components/schemas/BaseItemDeletionHistoryEntry/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/BaseItemDeletionHistoryEntry/properties/item_name/nullable
+    - >-
+      #/components/schemas/BaseItemDeletionHistoryEntry/properties/item_code/nullable
+    - >-
+      #/components/schemas/BaseItemDeletionHistoryEntry/properties/item_category/nullable
+    - >-
+      #/components/schemas/BaseItemDeletionHistoryEntry/properties/item_image_url/nullable
+    - '#/components/schemas/WorkspaceRole/properties/description/nullable'
+    - '#/components/schemas/CreateRoleBody/properties/description/nullable'
+    - '#/components/schemas/UpdateRoleBody/properties/description/nullable'
+    - '#/components/schemas/Supplier/properties/display_name/nullable'
+    - '#/components/schemas/Supplier/properties/contact_name/nullable'
+    - '#/components/schemas/Supplier/properties/contact_email/nullable'
+    - '#/components/schemas/Supplier/properties/contact_phone/nullable'
+    - '#/components/schemas/Supplier/properties/country/nullable'
+    - '#/components/schemas/Supplier/properties/tax_number/nullable'
+    - '#/components/schemas/Supplier/properties/supplier_code/nullable'
+    - '#/components/schemas/Supplier/properties/payment_terms/nullable'
+    - '#/components/schemas/Supplier/properties/currency_pref/nullable'
+    - '#/components/schemas/Supplier/properties/lead_time_days/nullable'
+    - '#/components/schemas/Supplier/properties/min_order_value/nullable'
+    - '#/components/schemas/Supplier/properties/notes/nullable'
+    - '#/components/schemas/Supplier/properties/updated_at/nullable'
+    - '#/components/schemas/Supplier/properties/updated_by_clerk_id/nullable'
+    - '#/components/schemas/Supplier/properties/created_by_clerk_id/nullable'
+    - '#/components/schemas/Supplier/properties/item_count/nullable'
+    - '#/components/schemas/Supplier/properties/supplier_id_label/nullable'
+    - '#/components/schemas/Supplier/properties/created_by_name/nullable'
+    - '#/components/schemas/Supplier/properties/updated_by_name/nullable'
+    - '#/components/schemas/Supplier/properties/invoice_count/nullable'
+    - '#/components/schemas/Supplier/properties/spend_ytd/nullable'
+    - '#/components/schemas/Supplier/properties/spend_ytd_currency/nullable'
+    - '#/components/schemas/Supplier/properties/paid_count/nullable'
+    - '#/components/schemas/Supplier/properties/outstanding_count/nullable'
+    - '#/components/schemas/Supplier/properties/category/nullable'
+    - '#/components/schemas/Supplier/properties/vat_registered/nullable'
+    - '#/components/schemas/Supplier/properties/vat_status/nullable'
+    - >-
+      #/components/schemas/Supplier/properties/vat_not_registered_reason/nullable
+    - '#/components/schemas/Supplier/properties/default_vat_treatment/nullable'
+    - '#/components/schemas/Supplier/properties/default_vat_rate/nullable'
+    - '#/components/schemas/Supplier/properties/default_tax_category/nullable'
+    - '#/components/schemas/Supplier/properties/billing_address/nullable'
+    - '#/components/schemas/Supplier/properties/website/nullable'
+    - '#/components/schemas/Supplier/properties/tags/nullable'
+    - '#/components/schemas/Supplier/properties/assignments/nullable'
+    - '#/components/schemas/SupplierAssignment/properties/memberUserId/nullable'
+    - '#/components/schemas/SupplierAssignment/properties/name/nullable'
+    - '#/components/schemas/SupplierAssignment/properties/imageUrl/nullable'
+    - '#/components/schemas/SupplierCreate/properties/display_name/nullable'
+    - '#/components/schemas/SupplierCreate/properties/contact_name/nullable'
+    - '#/components/schemas/SupplierCreate/properties/contact_email/nullable'
+    - '#/components/schemas/SupplierCreate/properties/contact_phone/nullable'
+    - '#/components/schemas/SupplierCreate/properties/country/nullable'
+    - '#/components/schemas/SupplierCreate/properties/tax_number/nullable'
+    - '#/components/schemas/SupplierCreate/properties/supplier_code/nullable'
+    - '#/components/schemas/SupplierCreate/properties/payment_terms/nullable'
+    - '#/components/schemas/SupplierCreate/properties/currency_pref/nullable'
+    - '#/components/schemas/SupplierCreate/properties/lead_time_days/nullable'
+    - '#/components/schemas/SupplierCreate/properties/min_order_value/nullable'
+    - '#/components/schemas/SupplierCreate/properties/notes/nullable'
+    - '#/components/schemas/SupplierCreate/properties/category/nullable'
+    - '#/components/schemas/SupplierCreate/properties/vat_registered/nullable'
+    - '#/components/schemas/SupplierCreate/properties/vat_status/nullable'
+    - >-
+      #/components/schemas/SupplierCreate/properties/vat_not_registered_reason/nullable
+    - >-
+      #/components/schemas/SupplierCreate/properties/default_vat_treatment/nullable
+    - '#/components/schemas/SupplierCreate/properties/default_vat_rate/nullable'
+    - >-
+      #/components/schemas/SupplierCreate/properties/default_tax_category/nullable
+    - '#/components/schemas/SupplierCreate/properties/billing_address/nullable'
+    - '#/components/schemas/SupplierCreate/properties/website/nullable'
+    - '#/components/schemas/SupplierCreate/properties/tags/nullable'
+    - '#/components/schemas/SupplierMatch/properties/display_name/nullable'
+    - '#/components/schemas/SupplierMatch/properties/category/nullable'
+    - '#/components/schemas/SupplierMatch/properties/country/nullable'
+    - '#/components/schemas/SupplierMatch/properties/last_activity_date/nullable'
+    - >-
+      #/components/schemas/BulkAssignSuppliersBody/properties/lead_member_id/nullable
+    - '#/components/schemas/SupplierUpdate/properties/display_name/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/contact_name/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/contact_email/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/contact_phone/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/country/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/tax_number/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/supplier_code/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/payment_terms/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/currency_pref/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/lead_time_days/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/min_order_value/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/notes/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/category/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/vat_registered/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/vat_status/nullable'
+    - >-
+      #/components/schemas/SupplierUpdate/properties/vat_not_registered_reason/nullable
+    - >-
+      #/components/schemas/SupplierUpdate/properties/default_vat_treatment/nullable
+    - '#/components/schemas/SupplierUpdate/properties/default_vat_rate/nullable'
+    - >-
+      #/components/schemas/SupplierUpdate/properties/default_tax_category/nullable
+    - '#/components/schemas/SupplierUpdate/properties/billing_address/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/website/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/tags/nullable'
+    - >-
+      #/components/schemas/PutSupplierAssignmentsBody/properties/lead_member_id/nullable
+    - '#/components/schemas/SupplierItem/properties/image_url/nullable'
+    - '#/components/schemas/SupplierItem/properties/main_category_name/nullable'
+    - '#/components/schemas/SupplierItem/properties/sub_category_name/nullable'
+    - '#/components/schemas/SupplierItem/properties/supplier_item_name/nullable'
+    - '#/components/schemas/SupplierItem/properties/supplier_item_code/nullable'
+    - '#/components/schemas/SupplierItem/properties/pricing_uom/nullable'
+    - '#/components/schemas/SupplierItem/properties/price/nullable'
+    - '#/components/schemas/SupplierItem/properties/package_name/nullable'
+    - >-
+      #/components/schemas/SupplierDocument/properties/uploaded_by_clerk_id/nullable
+    - '#/components/schemas/SupplierInvoice/properties/invoice_number/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/paid_at/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/notes/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/reference_type/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/reference_id/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/reference_name/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/due_date/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/vat_amount/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/delivery_charge/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/subtotal/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/discount/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/grand_total/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/payment_status/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/payment_terms/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/file_urls/nullable'
+    - '#/components/schemas/SupplierInvoice/properties/line_items/nullable'
+    - '#/components/schemas/InvoiceLineItem/properties/tax_rate/nullable'
+    - '#/components/schemas/InvoiceLineItem/properties/account_code/nullable'
+    - '#/components/schemas/InvoiceLineItem/properties/product_code/nullable'
+    - >-
+      #/components/schemas/SupplierInvoicesResponse/properties/spend_ytd_currency/nullable
+    - >-
+      #/components/schemas/SupplierInvoiceCreate/properties/invoice_number/nullable
+    - '#/components/schemas/SupplierInvoiceCreate/properties/paid_at/nullable'
+    - '#/components/schemas/SupplierInvoiceCreate/properties/notes/nullable'
+    - >-
+      #/components/schemas/SupplierInvoiceCreate/properties/reference_type/nullable
+    - >-
+      #/components/schemas/SupplierInvoiceCreate/properties/reference_id/nullable
+    - '#/components/schemas/SupplierInvoiceCreate/properties/line_items/nullable'
+    - '#/components/schemas/SupplierInvoiceCreate/properties/file_urls/nullable'
+    - '#/components/schemas/SupplierInvoiceCreate/properties/due_date/nullable'
+    - '#/components/schemas/SupplierInvoiceCreate/properties/vat_amount/nullable'
+    - '#/components/schemas/SupplierInvoiceCreate/properties/subtotal/nullable'
+    - '#/components/schemas/SupplierInvoiceCreate/properties/discount/nullable'
+    - >-
+      #/components/schemas/SupplierInvoiceCreate/properties/payment_terms/nullable
+    - >-
+      #/components/schemas/SupplierInvoiceCreate/properties/override_duplicates/nullable
+    - >-
+      #/components/schemas/SupplierSpendTrendResponse/properties/currency/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/vendor_name/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/vendor_tax_number/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/vendor_address/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/invoice_number/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/invoice_date/nullable
+    - '#/components/schemas/InvoiceExtractionResult/properties/due_date/nullable'
+    - '#/components/schemas/InvoiceExtractionResult/properties/currency/nullable'
+    - '#/components/schemas/InvoiceExtractionResult/properties/subtotal/nullable'
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/tax_amount/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/total_amount/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/company_validation_status/nullable
+    - >-
+      #/components/schemas/InvoiceExtractionResult/properties/company_validation_notes/nullable
+    - '#/components/schemas/InvoiceDuplicate/properties/invoiceNumber/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/amount/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/currency/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/status/nullable'
+    - >-
+      #/components/schemas/SupplierInvoiceUpdate/properties/invoice_number/nullable
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/issued_at/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/paid_at/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/notes/nullable'
+    - >-
+      #/components/schemas/SupplierInvoiceUpdate/properties/reference_type/nullable
+    - >-
+      #/components/schemas/SupplierInvoiceUpdate/properties/reference_id/nullable
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/line_items/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/file_urls/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/due_date/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/vat_amount/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/subtotal/nullable'
+    - '#/components/schemas/SupplierInvoiceUpdate/properties/discount/nullable'
+    - >-
+      #/components/schemas/SupplierInvoiceUpdate/properties/payment_terms/nullable
+    - '#/components/schemas/PurchaseOrder/properties/supplier_name/nullable'
+    - >-
+      #/components/schemas/PurchaseOrder/properties/supplier_is_archived/nullable
+    - '#/components/schemas/PurchaseOrder/properties/location_id/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/location_name/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/po_number/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/total_amount/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/effective_total/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/calculated_total/nullable'
+    - >-
+      #/components/schemas/PurchaseOrder/properties/expected_delivery_date/nullable
+    - '#/components/schemas/PurchaseOrder/properties/notes/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/created_by_clerk_id/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/created_by_name/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/sent_at/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/subtotal_amount/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/discount_amount/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/delivery_fee_amount/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/vat_treatment/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/vat_rate/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/vat_amount/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/vat_override_reason/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/grand_total_amount/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/payment_terms/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/supplier_reference/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/attachment_urls/nullable'
+    - >-
+      #/components/schemas/PurchaseOrder/properties/invoice_coverage_status/nullable
+    - >-
+      #/components/schemas/PurchaseOrder/properties/invoice_ready_for_approval/nullable
+    - '#/components/schemas/PurchaseOrder/properties/received_at/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/accepted_at/nullable'
+    - >-
+      #/components/schemas/PurchaseOrder/properties/acceptance_invalidated_at/nullable
+    - '#/components/schemas/PurchaseOrder/properties/acceptance_token/nullable'
+    - '#/components/schemas/PurchaseOrder/properties/acceptance_status/nullable'
+    - >-
+      #/components/schemas/PurchaseOrder/properties/acceptance_responded_at/nullable
+    - '#/components/schemas/PurchaseOrderAssignee/properties/email/nullable'
+    - '#/components/schemas/PurchaseOrderCreate/properties/po_number/nullable'
+    - '#/components/schemas/PurchaseOrderCreate/properties/total_amount/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/total_amount_manual_override/nullable
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/expected_delivery_date/nullable
+    - '#/components/schemas/PurchaseOrderCreate/properties/notes/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/discount_amount/nullable
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/delivery_fee_amount/nullable
+    - '#/components/schemas/PurchaseOrderCreate/properties/vat_treatment/nullable'
+    - '#/components/schemas/PurchaseOrderCreate/properties/vat_rate/nullable'
+    - '#/components/schemas/PurchaseOrderCreate/properties/vat_amount/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/vat_manual_override/nullable
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/vat_override_reason/nullable
+    - '#/components/schemas/PurchaseOrderCreate/properties/payment_terms/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/supplier_reference/nullable
+    - >-
+      #/components/schemas/PurchaseOrderCreate/properties/attachment_urls/nullable
+    - '#/components/schemas/PurchaseOrderCreate/properties/line_items/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderLineItemCreate/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemCreate/properties/supplier_catalog_item_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemCreate/properties/description_ar/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemCreate/properties/received_quantity/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemCreate/properties/vat_treatment/nullable
+    - '#/components/schemas/PurchaseOrderUpdate/properties/po_number/nullable'
+    - '#/components/schemas/PurchaseOrderUpdate/properties/status/nullable'
+    - '#/components/schemas/PurchaseOrderUpdate/properties/currency/nullable'
+    - '#/components/schemas/PurchaseOrderUpdate/properties/total_amount/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/total_amount_manual_override/nullable
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/expected_delivery_date/nullable
+    - '#/components/schemas/PurchaseOrderUpdate/properties/notes/nullable'
+    - '#/components/schemas/PurchaseOrderUpdate/properties/location_id/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/discount_amount/nullable
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/delivery_fee_amount/nullable
+    - '#/components/schemas/PurchaseOrderUpdate/properties/vat_treatment/nullable'
+    - '#/components/schemas/PurchaseOrderUpdate/properties/vat_rate/nullable'
+    - '#/components/schemas/PurchaseOrderUpdate/properties/vat_amount/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/vat_manual_override/nullable
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/vat_override_reason/nullable
+    - '#/components/schemas/PurchaseOrderUpdate/properties/payment_terms/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/supplier_reference/nullable
+    - >-
+      #/components/schemas/PurchaseOrderUpdate/properties/attachment_urls/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/base_item_name/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/supplier_catalog_item_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/supplier_item_unit/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/description_ar/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/received_quantity/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/tax_category/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/applied_tax_rate/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/taxable_amount/nullable
+    - '#/components/schemas/PurchaseOrderLineItem/properties/tax_amount/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderLineItem/properties/vat_treatment/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemsResponse/properties/calculated_total/nullable
+    - >-
+      #/paths/~1purchase-orders~1{id}~1accept/post/requestBody/content/application~1json/schema/properties/responder_name/nullable
+    - >-
+      #/paths/~1purchase-orders~1{id}~1accept/post/requestBody/content/application~1json/schema/properties/notes/nullable
+    - >-
+      #/paths/~1purchase-orders~1{id}~1acceptance~1manual/post/requestBody/content/application~1json/schema/properties/responder_name/nullable
+    - >-
+      #/paths/~1purchase-orders~1{id}~1acceptance~1manual/post/requestBody/content/application~1json/schema/properties/notes/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/acceptance/properties/responded_at/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/acceptance/properties/responder_name/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/grand_total_amount/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/subtotal_amount/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/discount_amount/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/delivery_fee_amount/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/vat_treatment/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/vat_rate/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/vat_amount/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/expected_delivery_date/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/notes/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/payment_terms/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/supplier_reference/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/sent_at/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/supplier_name/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/location_name/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/line_items/items/properties/description_ar/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/line_items/items/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/PoAcceptTokenResponse/properties/purchase_order/properties/line_items/items/properties/supplier_item_unit/nullable
+    - >-
+      #/components/schemas/PoAcceptRespondRequest/properties/responder_name/nullable
+    - >-
+      #/components/schemas/PoAcceptRespondRequest/properties/responder_contact/nullable
+    - '#/components/schemas/PoAcceptRespondRequest/properties/notes/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderReceiveResult/properties/base_item_name/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemStockItem/properties/base_item_name/nullable
+    - >-
+      #/components/schemas/PurchaseOrderReceiveHistoryItem/properties/base_item_name/nullable
+    - >-
+      #/components/schemas/PurchaseOrderReceiveHistoryItem/properties/location_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderReceiveHistoryItem/properties/location_name/nullable
+    - >-
+      #/components/schemas/PurchaseOrderReceiveHistoryItem/properties/note/nullable
+    - >-
+      #/components/schemas/PurchaseOrderActivityItem/properties/description/nullable
+    - >-
+      #/components/schemas/PurchaseOrderActivityItem/properties/metadata/nullable
+    - >-
+      #/components/schemas/PurchaseOrderActivityItem/properties/actor_name/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/linked_by/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/link_notes/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/invoice_number/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/due_date/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/grand_total/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/vat_amount/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/delivery_charge/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/discount/nullable
+    - '#/components/schemas/PurchaseOrderLinkedInvoice/properties/notes/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderLinkedInvoice/properties/supplier_name/nullable
+    - >-
+      #/components/schemas/LinkPurchaseOrderInvoiceRequest/properties/notes/nullable
+    - '#/components/schemas/PurchaseOrderMatchResult/properties/poAmount/nullable'
+    - >-
+      #/components/schemas/PurchaseOrderMatchResult/properties/receivedValue/nullable
+    - >-
+      #/components/schemas/PurchaseOrderMatchDiscrepancy/properties/expected/nullable
+    - >-
+      #/components/schemas/PurchaseOrderMatchDiscrepancy/properties/actual/nullable
+    - >-
+      #/components/schemas/PurchaseOrderMatchDiscrepancy/properties/delta/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/supplier_catalog_item_id/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/description/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/description_ar/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/quantity/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/unit_price/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/currency/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/received_quantity/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/vat_treatment/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/applied_tax_rate/nullable
+    - >-
+      #/components/schemas/PurchaseOrderLineItemUpdate/properties/tax_amount/nullable
+    - '#/components/schemas/SupplierCatalogItem/properties/base_item_id/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItem/properties/base_item_name/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItem/properties/internal_item_code/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItem/properties/internal_item_name/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItem/properties/supplier_item_code/nullable
+    - '#/components/schemas/SupplierCatalogItem/properties/name_ar/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItem/properties/name_ar_source/nullable
+    - '#/components/schemas/SupplierCatalogItem/properties/category/nullable'
+    - '#/components/schemas/SupplierCatalogItem/properties/unit/nullable'
+    - '#/components/schemas/SupplierCatalogItem/properties/package_size/nullable'
+    - '#/components/schemas/SupplierCatalogItem/properties/price/nullable'
+    - '#/components/schemas/SupplierCatalogItem/properties/par_level/nullable'
+    - '#/components/schemas/SupplierCatalogItem/properties/current_stock/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItem/properties/lead_time_days/nullable
+    - '#/components/schemas/SupplierCatalogItemCreate/properties/name_ar/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/category/nullable
+    - '#/components/schemas/SupplierCatalogItemCreate/properties/unit/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/package_size/nullable
+    - '#/components/schemas/SupplierCatalogItemCreate/properties/price/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/par_level/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/current_stock/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/lead_time_days/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemCreate/properties/base_item_id/nullable
+    - '#/components/schemas/SupplierCatalogItemUpdate/properties/name_ar/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/supplier_item_code/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/category/nullable
+    - '#/components/schemas/SupplierCatalogItemUpdate/properties/unit/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/package_size/nullable
+    - '#/components/schemas/SupplierCatalogItemUpdate/properties/price/nullable'
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/par_level/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/current_stock/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/lead_time_days/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemUpdate/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemStockLogEntry/properties/old_value/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemStockLogEntry/properties/new_value/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemStockLogEntry/properties/changed_by_clerk_id/nullable
+    - >-
+      #/components/schemas/SupplierCatalogItemStockLogEntry/properties/changed_by_name/nullable
+    - '#/components/schemas/SupplierStatement/properties/statement_date/nullable'
+    - '#/components/schemas/SupplierStatement/properties/currency/nullable'
+    - '#/components/schemas/SupplierStatement/properties/opening_balance/nullable'
+    - '#/components/schemas/SupplierStatement/properties/closing_balance/nullable'
+    - '#/components/schemas/SupplierStatement/properties/mime_type/nullable'
+    - '#/components/schemas/SupplierStatement/properties/file_size_bytes/nullable'
+    - '#/components/schemas/SupplierStatement/properties/notes/nullable'
+    - >-
+      #/components/schemas/SupplierStatement/properties/uploaded_by_member_id/nullable
+    - >-
+      #/components/schemas/SupplierStatement/properties/uploaded_by_email/nullable
+    - '#/components/schemas/TaxRule/properties/location_id/nullable'
+    - '#/components/schemas/TaxRule/properties/location_name/nullable'
+    - '#/components/schemas/TaxRule/properties/effective_to/nullable'
+    - '#/components/schemas/TaxRule/properties/description/nullable'
+    - '#/components/schemas/TaxRuleCreate/properties/location_id/nullable'
+    - '#/components/schemas/TaxRuleCreate/properties/effective_to/nullable'
+    - '#/components/schemas/TaxRuleCreate/properties/description/nullable'
+    - >-
+      #/components/schemas/TaxRateResolveResponse/properties/rate_percent/nullable
+    - '#/components/schemas/TaxRateResolveResponse/properties/rule_id/nullable'
+    - '#/components/schemas/TaxRuleUpdate/properties/rate_percent/nullable'
+    - '#/components/schemas/TaxRuleUpdate/properties/effective_from/nullable'
+    - '#/components/schemas/TaxRuleUpdate/properties/effective_to/nullable'
+    - '#/components/schemas/TaxRuleUpdate/properties/is_active/nullable'
+    - '#/components/schemas/TaxRuleUpdate/properties/description/nullable'
+    - '#/components/schemas/ChannelDetail/properties/cover_photo_width/nullable'
+    - '#/components/schemas/ChannelDetail/properties/cover_photo_height/nullable'
+    - '#/components/schemas/ChannelContact/properties/last_name/nullable'
+    - '#/components/schemas/ChannelContact/properties/email/nullable'
+    - '#/components/schemas/ChannelContact/properties/phone/nullable'
+    - '#/components/schemas/ChannelContact/properties/title/nullable'
+    - '#/components/schemas/CreateChannelContact/properties/last_name/nullable'
+    - '#/components/schemas/CreateChannelContact/properties/email/nullable'
+    - '#/components/schemas/CreateChannelContact/properties/phone/nullable'
+    - '#/components/schemas/CreateChannelContact/properties/title/nullable'
+    - '#/components/schemas/UpdateChannelContact/properties/last_name/nullable'
+    - '#/components/schemas/UpdateChannelContact/properties/email/nullable'
+    - '#/components/schemas/UpdateChannelContact/properties/phone/nullable'
+    - '#/components/schemas/UpdateChannelContact/properties/title/nullable'
+    - '#/components/schemas/FleetDriver/properties/phone/nullable'
+    - '#/components/schemas/FleetDriver/properties/taxi_company/nullable'
+    - '#/components/schemas/FleetDriver/properties/license_number/nullable'
+    - '#/components/schemas/FleetDriver/properties/notes/nullable'
+    - '#/components/schemas/FleetDriver/properties/clerk_user_id/nullable'
+    - '#/components/schemas/FleetDriverInput/properties/phone/nullable'
+    - '#/components/schemas/FleetDriverInput/properties/taxi_company/nullable'
+    - '#/components/schemas/FleetDriverInput/properties/license_number/nullable'
+    - '#/components/schemas/FleetDriverInput/properties/notes/nullable'
+    - '#/components/schemas/FleetDriverPatch/properties/phone/nullable'
+    - '#/components/schemas/FleetDriverPatch/properties/taxi_company/nullable'
+    - '#/components/schemas/FleetDriverPatch/properties/license_number/nullable'
+    - '#/components/schemas/FleetDriverPatch/properties/notes/nullable'
+    - '#/components/schemas/FleetVehicle/properties/make/nullable'
+    - '#/components/schemas/FleetVehicle/properties/model/nullable'
+    - '#/components/schemas/FleetVehicle/properties/year/nullable'
+    - '#/components/schemas/FleetVehicle/properties/plate_number/nullable'
+    - '#/components/schemas/FleetVehicle/properties/color/nullable'
+    - '#/components/schemas/FleetVehicleInput/properties/make/nullable'
+    - '#/components/schemas/FleetVehicleInput/properties/model/nullable'
+    - '#/components/schemas/FleetVehicleInput/properties/year/nullable'
+    - '#/components/schemas/FleetVehicleInput/properties/plate_number/nullable'
+    - '#/components/schemas/FleetVehicleInput/properties/color/nullable'
+    - '#/components/schemas/FleetAssignment/properties/pickup_address/nullable'
+    - '#/components/schemas/FleetAssignment/properties/delivery_address/nullable'
+    - '#/components/schemas/FleetAssignment/properties/scheduled_at/nullable'
+    - '#/components/schemas/FleetAssignment/properties/notes/nullable'
+    - >-
+      #/components/schemas/FleetAssignmentInput/properties/pickup_address/nullable
+    - >-
+      #/components/schemas/FleetAssignmentInput/properties/delivery_address/nullable
+    - '#/components/schemas/FleetAssignmentInput/properties/scheduled_at/nullable'
+    - '#/components/schemas/FleetAssignmentInput/properties/notes/nullable'
+    - '#/components/schemas/FleetAssignmentPatch/properties/notes/nullable'
+    - '#/components/schemas/FleetDeliveryEvent/properties/notes/nullable'
+    - '#/components/schemas/FleetDeliveryEvent/properties/lat/nullable'
+    - '#/components/schemas/FleetDeliveryEvent/properties/lng/nullable'
+    - '#/components/schemas/FleetDeliveryEventInput/properties/notes/nullable'
+    - '#/components/schemas/FleetDeliveryEventInput/properties/lat/nullable'
+    - '#/components/schemas/FleetDeliveryEventInput/properties/lng/nullable'
+    - >-
+      #/components/schemas/FleetProofOfDelivery/properties/recipient_name/nullable
+    - '#/components/schemas/FleetProofOfDelivery/properties/notes/nullable'
+    - >-
+      #/components/schemas/FleetProofOfDeliveryInput/properties/recipient_name/nullable
+    - '#/components/schemas/FleetProofOfDeliveryInput/properties/notes/nullable'
+    - >-
+      #/components/schemas/FleetProofOfDeliveryInput/properties/signature_data/nullable
+    - '#/components/schemas/StorefrontHomepageBanner/properties/title/nullable'
+    - '#/components/schemas/StorefrontHomepageBanner/properties/headline/nullable'
+    - '#/components/schemas/StorefrontHomepageBanner/properties/subtitle/nullable'
+    - '#/components/schemas/StorefrontHomepageBanner/properties/cta_text/nullable'
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/media_type/nullable
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/media_url/nullable
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/fallback_image_url/nullable
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/link_kind/nullable
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/link_slug/nullable
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/link_name/nullable
+    - '#/components/schemas/StorefrontHomepageBanner/properties/link_url/nullable'
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/destination_type/nullable
+    - >-
+      #/components/schemas/StorefrontHomepageBanner/properties/destination_value/nullable
+    - '#/components/schemas/StorefrontHomepageBanner/properties/start_at/nullable'
+    - '#/components/schemas/StorefrontHomepageBanner/properties/end_at/nullable'
+    - '#/components/schemas/HomepageBanner/properties/title/nullable'
+    - '#/components/schemas/HomepageBanner/properties/headline/nullable'
+    - '#/components/schemas/HomepageBanner/properties/subtitle/nullable'
+    - '#/components/schemas/HomepageBanner/properties/cta_text/nullable'
+    - '#/components/schemas/HomepageBannerSide/properties/media_type/nullable'
+    - '#/components/schemas/HomepageBannerSide/properties/media_url/nullable'
+    - >-
+      #/components/schemas/HomepageBannerSide/properties/fallback_image_url/nullable
+    - '#/components/schemas/HomepageBannerSide/properties/link_url/nullable'
+    - '#/components/schemas/HomepageBanner/properties/link_kind/nullable'
+    - '#/components/schemas/HomepageBanner/properties/link_attribute_id/nullable'
+    - '#/components/schemas/HomepageBanner/properties/link_slug/nullable'
+    - '#/components/schemas/HomepageBanner/properties/start_at/nullable'
+    - '#/components/schemas/HomepageBanner/properties/end_at/nullable'
+    - '#/components/schemas/HomepageBanner/properties/destination_type/nullable'
+    - '#/components/schemas/HomepageBanner/properties/destination_value/nullable'
+    - '#/components/schemas/HomepageBanner/properties/status_override/nullable'
+    - '#/components/schemas/HomepageBanner/properties/activated_at/nullable'
+    - '#/components/schemas/HomepageBanner/properties/created_by/nullable'
+    - '#/components/schemas/HomepageBanner/properties/updated_by/nullable'
+    - '#/components/schemas/HomepageBannerInput/properties/title/nullable'
+    - '#/components/schemas/HomepageBannerInput/properties/headline/nullable'
+    - '#/components/schemas/HomepageBannerInput/properties/subtitle/nullable'
+    - '#/components/schemas/HomepageBannerInput/properties/cta_text/nullable'
+    - '#/components/schemas/HomepageBannerInput/properties/link_kind/nullable'
+    - >-
+      #/components/schemas/HomepageBannerInput/properties/link_attribute_id/nullable
+    - '#/components/schemas/HomepageBannerInput/properties/end_at/nullable'
+    - >-
+      #/components/schemas/HomepageBannerInput/properties/destination_type/nullable
+    - >-
+      #/components/schemas/HomepageBannerInput/properties/destination_value/nullable
+    - >-
+      #/components/schemas/StorefrontWorkspaceStatus/properties/configured_via/nullable
+    - '#/components/schemas/FleetDriverTransaction/properties/order_id/nullable'
+    - >-
+      #/components/schemas/FleetCreateTransactionInput/properties/order_id/nullable
+    - >-
+      #/paths/~1fleet~1me~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/recipient_name/nullable
+    - >-
+      #/paths/~1fleet~1me~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/signature_data/nullable
+    - >-
+      #/paths/~1fleet~1me~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/image_url/nullable
+    - >-
+      #/paths/~1fleet~1me~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/latitude/nullable
+    - >-
+      #/paths/~1fleet~1me~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/longitude/nullable
+    - >-
+      #/paths/~1fleet~1me~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/notes/nullable
+    - >-
+      #/paths/~1fleet~1drivers~1{id}~1onboarding-status/patch/requestBody/content/application~1json/schema/properties/deactivation_reason/nullable
+    - >-
+      #/paths/~1fleet~1drivers~1{id}~1status/patch/requestBody/content/application~1json/schema/properties/deactivation_reason/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1status/patch/requestBody/content/application~1json/schema/properties/notes/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/recipient_name/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/notes/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/signature_data/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/image_url/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/latitude/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post/requestBody/content/application~1json/schema/properties/longitude/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1assign-driver/patch/requestBody/content/application~1json/schema/properties/scheduled_at/nullable
+    - >-
+      #/paths/~1fleet~1orders~1{id}~1assign-driver/patch/requestBody/content/application~1json/schema/properties/notes/nullable
+    - '#/components/schemas/Customer/properties/first_name/nullable'
+    - '#/components/schemas/Customer/properties/last_name/nullable'
+    - '#/components/schemas/Customer/properties/email/nullable'
+    - '#/components/schemas/Customer/properties/phone/nullable'
+    - '#/components/schemas/Customer/properties/country/nullable'
+    - '#/components/schemas/Customer/properties/city/nullable'
+    - '#/components/schemas/Customer/properties/notes/nullable'
+    - '#/components/schemas/Customer/properties/source/nullable'
+    - '#/components/schemas/Customer/properties/last_order_at/nullable'
+    - '#/components/schemas/CustomerUpdate/properties/firstName/nullable'
+    - '#/components/schemas/CustomerUpdate/properties/lastName/nullable'
+    - '#/components/schemas/CustomerUpdate/properties/phone/nullable'
+    - '#/components/schemas/CustomerUpdate/properties/city/nullable'
+    - '#/components/schemas/CustomerUpdate/properties/country/nullable'
+    - '#/components/schemas/CustomerUpdate/properties/notes/nullable'
+    - '#/components/schemas/CustomerOrder/properties/total/nullable'
+    - '#/components/schemas/CustomerOrder/properties/currency/nullable'
+    - '#/components/schemas/CustomerOrder/properties/shipping_address/nullable'
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/firstName/nullable
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/lastName/nullable
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/email/nullable
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/phone/nullable
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/country/nullable
+    - '#/components/schemas/CustomerUpsertFromOrderInput/properties/city/nullable'
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/source/nullable
+    - >-
+      #/components/schemas/CustomerUpsertFromOrderInput/properties/recompute/nullable
+    - '#/components/schemas/DeliveryCountrySummary/properties/currency/nullable'
+    - >-
+      #/components/schemas/DeliveryCountryToggleInput/properties/delivery_sort_order/nullable
+    - '#/components/schemas/DeliveryCityPatchInput/properties/name/nullable'
+    - '#/components/schemas/DeliveryCityPatchInput/properties/slug/nullable'
+    - '#/components/schemas/DeliveryCityPatchInput/properties/sort_order/nullable'
+    - '#/components/schemas/DeliveryCityPatchInput/properties/is_active/nullable'
+    - >-
+      #/paths/~1attendance~1today/get/responses/200/content/application~1json/schema/properties/openSession/nullable
+    - >-
+      #/paths/~1attendance~1today/get/responses/200/content/application~1json/schema/properties/activeBreak/nullable
+    - >-
+      #/paths/~1attendance~1today/get/responses/200/content/application~1json/schema/properties/assignedLocation/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettings/properties/express_start_time/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettings/properties/express_end_time/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettings/properties/express_min_prep_minutes/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettings/properties/express_daily_capacity/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettings/properties/express_fee/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettings/properties/express_cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettingsPatchInput/properties/express_start_time/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettingsPatchInput/properties/express_end_time/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettingsPatchInput/properties/express_min_prep_minutes/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettingsPatchInput/properties/express_daily_capacity/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettingsPatchInput/properties/express_fee/nullable
+    - >-
+      #/components/schemas/DeliveryExpressSettingsPatchInput/properties/express_cutoff_time/nullable
+    - '#/components/schemas/DeliveryWeeklySlot/properties/fee_override/nullable'
+    - '#/components/schemas/DeliveryWeeklySlot/properties/cutoff_time/nullable'
+    - '#/components/schemas/DeliveryWeeklySlot/properties/capacity/nullable'
+    - '#/components/schemas/DeliveryWeeklySlot/properties/internal_note/nullable'
+    - >-
+      #/components/schemas/DeliveryWeeklySlotCreateInput/properties/fee_override/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotCreateInput/properties/cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotCreateInput/properties/capacity/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotCreateInput/properties/internal_note/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotPatchInput/properties/fee_override/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotPatchInput/properties/cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotPatchInput/properties/capacity/nullable
+    - >-
+      #/components/schemas/DeliveryWeeklySlotPatchInput/properties/internal_note/nullable
+    - '#/components/schemas/SpecialDateOverride/properties/city_id/nullable'
+    - '#/components/schemas/SpecialDateOverride/properties/country_code/nullable'
+    - >-
+      #/components/schemas/SpecialDateOverride/properties/express_start_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverride/properties/express_end_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverride/properties/express_cutoff_time/nullable
+    - '#/components/schemas/SpecialDateOverride/properties/express_fee/nullable'
+    - >-
+      #/components/schemas/SpecialDateOverride/properties/express_min_prep_minutes/nullable
+    - >-
+      #/components/schemas/SpecialDateOverride/properties/express_daily_capacity/nullable
+    - '#/components/schemas/SpecialDateOverride/properties/internal_note/nullable'
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/city_id/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/country_code/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/express_start_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/express_end_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/express_cutoff_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/express_fee/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/express_min_prep_minutes/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/express_daily_capacity/nullable
+    - >-
+      #/components/schemas/SpecialDateOverrideCreateInput/properties/internal_note/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/city_id/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/country_code/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/express_start_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/express_end_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/express_cutoff_time/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/express_fee/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/express_min_prep_minutes/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/express_daily_capacity/nullable
+    - >-
+      #/components/schemas/SpecialDateOverridePatchInput/properties/internal_note/nullable
+    - '#/components/schemas/DeliveryOverrideSlot/properties/fee_override/nullable'
+    - '#/components/schemas/DeliveryOverrideSlot/properties/cutoff_time/nullable'
+    - '#/components/schemas/DeliveryOverrideSlot/properties/capacity/nullable'
+    - >-
+      #/components/schemas/DeliveryOverrideSlot/properties/internal_note/nullable
+    - >-
+      #/components/schemas/DeliveryOverrideSlotInput/properties/fee_override/nullable
+    - >-
+      #/components/schemas/DeliveryOverrideSlotInput/properties/cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryOverrideSlotInput/properties/capacity/nullable
+    - >-
+      #/components/schemas/DeliveryOverrideSlotInput/properties/internal_note/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/reason/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilitySlot/properties/fee_override/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilitySlot/properties/cutoff_time/nullable
+    - '#/components/schemas/DeliveryAvailabilitySlot/properties/capacity/nullable'
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/express/properties/fee/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/express/properties/cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/express/properties/start_time/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/express/properties/end_time/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/express/properties/min_prep_minutes/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/express/properties/daily_capacity/nullable
+    - >-
+      #/components/schemas/DeliveryAvailabilityResponse/properties/override_applied/nullable
+    - >-
+      #/components/schemas/PublicDeliveryCountry/properties/flag_image_url/nullable
+    - '#/components/schemas/PublicDeliveryCountry/properties/currency/nullable'
+    - '#/components/schemas/PublicDeliverySlot/properties/fee_override/nullable'
+    - '#/components/schemas/PublicDeliverySlot/properties/cutoff_time/nullable'
+    - '#/components/schemas/PublicDeliverySlot/properties/capacity/nullable'
+    - >-
+      #/components/schemas/PublicDeliveryExtCountry/properties/preferredDefaultCityId/nullable
+    - >-
+      #/components/schemas/PublicDeliveryExtCountry/properties/freeDeliveryThreshold/nullable
+    - >-
+      #/components/schemas/PublicDeliveryExtCity/properties/expressSurcharge/nullable
+    - >-
+      #/components/schemas/PublicDeliveryExtCity/properties/expressFeeTotal/nullable
+    - >-
+      #/components/schemas/PublicDeliveryExtCity/properties/sameDayCutoffHour/nullable
+    - >-
+      #/components/schemas/PublicDeliveryExtCity/properties/freeDeliveryThreshold/nullable
+    - '#/components/schemas/PublicDeliveryExtSlot/properties/startHour/nullable'
+    - '#/components/schemas/PublicDeliveryExtSlot/properties/endHour/nullable'
+    - '#/components/schemas/PublicDeliveryExtSlot/properties/cutoffHour/nullable'
+    - >-
+      #/components/schemas/DeliveryCatalogCity/properties/free_delivery_threshold/nullable
+    - >-
+      #/components/schemas/DeliveryCatalogCity/properties/express_delivery_fee/nullable
+    - >-
+      #/components/schemas/DeliveryCatalogCity/properties/express_delivery_cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryCatalogTimeslot/properties/fee_override/nullable
+    - '#/components/schemas/DeliveryCatalogTimeslot/properties/capacity/nullable'
+    - >-
+      #/components/schemas/DeliveryCatalogOverrideSlot/properties/fee_override/nullable
+    - >-
+      #/components/schemas/DeliveryCatalogOverrideSlot/properties/cutoff_time/nullable
+    - >-
+      #/components/schemas/DeliveryCatalogOverrideSlot/properties/capacity/nullable
+    - '#/components/schemas/ExternalProduct/properties/sku/nullable'
+    - '#/components/schemas/ExternalProduct/properties/description/nullable'
+    - '#/components/schemas/ExternalProduct/properties/price/nullable'
+    - '#/components/schemas/ExternalProduct/properties/priceAed/nullable'
+    - '#/components/schemas/ExternalProduct/properties/discountPrice/nullable'
+    - '#/components/schemas/ExternalProduct/properties/discountPriceAed/nullable'
+    - '#/components/schemas/Coupon/properties/description/nullable'
+    - '#/components/schemas/Coupon/properties/minOrderUsd/nullable'
+    - '#/components/schemas/Coupon/properties/startsAt/nullable'
+    - '#/components/schemas/Coupon/properties/expiresAt/nullable'
+    - '#/components/schemas/Coupon/properties/perUserLimit/nullable'
+    - '#/components/schemas/Coupon/properties/globalLimit/nullable'
+    - '#/components/schemas/CreateCouponInput/properties/description/nullable'
+    - '#/components/schemas/CreateCouponInput/properties/minOrderUsd/nullable'
+    - '#/components/schemas/CreateCouponInput/properties/startsAt/nullable'
+    - '#/components/schemas/CreateCouponInput/properties/expiresAt/nullable'
+    - '#/components/schemas/CreateCouponInput/properties/perUserLimit/nullable'
+    - '#/components/schemas/CreateCouponInput/properties/globalLimit/nullable'
+    - '#/components/schemas/UpdateCouponInput/properties/description/nullable'
+    - '#/components/schemas/UpdateCouponInput/properties/minOrderUsd/nullable'
+    - '#/components/schemas/UpdateCouponInput/properties/startsAt/nullable'
+    - '#/components/schemas/UpdateCouponInput/properties/expiresAt/nullable'
+    - '#/components/schemas/UpdateCouponInput/properties/perUserLimit/nullable'
+    - '#/components/schemas/UpdateCouponInput/properties/globalLimit/nullable'
+    - '#/components/schemas/ValidateCouponInput/properties/customerEmail/nullable'
+    - '#/components/schemas/ValidateCouponCartItem/properties/productId/nullable'
+    - '#/components/schemas/ValidateCouponCartItem/properties/slug/nullable'
+    - '#/components/schemas/ValidateCouponSuccess/properties/description/nullable'
+    - '#/components/schemas/AdSpendEntry/properties/campaign/nullable'
+    - '#/components/schemas/AdSpendEntry/properties/campaign_external_id/nullable'
+    - '#/components/schemas/AdSpendEntry/properties/impressions/nullable'
+    - '#/components/schemas/AdSpendEntry/properties/clicks/nullable'
+    - '#/components/schemas/AdSpendEntry/properties/conversions/nullable'
+    - '#/components/schemas/AdSpendEntry/properties/notes/nullable'
+    - '#/components/schemas/AdSpendInput/properties/campaign/nullable'
+    - '#/components/schemas/AdSpendInput/properties/campaignExternalId/nullable'
+    - '#/components/schemas/AdSpendInput/properties/impressions/nullable'
+    - '#/components/schemas/AdSpendInput/properties/clicks/nullable'
+    - '#/components/schemas/AdSpendInput/properties/conversions/nullable'
+    - '#/components/schemas/AdSpendInput/properties/notes/nullable'
+    - '#/components/schemas/AdSpendPatchInput/properties/campaign/nullable'
+    - >-
+      #/components/schemas/AdSpendPatchInput/properties/campaignExternalId/nullable
+    - '#/components/schemas/AdSpendPatchInput/properties/impressions/nullable'
+    - '#/components/schemas/AdSpendPatchInput/properties/clicks/nullable'
+    - '#/components/schemas/AdSpendPatchInput/properties/conversions/nullable'
+    - '#/components/schemas/AdSpendPatchInput/properties/notes/nullable'
+    - '#/components/schemas/AdPlatformConnection/properties/accountLabel/nullable'
+    - >-
+      #/components/schemas/AdPlatformConnection/properties/accountCurrency/nullable
+    - '#/components/schemas/AdPlatformConnection/properties/syncStatus/nullable'
+    - '#/components/schemas/AdPlatformConnection/properties/lastSyncAt/nullable'
+    - >-
+      #/components/schemas/AdPlatformConnection/properties/lastFullSyncAt/nullable
+    - '#/components/schemas/AdPlatformConnection/properties/lastError/nullable'
+    - >-
+      #/components/schemas/AdPlatformConnection/properties/latestDataDate/nullable
+    - >-
+      #/components/schemas/AdPlatformConnectInput/oneOf/0/properties/loginCustomerId/nullable
+    - '#/components/schemas/SeoMetric/properties/landing_page/nullable'
+    - '#/components/schemas/SeoMetric/properties/query/nullable'
+    - '#/components/schemas/SeoMetric/properties/ctr/nullable'
+    - '#/components/schemas/SeoMetric/properties/avg_position/nullable'
+    - '#/components/schemas/SeoMetricInput/properties/landingPage/nullable'
+    - '#/components/schemas/SeoMetricInput/properties/query/nullable'
+    - '#/components/schemas/SeoMetricInput/properties/ctr/nullable'
+    - '#/components/schemas/SeoMetricInput/properties/avgPosition/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/external_order_id/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/appOrderId/nullable
+    - '#/components/schemas/CreateExternalOrderInput/properties/platform/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/couponCode/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/coupon_code/nullable
+    - '#/components/schemas/CreateExternalOrderInput/properties/couponId/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/couponDiscountUsd/nullable
+    - '#/components/schemas/CreateExternalOrderInput/properties/contact/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/contact/properties/first_name/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/contact/properties/last_name/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/contact/properties/email/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/contact/properties/phone/nullable
+    - '#/components/schemas/ExternalOrderBilling/properties/firstName/nullable'
+    - '#/components/schemas/ExternalOrderBilling/properties/lastName/nullable'
+    - '#/components/schemas/ExternalOrderBilling/properties/email/nullable'
+    - '#/components/schemas/ExternalOrderBilling/properties/phone/nullable'
+    - '#/components/schemas/ExternalOrderBilling/properties/countryCode/nullable'
+    - '#/components/schemas/ExternalOrderRecipient/properties/firstName/nullable'
+    - '#/components/schemas/ExternalOrderRecipient/properties/lastName/nullable'
+    - '#/components/schemas/ExternalOrderRecipient/properties/phone/nullable'
+    - '#/components/schemas/ExternalOrderLineItem/properties/sku/nullable'
+    - '#/components/schemas/ExternalOrderLineItem/properties/unit_price/nullable'
+    - >-
+      #/components/schemas/ExternalOrderLineItem/properties/paid_unit_price/nullable
+    - >-
+      #/components/schemas/ExternalOrderLineItem/properties/custom_input/nullable
+    - >-
+      #/components/schemas/ExternalOrderCheckoutItem/properties/productId/nullable
+    - >-
+      #/components/schemas/ExternalOrderCheckoutItem/properties/priceUsd/nullable
+    - >-
+      #/components/schemas/ExternalOrderCheckoutItem/properties/paidUnitPrice/nullable
+    - >-
+      #/components/schemas/ExternalOrderCheckoutItem/properties/imageUrl/nullable
+    - >-
+      #/components/schemas/ExternalOrderCheckoutItem/properties/customInput/nullable
+    - '#/components/schemas/ExternalOrderFeeItem/properties/priceUsd/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/district/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/cityId/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/address/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/date/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/slot/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/isExpress/nullable'
+    - '#/components/schemas/ExternalOrderDelivery/properties/feeUsd/nullable'
+    - >-
+      #/components/schemas/ExternalOrderDelivery/properties/expressSurchargeUsd/nullable
+    - '#/components/schemas/ExternalOrderDelivery/properties/slotFeeUsd/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/delivery_address/nullable
+    - '#/components/schemas/ExternalOrderPayment/properties/method/nullable'
+    - '#/components/schemas/ExternalOrderPayment/properties/ref/nullable'
+    - '#/components/schemas/ExternalOrderPayment/properties/verified/nullable'
+    - '#/components/schemas/ExternalOrderPayment/properties/totalUsd/nullable'
+    - '#/components/schemas/ExternalOrderPayment/properties/totalAmount/nullable'
+    - '#/components/schemas/ExternalOrderPayment/properties/currencyCode/nullable'
+    - >-
+      #/components/schemas/ExternalOrderPayment/properties/subtotalAmount/nullable
+    - >-
+      #/components/schemas/ExternalOrderPayment/properties/deliveryFeeAmount/nullable
+    - '#/components/schemas/CreateExternalOrderInput/properties/totals/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/subtotal/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/shipping/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/discount/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/total/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/currency/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/paid_subtotal/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/totals/properties/paid_shipping/nullable
+    - '#/components/schemas/CreateExternalOrderInput/properties/notes/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/orderNotes/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/cardMessage/nullable
+    - '#/components/schemas/CreateExternalOrderInput/properties/cardFrom/nullable'
+    - '#/components/schemas/CreateExternalOrderInput/properties/cardTo/nullable'
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/ordered_at/nullable
+    - '#/components/schemas/MarketingAttribution/properties/source/nullable'
+    - '#/components/schemas/MarketingAttributionTouch/properties/gclid/nullable'
+    - '#/components/schemas/MarketingAttributionTouch/properties/gbraid/nullable'
+    - '#/components/schemas/MarketingAttributionTouch/properties/wbraid/nullable'
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/utm_source/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/utm_medium/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/utm_campaign/nullable
+    - '#/components/schemas/MarketingAttributionTouch/properties/utm_id/nullable'
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/utm_term/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/utm_content/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/referrer/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/landing_page_url/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/landing_page_path/nullable
+    - >-
+      #/components/schemas/MarketingAttributionTouch/properties/captured_at/nullable
+    - >-
+      #/components/schemas/MarketingAttributionConversion/properties/order_total/nullable
+    - >-
+      #/components/schemas/MarketingAttributionConversion/properties/currency/nullable
+    - >-
+      #/components/schemas/MarketingAttributionConversion/properties/converted_at/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/isAnonymous/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/senderAnonymous/nullable
+    - >-
+      #/components/schemas/CreateExternalOrderInput/properties/anonymous/nullable
+    - >-
+      #/paths/~1orders~1{id}/get/responses/200/content/application~1json/schema/properties/assignment/nullable
+    - >-
+      #/components/schemas/ListOrderCommunicationsResponse/properties/customerEmail/nullable
+    - >-
+      #/components/schemas/ListOrderCommunicationsResponse/properties/customerName/nullable
+    - '#/components/schemas/OrderCommunication/properties/recipientName/nullable'
+    - '#/components/schemas/OrderCommunication/properties/recipientEmail/nullable'
+    - '#/components/schemas/OrderCommunication/properties/subject/nullable'
+    - >-
+      #/components/schemas/OrderCommunication/properties/providerMessageId/nullable
+    - '#/components/schemas/OrderCommunication/properties/failureReason/nullable'
+    - >-
+      #/components/schemas/OrderCommunication/properties/triggeredByName/nullable
+    - '#/components/schemas/OrderCommunication/properties/sentAt/nullable'
+    - '#/components/schemas/OrderCommunication/properties/deliveredAt/nullable'
+    - '#/components/schemas/OrderCommunication/properties/openedAt/nullable'
+    - '#/components/schemas/OrderCommunication/properties/clickedAt/nullable'
+    - '#/components/schemas/OrderCommunication/properties/lastEventAt/nullable'
+    - '#/components/schemas/OrderCommunicationEvent/properties/rawType/nullable'
+    - >-
+      #/components/schemas/AddOrderLineItemInput/properties/custom_input/nullable
+    - >-
+      #/components/schemas/UpdateOrderLineItemInput/properties/custom_input/nullable
+    - '#/components/schemas/FloristAssignment/properties/started_at/nullable'
+    - '#/components/schemas/FloristAssignment/properties/completed_at/nullable'
+    - >-
+      #/components/schemas/FloristAssignmentNullableResponse/properties/assignment/nullable
+    - '#/components/schemas/FloristOrderCard/properties/started_at/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/completed_at/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/window_start/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/window_end/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/card_message/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/card_from/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/card_to/nullable'
+    - '#/components/schemas/FloristOrderCard/properties/qr_link/nullable'
+    - '#/components/schemas/FloristOrderItem/properties/image_url/nullable'
+    - '#/components/schemas/FloristOrderItem/properties/custom_input/nullable'
+    - '#/components/schemas/FloristOrderItem/properties/product_id/nullable'
+    - '#/components/schemas/FloristOrderItem/properties/description/nullable'
+    - '#/components/schemas/FloristOrderItem/properties/description_ar/nullable'
+    - >-
+      #/components/schemas/FloristRecipeEntry/properties/base_item_image_url/nullable
+    - >-
+      #/components/schemas/RefundOrderResponse/properties/payment/properties/refunded_amount/nullable
+    - >-
+      #/components/schemas/RefundOrderResponse/properties/payment/properties/refunded_amount_usd/nullable
+    - >-
+      #/components/schemas/RetryTookanTaskResponse/properties/tookan_job_id/nullable
+    - >-
+      #/components/schemas/RetryTookanTaskResponse/properties/tookan_task_id/nullable
+    - >-
+      #/components/schemas/RetryTookanTaskResponse/properties/tookan_status/nullable
+    - >-
+      #/components/schemas/RetryTookanTaskResponse/properties/tookan_created_at/nullable
+    - >-
+      #/components/schemas/RetryTookanTaskResponse/properties/tookan_error/nullable
+    - >-
+      #/paths/~1exchange-rates/get/responses/200/content/application~1json/schema/properties/last_fetched_at/nullable
+    - >-
+      #/paths/~1exchange-rates~1refresh/post/responses/200/content/application~1json/schema/properties/last_fetched_at/nullable
+    - '#/components/schemas/Occasion/properties/product_focus/nullable'
+    - '#/components/schemas/Occasion/properties/month/nullable'
+    - '#/components/schemas/Occasion/properties/day/nullable'
+    - '#/components/schemas/Occasion/properties/notes/nullable'
+    - '#/components/schemas/Occasion/properties/next_occurrence/nullable'
+    - '#/components/schemas/Occasion/properties/days_until/nullable'
+    - '#/components/schemas/Occasion/properties/campaign_phase/nullable'
+    - '#/components/schemas/CreateOccasion/properties/product_focus/nullable'
+    - '#/components/schemas/CreateOccasion/properties/month/nullable'
+    - '#/components/schemas/CreateOccasion/properties/day/nullable'
+    - '#/components/schemas/CreateOccasion/properties/notes/nullable'
+    - '#/components/schemas/PatchOccasion/properties/product_focus/nullable'
+    - '#/components/schemas/PatchOccasion/properties/month/nullable'
+    - '#/components/schemas/PatchOccasion/properties/day/nullable'
+    - '#/components/schemas/PatchOccasion/properties/notes/nullable'
+    - '#/components/schemas/CampaignPlan/properties/budget/nullable'
+    - '#/components/schemas/CampaignPlan/properties/notes/nullable'
+    - '#/components/schemas/CampaignPlan/properties/days_until/nullable'
+    - '#/components/schemas/CampaignPlan/properties/campaign_phase/nullable'
+    - '#/components/schemas/CampaignPlan/properties/occasion_name/nullable'
+    - '#/components/schemas/CampaignPlan/properties/occasion_type/nullable'
+    - '#/components/schemas/CreateCampaignPlan/properties/budget/nullable'
+    - '#/components/schemas/CreateCampaignPlan/properties/notes/nullable'
+    - '#/components/schemas/PatchCampaignPlan/properties/budget/nullable'
+    - '#/components/schemas/PatchCampaignPlan/properties/notes/nullable'
+    - '#/components/schemas/CampaignAction/properties/description/nullable'
+    - '#/components/schemas/CampaignAction/properties/due_date/nullable'
+    - >-
+      #/components/schemas/OccasionCampaignSummary/properties/next_occasion/nullable
+    - >-
+      #/paths/~1settings~1workspace-slug/patch/requestBody/content/application~1json/schema/properties/workspace_slug/nullable
+    - >-
+      #/paths/~1settings~1workspace-slug/patch/responses/200/content/application~1json/schema/properties/workspace_slug/nullable
+    - >-
+      #/paths/~1exchange-rate-settings/get/responses/200/content/application~1json/schema/properties/created_at/nullable
+    - >-
+      #/paths/~1exchange-rate-settings/get/responses/200/content/application~1json/schema/properties/updated_at/nullable
+    - >-
+      #/paths/~1exchange-rate-settings/patch/responses/200/content/application~1json/schema/properties/created_at/nullable
+    - >-
+      #/paths/~1exchange-rate-settings/patch/responses/200/content/application~1json/schema/properties/updated_at/nullable
+    - '#/components/schemas/ProfileResponse/properties/phone/nullable'
+    - '#/components/schemas/ProfileResponse/properties/job_title/nullable'
+    - '#/components/schemas/ProfileResponse/properties/birthday/nullable'
+    - '#/components/schemas/ProfileResponse/properties/gender/nullable'
+    - '#/components/schemas/ProfileResponse/properties/department/nullable'
+    - '#/components/schemas/ProfileResponse/properties/location/nullable'
+    - '#/components/schemas/ProfileResponse/properties/employment_type/nullable'
+    - '#/components/schemas/ProfileResponse/properties/employment_status/nullable'
+    - '#/components/schemas/ProfileResponse/properties/start_date/nullable'
+    - '#/components/schemas/ProfileResponse/properties/manager_member_id/nullable'
+    - '#/components/schemas/ProfileResponse/properties/manager_name/nullable'
+    - '#/components/schemas/ProfileResponse/properties/custom_role_id/nullable'
+    - '#/components/schemas/ProfileResponse/properties/custom_role_name/nullable'
+    - '#/components/schemas/ProfileResponse/properties/ec_name/nullable'
+    - '#/components/schemas/ProfileResponse/properties/ec_relationship/nullable'
+    - >-
+      #/components/schemas/ProfileResponse/properties/ec_phone_country_code/nullable
+    - '#/components/schemas/ProfileResponse/properties/ec_phone/nullable'
+    - '#/components/schemas/UpdateProfileBody/properties/phone/nullable'
+    - '#/components/schemas/UpdateProfileBody/properties/job_title/nullable'
+    - '#/components/schemas/UpdateProfileBody/properties/birthday/nullable'
+    - '#/components/schemas/UpdateProfileBody/properties/gender/nullable'
+    - '#/components/schemas/UpdateProfileBody/properties/ec_name/nullable'
+    - '#/components/schemas/UpdateProfileBody/properties/ec_relationship/nullable'
+    - >-
+      #/components/schemas/UpdateProfileBody/properties/ec_phone_country_code/nullable
+    - '#/components/schemas/UpdateProfileBody/properties/ec_phone/nullable'
+    - '#/components/schemas/SecuritySession/properties/lastActiveAt/nullable'
+    - '#/components/schemas/SecuritySession/properties/createdAt/nullable'
+    - '#/components/schemas/SecuritySession/properties/expireAt/nullable'
+    - '#/components/schemas/SecuritySession/properties/ipAddress/nullable'
+    - '#/components/schemas/SecuritySession/properties/city/nullable'
+    - '#/components/schemas/SecuritySession/properties/country/nullable'
+    - '#/components/schemas/SecurityAlertEvent/properties/deviceLabel/nullable'
+    - '#/components/schemas/SecurityAlertEvent/properties/country/nullable'
+    - >-
+      #/components/schemas/WebhookEndpoint/properties/last_delivery_status/nullable
+    - '#/components/schemas/WebhookEndpoint/properties/last_delivery_at/nullable'
+    - '#/components/schemas/WebhookDelivery/properties/response_status/nullable'
+    - '#/components/schemas/WebhookDelivery/properties/response_body/nullable'
+    - '#/components/schemas/WebhookDelivery/properties/next_retry_at/nullable'
+    - '#/components/schemas/CatalogAttribute/properties/description/nullable'
+    - '#/components/schemas/CatalogAttribute/properties/image_url/nullable'
+    - '#/components/schemas/CatalogAttribute/properties/banner_image_url/nullable'
+    - '#/components/schemas/CatalogAttribute/properties/is_featured/nullable'
+    - '#/components/schemas/CatalogAttribute/properties/is_upsell/nullable'
+    - '#/components/schemas/CatalogAttributeCreateInput/properties/slug/nullable'
+    - >-
+      #/components/schemas/CatalogAttributeCreateInput/properties/description/nullable
+    - >-
+      #/components/schemas/CatalogAttributeCreateInput/properties/image_url/nullable
+    - >-
+      #/components/schemas/CatalogAttributeCreateInput/properties/banner_image_url/nullable
+    - >-
+      #/components/schemas/CatalogAttributeUpdateInput/properties/description/nullable
+    - >-
+      #/components/schemas/CatalogAttributeUpdateInput/properties/image_url/nullable
+    - >-
+      #/components/schemas/CatalogAttributeUpdateInput/properties/banner_image_url/nullable
+    - >-
+      #/components/schemas/CatalogAttributeCityAvailabilityRow/properties/updated_at/nullable
+    - >-
+      #/components/schemas/ProductCityAvailabilityRow/properties/updated_at/nullable
+    - >-
+      #/components/schemas/ProductCountryAvailabilityRow/properties/flag_emoji/nullable
+    - >-
+      #/components/schemas/ProductCountryAvailabilityRow/properties/updated_at/nullable
+    - >-
+      #/components/schemas/PublicCatalogAttribute/properties/description/nullable
+    - '#/components/schemas/PublicCatalogAttribute/properties/image_url/nullable'
+    - >-
+      #/components/schemas/OmniConversation/properties/contact_avatar_url/nullable
+    - >-
+      #/components/schemas/OmniConversation/properties/assigned_agent_id/nullable
+    - '#/components/schemas/OmniConversation/properties/assigned_team_id/nullable'
+    - '#/components/schemas/OmniConversation/properties/priority/nullable'
+    - '#/components/schemas/OmniConversation/properties/subject/nullable'
+    - '#/components/schemas/OmniConversation/properties/last_message_at/nullable'
+    - >-
+      #/components/schemas/OmniConversation/properties/last_message_snippet/nullable
+    - '#/components/schemas/OmniMessage/properties/content/nullable'
+    - '#/components/schemas/OmniMessage/properties/media_url/nullable'
+    - '#/components/schemas/OmniMessage/properties/media_mime_type/nullable'
+    - '#/components/schemas/OmniMessage/properties/sender_name/nullable'
+    - '#/components/schemas/OmniMessage/properties/sender_agent_id/nullable'
+    - '#/components/schemas/OmniMessage/properties/error_code/nullable'
+    - '#/components/schemas/OmniMessage/properties/error_message/nullable'
+    - '#/components/schemas/OmniMessage/properties/sent_at/nullable'
+    - '#/components/schemas/OmniMessage/properties/delivered_at/nullable'
+    - '#/components/schemas/OmniMessage/properties/read_at/nullable'
+    - '#/components/schemas/OmniNote/properties/author_name/nullable'
+    - >-
+      #/components/schemas/OmniConversationDetailResponse/properties/contact_identities/items/properties/display_name/nullable
+    - '#/components/schemas/OmniConversationPatch/properties/subject/nullable'
+    - '#/components/schemas/OmniConversationPatch/properties/priority/nullable'
+    - >-
+      #/components/schemas/OmniConversationPatch/properties/snoozed_until/nullable
+    - '#/components/schemas/OmniAssignInput/properties/assigned_agent_id/nullable'
+    - '#/components/schemas/OmniAssignInput/properties/assigned_team_id/nullable'
+    - '#/components/schemas/OmniTag/properties/color/nullable'
+    - '#/components/schemas/OmniCreateTagInput/properties/color/nullable'
+    - '#/components/schemas/OmniUpdateTagInput/properties/color/nullable'
+    - >-
+      #/components/schemas/OmniBulkActionInput/properties/assigned_agent_id/nullable
+    - '#/components/schemas/OmniAiDraftInput/properties/context/nullable'
+    - '#/components/schemas/OmniKnowledgeBaseArticle/properties/category/nullable'
+    - '#/components/schemas/OmniKnowledgeBaseArticle/properties/tags/nullable'
+    - >-
+      #/components/schemas/OmniKnowledgeBaseArticle/properties/created_by_agent_id/nullable
+    - >-
+      #/components/schemas/OmniKnowledgeBaseArticleInput/properties/category/nullable
+    - >-
+      #/components/schemas/OmniKnowledgeBaseArticleInput/properties/tags/nullable
+    - >-
+      #/components/schemas/OmniKnowledgeBaseArticleUpdateInput/properties/category/nullable
+    - >-
+      #/components/schemas/OmniKnowledgeBaseArticleUpdateInput/properties/tags/nullable
+    - >-
+      #/components/schemas/OmniChannelAccount/properties/external_account_id/nullable
+    - >-
+      #/components/schemas/OmniChannelAccount/properties/webhook_verify_token/nullable
+    - >-
+      #/components/schemas/OmniChannelAccount/properties/last_webhook_received_at/nullable
+    - >-
+      #/components/schemas/OmniChannelAccount/properties/last_outbound_send_at/nullable
+    - '#/components/schemas/OmniChannelAccount/properties/last_error/nullable'
+    - >-
+      #/components/schemas/CreateOmniChannelAccountInput/properties/external_account_id/nullable
+    - >-
+      #/components/schemas/CreateOmniChannelAccountInput/properties/access_token/nullable
+    - >-
+      #/components/schemas/CreateOmniChannelAccountInput/properties/refresh_token/nullable
+    - >-
+      #/components/schemas/CreateOmniChannelAccountInput/properties/webhook_verify_token/nullable
+    - >-
+      #/components/schemas/UpdateOmniChannelAccountInput/properties/external_account_id/nullable
+    - >-
+      #/components/schemas/UpdateOmniChannelAccountInput/properties/access_token/nullable
+    - >-
+      #/components/schemas/UpdateOmniChannelAccountInput/properties/refresh_token/nullable
+    - >-
+      #/components/schemas/UpdateOmniChannelAccountInput/properties/webhook_verify_token/nullable
+    - >-
+      #/components/schemas/StoreCustomerInsightsResponse/properties/comparison/nullable
+    - >-
+      #/components/schemas/StoreCustomerInsightsResponse/properties/previousKpis/nullable
+    - '#/components/schemas/StoreCustomerCountryCount/properties/code/nullable'
+    - >-
+      #/components/schemas/StoreExecutiveOverviewResponse/properties/comparison/nullable
+    - '#/components/schemas/StoreAnalyticsKpis/properties/grossMarginUsd/nullable'
+    - '#/components/schemas/StoreAnalyticsKpis/properties/grossMarginPct/nullable'
+    - >-
+      #/components/schemas/StoreAnalyticsKpis/properties/cogsCoveragePct/nullable
+    - '#/components/schemas/StoreAnalyticsKpis/properties/conversionRate/nullable'
+    - >-
+      #/components/schemas/StoreExecutiveOverviewResponse/properties/previousKpis/nullable
+    - '#/components/schemas/StoreRevenuePoint/properties/cogs/nullable'
+    - >-
+      #/components/schemas/StoreExecutiveOverviewResponse/properties/comparisonRevenueOverTime/nullable
+    - '#/components/schemas/StoreCountryRevenue/properties/code/nullable'
+    - >-
+      #/components/schemas/StoreCountryRevenue/properties/conversionRatePct/nullable
+    - >-
+      #/components/schemas/StoreNetRevenueBreakdownResponse/properties/comparison/nullable
+    - >-
+      #/components/schemas/StoreNetRevenueBreakdownResponse/properties/baselineComponents/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/comparison/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/headline/properties/revenuePct/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/headline/properties/baselineRevenue/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/driver/properties/code/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/driver/properties/ordersPct/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/driver/properties/aovPct/nullable
+    - >-
+      #/components/schemas/StorePerformanceSummaryResponse/properties/attention/properties/code/nullable
+    - '#/components/schemas/StoreProductStat/properties/marginUsd/nullable'
+    - '#/components/schemas/StoreProductStat/properties/marginPct/nullable'
+    - '#/components/schemas/StoreCityProductStat/properties/marginUsd/nullable'
+    - >-
+      #/components/schemas/StoreProductEventTotals/properties/addToCartRate/nullable
+    - >-
+      #/components/schemas/StoreProductEventTotals/properties/conversionRate/nullable
+    - >-
+      #/components/schemas/StoreCartCheckoutResponse/properties/comparison/nullable
+    - '#/components/schemas/CartFreeDeliveryBar/properties/thresholdUsd/nullable'
+    - >-
+      #/components/schemas/DeliveryAnalyticsResponse/properties/comparison/nullable
+    - '#/components/schemas/DeliveryAnalyticsKpis/properties/onTimeRate/nullable'
+    - >-
+      #/components/schemas/DeliveryAnalyticsResponse/properties/previousKpis/nullable
+    - '#/components/schemas/DeliveryDistrictRow/properties/cityId/nullable'
+    - '#/components/schemas/DeliveryDistrictRow/properties/windowLabel/nullable'
+    - >-
+      #/components/schemas/StoreOperationsSummary/properties/onTimeOrders/express
+      = 90 min from placement).
+    - >-
+      #/components/schemas/StorePunctualityOrder/properties/displayOrderNumber/nullable
+    - '#/components/schemas/StoreFunnelResponse/properties/comparison/nullable'
+    - '#/components/schemas/StoreFunnelResponse/properties/previousSteps/nullable'
+    - '#/components/schemas/StoreFunnelBreakdownItem/properties/value/AE'
+    - '#/components/schemas/StoreFunnelBreakdownItem/properties/value/en).'
+    - '#/components/schemas/StoreCountryStat/properties/code/nullable'
+    - '#/components/schemas/StoreCountryStat/properties/sessions/nullable'
+    - >-
+      #/components/schemas/StoreCountryStat/properties/conversionRatePct/nullable
+    - >-
+      #/components/schemas/StoreCountryStat/properties/conversionRatePrevPct/nullable
+    - '#/components/schemas/StoreCountryStat/properties/conversionTrend/nullable'
+    - '#/components/schemas/StoreConversionByCountry/properties/code/nullable'
+    - '#/components/schemas/StoreConversionByCountry/properties/sessions/nullable'
+    - >-
+      #/components/schemas/StoreConversionByCountry/properties/conversionRatePct/nullable
+    - >-
+      #/components/schemas/StoreConversionByCountry/properties/conversionRatePrevPct/nullable
+    - >-
+      #/components/schemas/StoreConversionByCountry/properties/conversionTrend/nullable
+    - '#/components/schemas/StoreTimeSlotStat/properties/slot/nullable'
+    - '#/components/schemas/StorePaymentMethodStat/properties/method/paypal'
+    - '#/components/schemas/StorePaymentMethodStat/properties/method/whish'
+    - '#/components/schemas/StorePaymentMethodStat/properties/method/cash).'
+    - >-
+      #/components/schemas/StorePaymentMethodCurrency/properties/currency/e.g.
+      USD
+    - '#/components/schemas/StorePaymentMethodCurrency/properties/currency/AED).'
+    - '#/components/schemas/StoreMarketingResponse/properties/comparison/nullable'
+    - >-
+      #/components/schemas/StoreMarketingTotals/properties/grossMarginPct/nullable
+    - '#/components/schemas/StoreMarketingTotals/properties/cac/nullable'
+    - >-
+      #/components/schemas/StoreMarketingTotals/properties/firstOrderCac/nullable
+    - '#/components/schemas/StoreMarketingTotals/properties/revenueRoas/nullable'
+    - >-
+      #/components/schemas/StoreMarketingTotals/properties/grossMarginRoas/nullable
+    - >-
+      #/components/schemas/StoreMarketingTotals/properties/conversionRate/nullable
+    - '#/components/schemas/StoreMarketingSource/properties/channel/meta_ads'
+    - '#/components/schemas/StoreMarketingSource/properties/channel/organic'
+    - '#/components/schemas/StoreMarketingSource/properties/channel/direct'
+    - '#/components/schemas/StoreMarketingSource/properties/channel/whatsapp'
+    - '#/components/schemas/StoreMarketingSource/properties/channel/email'
+    - '#/components/schemas/StoreMarketingSource/properties/channel/influencer'
+    - '#/components/schemas/StoreMarketingSource/properties/channel/other).'
+    - >-
+      #/components/schemas/StoreMarketingSource/properties/conversionRate/nullable
+    - '#/components/schemas/StoreMarketingSource/properties/cac/nullable'
+    - >-
+      #/components/schemas/StoreMarketingSource/properties/firstOrderCac/nullable
+    - '#/components/schemas/StoreMarketingSource/properties/revenueRoas/nullable'
+    - >-
+      #/components/schemas/StoreMarketingSource/properties/grossMarginRoas/nullable
+    - >-
+      #/components/schemas/StoreMarketingCampaign/properties/revenueRoas/nullable
+    - >-
+      #/components/schemas/StoreMarketingCampaign/properties/grossMarginRoas/nullable
+    - '#/components/schemas/StoreMarketingCampaign/properties/cac/nullable'
+    - >-
+      #/components/schemas/StoreSearchDiscoveryResponse/properties/comparison/nullable
+    - '#/components/schemas/StoreSearchTotals/properties/noResultRate/nullable'
+    - >-
+      #/components/schemas/StoreSearchTotals/properties/clickThroughRate/nullable
+    - >-
+      #/components/schemas/StoreSearchTotals/properties/searchConversionRate/nullable
+    - '#/components/schemas/StoreSearchTerm/properties/avgResultCount/nullable'
+    - '#/components/schemas/StoreSearchTerm/properties/clickThroughRate/nullable'
+    - '#/components/schemas/StoreSeoResponse/properties/comparison/nullable'
+    - >-
+      #/components/schemas/StoreSeoTotals/properties/organicConversionRate/nullable
+    - '#/components/schemas/StoreSeoTotals/properties/ctr/nullable'
+    - '#/components/schemas/StoreSeoTotals/properties/avgPosition/nullable'
+    - '#/components/schemas/StoreSeoQuery/properties/ctr/nullable'
+    - '#/components/schemas/StoreSeoQuery/properties/avgPosition/nullable'
+    - '#/components/schemas/StoreSeoPage/properties/conversionRate/nullable'
+    - '#/components/schemas/StoreSeoPage/properties/ctr/nullable'
+    - '#/components/schemas/StoreSeoPage/properties/avgPosition/nullable'
+    - '#/components/schemas/StoreSeoPage/properties/wordCount/nullable'
+    - '#/components/schemas/StoreSeoPage/properties/titleLength/nullable'
+    - '#/components/schemas/StoreSeoPage/properties/hasMetaDescription/nullable'
+    - '#/components/schemas/StoreCogsMarginRow/properties/cogsUsd/nullable'
+    - '#/components/schemas/StoreCogsMarginRow/properties/marginUsd/nullable'
+    - '#/components/schemas/StoreCogsMarginRow/properties/marginPct/nullable'
+    - '#/components/schemas/StoreCogsOrderRow/properties/marginPct/nullable'
+    - >-
+      #/components/schemas/StoreMaterialConsumptionRow/properties/costUsd/nullable
+    - >-
+      #/components/schemas/InventoryOverviewKpis/properties/actualCogsPct/nullable
+    - >-
+      #/components/schemas/InventoryOverviewKpis/properties/theoreticalCogsPct/nullable
+    - '#/components/schemas/InventoryOverviewKpis/properties/cogsGap/nullable'
+    - >-
+      #/components/schemas/InventoryOverviewKpis/properties/grossMarginPct/nullable
+    - >-
+      #/components/schemas/InventoryOverviewKpis/properties/targetCogsPct/nullable
+    - >-
+      #/components/schemas/InventoryCogsByLocation/properties/actualCogsPct/nullable
+    - >-
+      #/components/schemas/InventoryWeeklyCogsTrend/properties/targetCogsPct/nullable
+    - '#/components/schemas/InventoryMovementRow/properties/location_id/nullable'
+    - >-
+      #/components/schemas/InventoryMovementRow/properties/location_name/nullable
+    - >-
+      #/components/schemas/InventoryMovementRow/properties/unit_of_measure/nullable
+    - '#/components/schemas/InventoryMovementRow/properties/unit_cost/nullable'
+    - '#/components/schemas/InventoryMovementRow/properties/total_value/nullable'
+    - '#/components/schemas/InventoryMovementRow/properties/source_type/nullable'
+    - '#/components/schemas/InventoryMovementRow/properties/source_id/nullable'
+    - '#/components/schemas/InventoryMovementRow/properties/source_label/nullable'
+    - '#/components/schemas/InventoryMovementRow/properties/employee_id/nullable'
+    - '#/components/schemas/InventoryMovementRow/properties/notes/nullable'
+    - >-
+      #/components/schemas/InventoryVarianceByLocation/properties/locationId/nullable
+    - >-
+      #/components/schemas/InventoryWastageKpis/properties/wasteAsPctOfPurchases/nullable
+    - >-
+      #/components/schemas/InventoryWastageResponse/properties/byLocation/items/allOf/1/properties/locationId/nullable
+    - '#/components/schemas/InventoryWastageRecord/properties/locationId/nullable'
+    - >-
+      #/components/schemas/InventoryWastageRecord/properties/unitOfMeasure/nullable
+    - '#/components/schemas/InventoryWastageRecord/properties/employeeId/nullable'
+    - '#/components/schemas/InventoryWastageRecord/properties/orderId/nullable'
+    - '#/components/schemas/InventoryWastageRecord/properties/notes/nullable'
+    - >-
+      #/components/schemas/InventoryProcurementResponse/properties/byLocation/items/properties/locationId/nullable
+    - '#/components/schemas/InventoryTransferRow/properties/sourceLabel/nullable'
+    - >-
+      #/components/schemas/InventoryTransferRow/properties/outLocationId/nullable
+    - '#/components/schemas/InventoryTransferRow/properties/inLocationId/nullable'
+    - '#/components/schemas/InventoryTransferRow/properties/dispatchedAt/nullable'
+    - '#/components/schemas/InventoryTransferRow/properties/receivedAt/nullable'
+    - '#/components/schemas/InventoryTransferRow/properties/employeeId/nullable'
+    - '#/components/schemas/InventoryCogsTargetData/properties/entityId/nullable'
+    - >-
+      #/components/schemas/InventoryCogsTargetData/properties/locationId/nullable
+    - >-
+      #/paths/~1inventory-analytics~1cogs-target/put/requestBody/content/application~1json/schema/properties/entityId/nullable
+    - >-
+      #/paths/~1inventory-analytics~1cogs-target/put/requestBody/content/application~1json/schema/properties/locationId/nullable
+    - '#/components/schemas/WastageRecordInput/properties/locationId/nullable'
+    - '#/components/schemas/WastageRecordInput/properties/employeeId/nullable'
+    - '#/components/schemas/WastageRecordInput/properties/orderId/nullable'
+    - '#/components/schemas/WastageRecordInput/properties/notes/nullable'
+    - '#/components/schemas/WastageRecordInput/properties/imageUrls/nullable'
+    - '#/components/schemas/WastageRecordInput/properties/unitCost/nullable'
+    - '#/components/schemas/StoreInsight/properties/label/nullable'
+    - '#/components/schemas/StoreInsightValues/properties/pct/nullable'
+    - '#/components/schemas/StoreInsightValues/properties/current/nullable'
+    - '#/components/schemas/StoreInsightValues/properties/previous/nullable'
+    - '#/components/schemas/StoreInsightValues/properties/views/nullable'
+    - '#/components/schemas/StoreInsightValues/properties/rate/nullable'
+    - '#/components/schemas/StoreInsightValues/properties/average/nullable'
+    - >-
+      #/components/schemas/StoreMarketplaceResponse/properties/comparison/nullable
+    - >-
+      #/components/schemas/StoreMarketplaceTotals/properties/recordedPayoutUsd/nullable
+    - >-
+      #/components/schemas/StoreMarketplaceTotals/properties/avgOrderValueUsd/nullable
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/pos'
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/whatsapp'
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/toters'
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/deliveroo'
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/careem'
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/talabat'
+    - '#/components/schemas/StoreMarketplaceChannel/properties/channel/other).'
+    - >-
+      #/components/schemas/StoreMarketplaceChannel/properties/isMarketplace/deliveroo
+    - >-
+      #/components/schemas/StoreMarketplaceChannel/properties/isMarketplace/careem
+    - >-
+      #/components/schemas/StoreMarketplaceChannel/properties/isMarketplace/talabat).
+    - >-
+      #/components/schemas/StoreMarketplaceChannel/properties/cancellationRate/nullable
+    - >-
+      #/components/schemas/StoreMarketplaceChannel/properties/avgOrderValueUsd/nullable
+    - >-
+      #/components/schemas/StoreMarketplacePayout/properties/recordedCommissionUsd/nullable
+    - >-
+      #/components/schemas/StoreMarketplacePayout/properties/recordedPayoutUsd/nullable
+    - >-
+      #/components/schemas/StoreMarketplacePayout/properties/recordedTotalRevenueUsd/nullable
+    - >-
+      #/components/schemas/StoreMarketplacePayout/properties/varianceUsd/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsOverviewResponse/properties/avg_first_response_seconds/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsOverviewResponse/properties/avg_resolution_seconds/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsOverviewResponse/properties/automation_resolution_rate/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsOverviewResponse/properties/human_handoff_rate/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsChannelsResponse/properties/channels/items/properties/last_webhook_received_at/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsChannelsResponse/properties/channels/items/properties/last_error/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsFlowsResponse/properties/flows/items/properties/avg_duration_seconds/nullable
+    - >-
+      #/components/schemas/OmniAnalyticsAgentsResponse/properties/agents/items/properties/avg_resolution_seconds/nullable
+    - >-
+      #/components/schemas/OmniContactsListResponse/properties/contacts/items/properties/email/nullable
+    - >-
+      #/components/schemas/OmniContactsListResponse/properties/contacts/items/properties/phone/nullable
+    - >-
+      #/components/schemas/OmniContactsListResponse/properties/contacts/items/properties/avatar_url/nullable
+    - >-
+      #/components/schemas/OmniContactsListResponse/properties/contacts/items/properties/last_seen_at/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/contact/properties/email/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/contact/properties/phone/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/contact/properties/avatar_url/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/contact/properties/language/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/contact/properties/timezone/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/identities/items/properties/display_name/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/tags/items/properties/color/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/timeline/items/properties/content/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/timeline/items/properties/sender_name/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/timeline/items/properties/channel_name/nullable
+    - >-
+      #/components/schemas/OmniContactProfileResponse/properties/timeline/items/properties/provider/nullable
+    - '#/components/schemas/OmniContactUpdateInput/properties/email/nullable'
+    - '#/components/schemas/OmniContactUpdateInput/properties/phone/nullable'
+    - '#/components/schemas/OmniContactUpdateInput/properties/language/nullable'
+    - '#/components/schemas/OmniContactUpdateInput/properties/timezone/nullable'
+    - >-
+      #/components/schemas/OmniAuditLogResponse/properties/events/items/properties/actor_id/nullable
+    - >-
+      #/components/schemas/OmniAuditLogResponse/properties/events/items/properties/resource_id/nullable
+    - >-
+      #/components/schemas/OmniAuditLogResponse/properties/events/items/properties/metadata/nullable
+    - >-
+      #/paths/~1webhooks~1marketplace-reports~1toters/post/responses/202/content/application~1json/schema/properties/existing_import_id/nullable
+    - >-
+      #/paths/~1brands~1{brandId}~1marketplace-reports~1imports~1manual/post/requestBody/content/multipart~1form-data/schema/properties/location_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/pdf_storage_path/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/pdf_sha256/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/email_message_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/detected_merchant_name/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/detected_brand_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/detected_location_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/auto_matched_alias_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/auto_matched_alias_name/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/brand_name/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/location_name/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/report_period_start/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/report_period_end/nullable
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/extracted_data/nullable
+    - '#/components/schemas/MarketplaceReportImport/properties/notes/nullable'
+    - >-
+      #/components/schemas/MarketplaceReportImport/properties/approved_report_id/nullable
+    - '#/components/schemas/MarketplaceReport/properties/location_id/nullable'
+    - '#/components/schemas/MarketplaceReport/properties/brand_name/nullable'
+    - '#/components/schemas/MarketplaceReport/properties/location_name/nullable'
+    - >-
+      #/components/schemas/MarketplaceReport/properties/detected_merchant_name/nullable
+    - >-
+      #/components/schemas/PatchMarketplaceReportImportInput/properties/detected_brand_id/nullable
+    - >-
+      #/components/schemas/PatchMarketplaceReportImportInput/properties/detected_location_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportMetric/properties/metric_value/nullable
+    - >-
+      #/components/schemas/MarketplaceReportMetric/properties/metric_unit/nullable
+    - '#/components/schemas/MarketplaceReportMetric/properties/category/nullable'
+    - >-
+      #/components/schemas/MarketplaceReportWeeklyTrend/properties/week_start/nullable
+    - >-
+      #/components/schemas/MarketplaceReportWeeklyTrend/properties/value/nullable
+    - >-
+      #/components/schemas/MarketplaceReportWeeklyTrend/properties/metric_name/nullable
+    - '#/components/schemas/MarketplaceReportItem/properties/rank/nullable'
+    - '#/components/schemas/MarketplaceReportItem/properties/quantity/nullable'
+    - '#/components/schemas/MarketplaceReportItem/properties/revenue/nullable'
+    - >-
+      #/components/schemas/MarketplaceReportItem/properties/matched_product_id/nullable
+    - >-
+      #/components/schemas/MarketplaceReportItem/properties/matched_product_name/nullable
+    - '#/components/schemas/MarketplaceReportItem/properties/match_score/nullable'
+    - '#/components/schemas/MarketplaceBrandAlias/properties/brand_id/nullable'
+    - '#/components/schemas/MarketplaceBrandAlias/properties/location_id/nullable'
+    - '#/components/schemas/MarketplaceBrandAlias/properties/brand_name/nullable'
+    - >-
+      #/components/schemas/MarketplaceBrandAlias/properties/location_name/nullable
+    - >-
+      #/components/schemas/MarketplaceBrandAlias/properties/last_used_at/nullable
+    - >-
+      #/components/schemas/CreateMarketplaceBrandAliasInput/properties/location_id/nullable
+    - '#/components/schemas/PublicCatalogProduct/properties/price_usd/nullable'
+    - '#/components/schemas/PublicCatalogProduct/properties/price_aed/nullable'
+    - >-
+      #/components/schemas/PublicCatalogProduct/properties/discount_price_usd/nullable
+    - >-
+      #/components/schemas/PublicCatalogProduct/properties/discount_price_aed/nullable
+    - >-
+      #/components/schemas/PublicCatalogProduct/properties/main_image_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogProduct/properties/additional_image_urls/nullable
+    - '#/components/schemas/PublicCatalogProduct/properties/description/nullable'
+    - '#/components/schemas/PublicCatalogProduct/properties/brand/nullable'
+    - '#/components/schemas/PublicCatalogProduct/properties/tags/nullable'
+    - '#/components/schemas/PublicCatalogProduct/properties/category/nullable'
+    - '#/components/schemas/PublicCatalogProduct/properties/sku/nullable'
+    - '#/components/schemas/PublicCatalogProduct/properties/updated_at/nullable'
+    - '#/components/schemas/PublicCatalogBaseItem/properties/code/nullable'
+    - '#/components/schemas/PublicCatalogBaseItem/properties/image_url/nullable'
+    - '#/components/schemas/PublicCatalogBaseItem/properties/category_id/nullable'
+    - >-
+      #/components/schemas/PublicCatalogBaseItem/properties/main_category_name/nullable
+    - >-
+      #/components/schemas/PublicCatalogBaseItem/properties/sub_category_name/nullable
+    - '#/components/schemas/PublicCatalogBaseItem/properties/type/nullable'
+    - '#/components/schemas/PublicCatalogBaseItem/properties/updated_at/nullable'
+    - >-
+      #/components/schemas/PublicCatalogBaseItem/properties/packages/items/properties/unit/nullable
+    - '#/components/schemas/PublicCatalogBrand/properties/description/nullable'
+    - '#/components/schemas/PublicCatalogBrand/properties/logo_url/nullable'
+    - '#/components/schemas/PublicCatalogBrand/properties/updated_at/nullable'
+    - '#/components/schemas/PublicCatalogBanner/properties/title/nullable'
+    - '#/components/schemas/PublicCatalogBanner/properties/headline/nullable'
+    - '#/components/schemas/PublicCatalogBanner/properties/subtitle/nullable'
+    - '#/components/schemas/PublicCatalogBanner/properties/cta_text/nullable'
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/desktop/properties/media_type/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/desktop/properties/media_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/desktop/properties/fallback_image_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/desktop/properties/link_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/mobile/properties/media_type/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/mobile/properties/media_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/mobile/properties/fallback_image_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogBanner/properties/mobile/properties/link_url/nullable
+    - '#/components/schemas/PublicCatalogBanner/properties/start_at/nullable'
+    - '#/components/schemas/PublicCatalogBanner/properties/end_at/nullable'
+    - '#/components/schemas/PublicCatalogOccasion/properties/description/nullable'
+    - '#/components/schemas/PublicCatalogOccasion/properties/image_url/nullable'
+    - '#/components/schemas/PublicCatalogOccasion/properties/updated_at/nullable'
+    - '#/components/schemas/PublicCatalogOccasion/properties/image/nullable'
+    - '#/components/schemas/PublicCatalogCategory/properties/description/nullable'
+    - '#/components/schemas/PublicCatalogCategory/properties/image_url/nullable'
+    - '#/components/schemas/PublicCatalogCategory/properties/updated_at/nullable'
+    - '#/components/schemas/PublicCatalogCategory/properties/image/nullable'
+    - '#/components/schemas/PublicCatalogCustomer/properties/first_name/nullable'
+    - '#/components/schemas/PublicCatalogCustomer/properties/last_name/nullable'
+    - '#/components/schemas/PublicCatalogCustomer/properties/email/nullable'
+    - '#/components/schemas/PublicCatalogCustomer/properties/phone/nullable'
+    - '#/components/schemas/PublicCatalogCustomer/properties/country/nullable'
+    - '#/components/schemas/PublicCatalogCustomer/properties/city/nullable'
+    - >-
+      #/components/schemas/PublicCatalogCustomer/properties/last_order_at/nullable
+    - '#/components/schemas/WorkshopSale/properties/brand_id/nullable'
+    - '#/components/schemas/WorkshopSale/properties/location_id/nullable'
+    - '#/components/schemas/WorkshopSale/properties/country_id/nullable'
+    - '#/components/schemas/WorkshopSale/properties/sale_type/nullable'
+    - >-
+      #/components/schemas/WorkshopSale/properties/assigned_florist_member_id/nullable
+    - '#/components/schemas/WorkshopSale/properties/payment_status/nullable'
+    - '#/components/schemas/WorkshopSale/properties/customer_type/nullable'
+    - '#/components/schemas/WorkshopSale/properties/customer_id/nullable'
+    - '#/components/schemas/WorkshopSale/properties/customer_name/nullable'
+    - '#/components/schemas/WorkshopSale/properties/customer_phone/nullable'
+    - '#/components/schemas/WorkshopSale/properties/customer_email/nullable'
+    - '#/components/schemas/WorkshopSale/properties/request_description/nullable'
+    - '#/components/schemas/WorkshopSale/properties/occasion/nullable'
+    - '#/components/schemas/WorkshopSale/properties/colors/nullable'
+    - '#/components/schemas/WorkshopSale/properties/style/nullable'
+    - '#/components/schemas/WorkshopSale/properties/budget/nullable'
+    - '#/components/schemas/WorkshopSale/properties/internal_notes/nullable'
+    - '#/components/schemas/WorkshopSale/properties/cogs_amount/nullable'
+    - '#/components/schemas/WorkshopSale/properties/cogs_percentage/nullable'
+    - '#/components/schemas/WorkshopSale/properties/created_by/nullable'
+    - '#/components/schemas/WorkshopSale/properties/updated_by/nullable'
+    - '#/components/schemas/WorkshopSale/properties/created_at/nullable'
+    - '#/components/schemas/WorkshopSale/properties/updated_at/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/brand_id/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/location_id/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/country_id/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/sale_type/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleCreate/properties/assigned_florist_member_id/nullable
+    - '#/components/schemas/WorkshopSaleCreate/properties/status/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/currency/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/customer_type/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/customer_id/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/customer_name/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/customer_phone/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/customer_email/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleCreate/properties/request_description/nullable
+    - '#/components/schemas/WorkshopSaleCreate/properties/occasion/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/colors/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/style/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/budget/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/internal_notes/nullable'
+    - '#/components/schemas/WorkshopSaleCreate/properties/items/nullable'
+    - '#/components/schemas/WorkshopSaleItemInput/properties/description/nullable'
+    - '#/components/schemas/WorkshopSaleItemInput/properties/discount/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleItemInput/properties/discount_type/nullable
+    - '#/components/schemas/WorkshopSaleItemInput/properties/tax_rate/nullable'
+    - '#/components/schemas/WorkshopSaleItem/properties/description/nullable'
+    - '#/components/schemas/WorkshopSaleItem/properties/discount/nullable'
+    - '#/components/schemas/WorkshopSaleItem/properties/discount_type/nullable'
+    - '#/components/schemas/WorkshopSaleItem/properties/tax_rate/nullable'
+    - '#/components/schemas/WorkshopSaleItem/properties/sort_order/nullable'
+    - '#/components/schemas/WorkshopSalePayment/properties/reference/nullable'
+    - '#/components/schemas/WorkshopSalePayment/properties/paid_at/nullable'
+    - '#/components/schemas/WorkshopSalePayment/properties/created_at/nullable'
+    - '#/components/schemas/WorkshopSalePhoto/properties/caption/nullable'
+    - '#/components/schemas/WorkshopSalePhoto/properties/created_at/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleActivityLog/properties/description/nullable
+    - '#/components/schemas/WorkshopSaleActivityLog/properties/actor_id/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleActivityLog/properties/actor_name/nullable
+    - >-
+      #/components/schemas/WorkshopSaleActivityLog/properties/created_at/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsage/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsage/properties/description/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsage/properties/unit_cost/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsage/properties/location_id/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsage/properties/created_at/nullable
+    - '#/components/schemas/WorkshopSaleUpdate/properties/brand_id/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/location_id/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/country_id/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/sale_type/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleUpdate/properties/assigned_florist_member_id/nullable
+    - '#/components/schemas/WorkshopSaleUpdate/properties/currency/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/customer_type/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/customer_id/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/customer_name/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/customer_phone/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/customer_email/nullable'
+    - >-
+      #/components/schemas/WorkshopSaleUpdate/properties/request_description/nullable
+    - '#/components/schemas/WorkshopSaleUpdate/properties/occasion/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/style/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/budget/nullable'
+    - '#/components/schemas/WorkshopSaleUpdate/properties/internal_notes/nullable'
+    - >-
+      #/paths/~1workshop-sales~1{id}~1cancel/post/requestBody/content/application~1json/schema/properties/reason/nullable
+    - >-
+      #/components/schemas/WorkshopSalePaymentCreate/properties/currency/nullable
+    - >-
+      #/components/schemas/WorkshopSalePaymentCreate/properties/reference/nullable
+    - '#/components/schemas/WorkshopSalePaymentCreate/properties/paid_at/nullable'
+    - >-
+      #/paths/~1workshop-sales~1{id}~1photos~1{photoId}/patch/requestBody/content/application~1json/schema/properties/caption/nullable
+    - >-
+      #/components/schemas/WorkshopSaleCogsUpdate/properties/cogs_amount/nullable
+    - >-
+      #/components/schemas/WorkshopSaleCogsUpdate/properties/cogs_percentage/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsageCreate/properties/base_item_id/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsageCreate/properties/description/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsageCreate/properties/unit_cost/nullable
+    - >-
+      #/components/schemas/WorkshopSaleInventoryUsageCreate/properties/location_id/nullable
+    - >-
+      #/paths/~1workshop-sales~1{id}~1receipt~1email/post/requestBody/content/application~1json/schema/properties/email/nullable
+    - '#/components/schemas/ContactListItem/properties/first_name/nullable'
+    - '#/components/schemas/ContactListItem/properties/last_name/nullable'
+    - '#/components/schemas/ContactListItem/properties/display_name/nullable'
+    - '#/components/schemas/ContactListItem/properties/email/nullable'
+    - '#/components/schemas/ContactListItem/properties/phone/nullable'
+    - '#/components/schemas/ContactListItem/properties/last_order_at/nullable'
+    - '#/components/schemas/ContactListItem/properties/customer_id/nullable'
+    - '#/components/schemas/ContactListItem/properties/country/nullable'
+    - >-
+      #/components/schemas/ContactDetail/allOf/1/properties/last_gift_at/nullable
+    - >-
+      #/components/schemas/ContactDetail/allOf/1/properties/last_activity_at/nullable
+    - '#/components/schemas/ContactDetail/allOf/1/properties/source/nullable'
+    - >-
+      #/components/schemas/ContactDetail/allOf/1/properties/preferred_language/nullable
+    - >-
+      #/components/schemas/ContactDetail/allOf/1/properties/gender_source/nullable
+    - >-
+      #/components/schemas/ContactDetail/allOf/1/properties/gender_confidence/nullable
+    - '#/components/schemas/ContactDetail/allOf/1/properties/archived_at/nullable'
+    - '#/components/schemas/ContactRelationship/properties/name/nullable'
+    - '#/components/schemas/ContactRelationship/properties/last_order_at/nullable'
+    - '#/components/schemas/ContactDetail/allOf/1/properties/customer/nullable'
+    - >-
+      #/components/schemas/ContactMatchedCustomer/properties/last_order_at/nullable
+    - '#/components/schemas/UpdateContactRequest/properties/first_name/nullable'
+    - '#/components/schemas/UpdateContactRequest/properties/last_name/nullable'
+    - '#/components/schemas/UpdateContactRequest/properties/display_name/nullable'
+    - '#/components/schemas/UpdateContactRequest/properties/email/nullable'
+    - '#/components/schemas/UpdateContactRequest/properties/phone/nullable'
+    - >-
+      #/components/schemas/UpdateContactRequest/properties/preferred_language/nullable
+    - '#/components/schemas/ContactsKpi/properties/delta_pct/nullable'
+    - >-
+      #/components/schemas/ContactOrderRow/properties/display_order_number/nullable
+    - '#/components/schemas/ContactOrderRow/properties/ordered_at/nullable'
+    - '#/components/schemas/ContactOrderRow/properties/totals/nullable'
+    - '#/components/schemas/ContactNote/properties/author_user_id/nullable'
+    - '#/components/schemas/ContactNote/properties/author_name/nullable'
+    - '#/components/schemas/ContactActivityItem/properties/body/nullable'
+    - '#/components/schemas/ContactActivityItem/properties/actor_user_id/nullable'
+    - '#/components/schemas/ContactActivityItem/properties/actor_name/nullable'
+    - '#/components/schemas/ContactActivityItem/properties/data/nullable'
+    - '#/components/schemas/ContactDuplicate/properties/first_name/nullable'
+    - '#/components/schemas/ContactDuplicate/properties/last_name/nullable'
+    - '#/components/schemas/ContactDuplicate/properties/display_name/nullable'
+    - '#/components/schemas/ContactDuplicate/properties/email/nullable'
+    - '#/components/schemas/ContactDuplicate/properties/phone/nullable'
+    - '#/components/schemas/AccountingMonth/properties/notes/nullable'
+    - '#/components/schemas/AccountingMonth/properties/locked_at/nullable'
+    - '#/components/schemas/AccountingMonth/properties/locked_by/nullable'
+    - '#/components/schemas/AccountingMonthCreate/properties/notes/nullable'
+    - >-
+      #/components/schemas/AccountingMonthOverview/properties/combinedSalesCents/nullable
+    - >-
+      #/components/schemas/AccountingEntityOverview/properties/entityMonthId/nullable
+    - '#/components/schemas/AccountingSourceRow/properties/sourceMonthId/nullable'
+    - '#/components/schemas/AccountingSourceRow/properties/osSalesCents/nullable'
+    - >-
+      #/components/schemas/AccountingSourceRow/properties/externalSourceCents/nullable
+    - >-
+      #/components/schemas/AccountingSourceRow/properties/differenceCents/nullable
+    - '#/components/schemas/AccountingSourceRow/properties/refundsCents/nullable'
+    - '#/components/schemas/AccountingSourceRow/properties/feesCents/nullable'
+    - >-
+      #/components/schemas/AccountingSourceRow/properties/netActivityCents/nullable
+    - '#/components/schemas/AccountingSourceRow/properties/payoutStatus/nullable'
+    - '#/components/schemas/AccountingSourceRow/properties/lastSyncedAt/nullable'
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/last_synced_at/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/sales_amount_cents/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/refunds_amount_cents/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/net_activity_cents/nullable
+    - '#/components/schemas/AccountingSourceMonth/properties/sync_type/nullable'
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/total_amount_cents/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/variance_cents/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/sales_reconciliation_status/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonth/properties/payout_reconciliation_status/nullable
+    - '#/components/schemas/AccountingSourceMonth/properties/notes/nullable'
+    - '#/components/schemas/AccountingChecklistItem/properties/checkedBy/nullable'
+    - '#/components/schemas/AccountingChecklistItem/properties/checkedAt/nullable'
+    - '#/components/schemas/AccountingAuditEvent/properties/actorUserId/nullable'
+    - '#/components/schemas/AccountingAuditEvent/properties/actorName/nullable'
+    - '#/components/schemas/AccountingDocument/properties/mimeType/nullable'
+    - '#/components/schemas/AccountingDocument/properties/entityMonthId/nullable'
+    - '#/components/schemas/AccountingDocument/properties/uploadedBy/nullable'
+    - '#/components/schemas/AccountingDocument/properties/uploaderName/nullable'
+    - '#/components/schemas/SourceSyncRun/properties/completed_at/nullable'
+    - '#/components/schemas/SourceSyncRun/properties/error_message/nullable'
+    - '#/components/schemas/SourceStatementLine/properties/external_ref/nullable'
+    - '#/components/schemas/SourceStatementLine/properties/line_date/nullable'
+    - '#/components/schemas/SourceStatementLine/properties/description/nullable'
+    - '#/components/schemas/SourceStatementLine/properties/reference/nullable'
+    - >-
+      #/components/schemas/SourceStatementLine/properties/matched_order_id/nullable
+    - '#/components/schemas/SourceStatementLine/properties/line_type/nullable'
+    - >-
+      #/components/schemas/SourceStatementLine/properties/match_confidence/nullable
+    - >-
+      #/components/schemas/AccountingSourceMonthBrief/properties/last_synced_at/nullable
+    - '#/components/schemas/AccountingStatementLine/properties/line_date/nullable'
+    - >-
+      #/components/schemas/AccountingStatementLine/properties/description/nullable
+    - '#/components/schemas/AccountingStatementLine/properties/reference/nullable'
+    - >-
+      #/components/schemas/ReconcileSourceMonthResponse/properties/reconciliation/properties/payoutStatus/nullable
+    - '#/components/schemas/AccountingException/properties/entityId/nullable'
+    - '#/components/schemas/AccountingException/properties/entityName/nullable'
+    - '#/components/schemas/AccountingException/properties/sourceMonthId/nullable'
+    - '#/components/schemas/AccountingException/properties/sourceName/nullable'
+    - '#/components/schemas/AccountingException/properties/amountCents/nullable'
+    - '#/components/schemas/AccountingException/properties/currency/nullable'
+    - '#/components/schemas/AccountingException/properties/assignedTo/nullable'
+    - '#/components/schemas/AccountingException/properties/assignedName/nullable'
+    - '#/components/schemas/AccountingException/properties/notes/nullable'
+    - '#/components/schemas/AccountingException/properties/resolution/nullable'
+    - >-
+      #/components/schemas/AccountingException/properties/acceptedDifferenceReason/nullable
+    - '#/components/schemas/AccountingException/properties/externalRef/nullable'
+    - >-
+      #/components/schemas/AccountingException/properties/relatedOrderId/nullable
+    - >-
+      #/components/schemas/AccountingExceptionAuditEntry/properties/assigned_to/nullable
+    - >-
+      #/components/schemas/AccountingExceptionAuditEntry/properties/note/nullable
+    - >-
+      #/components/schemas/AccountingExceptionAuditEntry/properties/action/nullable
+    - '#/components/schemas/AccountingException/properties/resolvedBy/nullable'
+    - '#/components/schemas/AccountingException/properties/resolvedAt/nullable'
+    - >-
+      #/components/schemas/PatchAccountingExceptionInput/properties/assigned_to/nullable
+    - >-
+      #/components/schemas/PatchAccountingExceptionInput/properties/notes/nullable
+    - >-
+      #/components/schemas/PatchAccountingExceptionInput/properties/resolution/nullable
+    - >-
+      #/components/schemas/PatchAccountingExceptionInput/properties/accepted_difference_reason/nullable
+    - '#/components/schemas/JournalEntryHeader/properties/approvedBy/nullable'
+    - '#/components/schemas/JournalEntryHeader/properties/approvedAt/nullable'
+    - '#/components/schemas/JournalEntryLine/properties/description/nullable'
+    - '#/components/schemas/JournalEntryLine/properties/lineType/nullable'
+    - '#/components/schemas/JournalEntryLine/properties/sourceId/nullable'
+    - '#/components/schemas/JournalEntryLine/properties/sourceName/nullable'
+    - '#/components/schemas/VatSummaryRow/properties/sourceId/nullable'
+    - '#/components/schemas/VatSummaryRow/properties/sourceName/nullable'
+    - '#/components/schemas/DeliveryCityCreateInput/properties/slug/nullable'
+    - >-
+      #/components/schemas/DeliveryCityCreateInput/properties/sort_order/nullable
+    - '#/components/schemas/DeliveryCityCreateInput/properties/is_active/nullable'
+    - >-
+      #/components/schemas/PublicCatalogSimpleAttribute/properties/description/nullable
+    - >-
+      #/components/schemas/PublicCatalogSimpleAttribute/properties/image_url/nullable
+    - >-
+      #/components/schemas/PublicCatalogSimpleAttribute/properties/updated_at/nullable
+    - '#/components/schemas/Supplier/properties/vat_status/nullable'
+    - '#/components/schemas/Supplier/properties/vat_not_registered_reason/nullable'
+    - '#/components/schemas/SupplierCreate/properties/vat_status/nullable'
+    - '#/components/schemas/SupplierCreate/properties/vat_not_registered_reason/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/vat_status/nullable'
+    - '#/components/schemas/SupplierUpdate/properties/vat_not_registered_reason/nullable'
+    - '#/components/schemas/BaseItemSupplier/properties/name_ar/nullable'
+    - '#/components/schemas/BaseItemSupplier/properties/name_ar_source/nullable'
+    - '#/components/schemas/PurchaseOrderLineItem/properties/base_item_supplier_id/nullable'
+    - '#/components/schemas/PurchaseOrderLineItemCreate/properties/base_item_supplier_id/nullable'
+    - '#/components/schemas/PurchaseOrderLineItemCreate/properties/description/nullable'
+    - '#/components/schemas/PurchaseOrderLineItemCreate/properties/unit_price/nullable'
+    - '#/components/schemas/PurchaseOrderLineItemCreate/properties/currency/nullable'
+    - '#/components/schemas/PurchaseOrderLineItemUpdate/properties/base_item_supplier_id/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/base_item_code/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/image_url/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/supplier_item_name/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/supplier_item_code/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/price/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/pricing_uom/nullable'
+    - '#/components/schemas/LinkedBaseItem/properties/name_ar/nullable'
+    - '#/components/schemas/BaseItemSupplierCreate/properties/name_ar/nullable'
+    - '#/components/schemas/BaseItemSupplierUpdate/properties/name_ar/nullable'
+  operation-2xx-response:
+    - '#/paths/~1cash-sessions~1{id}~1bill~1{txId}/delete/responses'
+  operation-summary:
+    - '#/paths/~1admin~1homepage-banners~1{id}/get/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}/put/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}/delete/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1duplicate/post/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1activate/post/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1deactivate/post/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1pause/post/summary'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1resume/post/summary'
+  operation-operationId-unique:
+    - '#/paths/~1occasions~1{id}/get/getOccasion'
+    - '#/paths/~1accounting~1source-months/get/getAccountingSourceMonths'
+  no-unused-components:
+    - '#/components/schemas/StoreCustomerCountryRevenue'
+    - '#/components/schemas/DeliveryCitiesResponse'
+    - '#/components/schemas/DeliveryCityCreateInput'
+    - '#/components/schemas/PublicCatalogSimpleAttribute'
+    - '#/components/schemas/AccountingAccountConfig'
+    - '#/components/schemas/StripeSyncResponse'
+  security-defined:
+    - '#/paths/~1review-rewards~1profiles~1{id}/delete'
+    - '#/paths/~1review-rewards~1profiles/get'
+    - '#/paths/~1review-rewards~1profiles/post'
+    - '#/paths/~1review-rewards~1profiles~1{id}/patch'
+    - '#/paths/~1review-rewards~1profiles~1{id}~1pause/post'
+    - '#/paths/~1review-rewards~1profiles~1{id}~1reactivate/post'
+    - '#/paths/~1review-rewards~1profiles~1{id}~1qr/get'
+    - '#/paths/~1review-rewards~1settings/get'
+    - '#/paths/~1review-rewards~1settings/patch'
+    - '#/paths/~1review-rewards~1reviews/get'
+    - '#/paths/~1review-rewards~1reviews~1{id}~1resolve/post'
+    - '#/paths/~1review-rewards~1rewards/get'
+    - '#/paths/~1review-rewards~1rewards~1{id}~1pay/post'
+    - '#/paths/~1review-rewards~1rewards~1{id}~1void/post'
+    - '#/paths/~1review-rewards~1metrics~1overview/get'
+    - '#/paths/~1review-rewards~1metrics~1trend/get'
+    - '#/paths/~1review-rewards~1metrics~1employees/get'
+    - '#/paths/~1review-rewards~1metrics~1latest-matches/get'
+    - '#/paths/~1healthz/get'
+    - '#/paths/~1brands/get'
+    - '#/paths/~1storage~1uploads~1request-url/post'
+    - '#/paths/~1time-off~1balance/get'
+    - '#/paths/~1time-off~1balance~1adjustments/get'
+    - '#/paths/~1time-off~1members~1{memberId}~1balance/get'
+    - '#/paths/~1time-off~1members~1{memberId}~1balance~1adjustments/get'
+    - '#/paths/~1time-off~1requests/get'
+    - '#/paths/~1time-off~1requests/post'
+    - '#/paths/~1time-off~1requests~1{id}~1cancel/post'
+    - '#/paths/~1time-off~1team~1balances/get'
+    - '#/paths/~1time-off~1requests~1{id}~1status/patch'
+    - '#/paths/~1time-off~1notifications/get'
+    - '#/paths/~1time-off~1notifications~1seen/post'
+    - '#/paths/~1time-off~1notifications~1seen-all/post'
+    - '#/paths/~1time-off~1team/get'
+    - '#/paths/~1time-off~1requests~1{id}~1approve/post'
+    - '#/paths/~1time-off~1requests~1{id}~1decline/post'
+    - '#/paths/~1time-off~1policies/get'
+    - '#/paths/~1time-off~1policies/post'
+    - '#/paths/~1time-off~1policies~1{id}/get'
+    - '#/paths/~1time-off~1policies~1{id}/delete'
+    - '#/paths/~1time-off~1policies~1{id}/patch'
+    - '#/paths/~1time-off~1policies~1{id}~1assign/post'
+    - '#/paths/~1time-off~1policies~1{id}~1assignees/get'
+    - '#/paths/~1time-off~1policies~1{id}~1balance-adjustment/post'
+    - '#/paths/~1time-off~1calendar/get'
+    - '#/paths/~1public-holidays~1calendars/get'
+    - '#/paths/~1public-holidays~1calendars/post'
+    - '#/paths/~1public-holidays~1calendars~1{id}/delete'
+    - '#/paths/~1public-holidays~1calendars~1{id}/patch'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1holidays/get'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1holidays/post'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1holidays~1{holidayId}/delete'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1holidays~1{holidayId}/patch'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1assign/post'
+    - '#/paths/~1public-holidays~1import~1countries/get'
+    - '#/paths/~1public-holidays~1import~1regions~1{countryCode}/get'
+    - '#/paths/~1public-holidays~1import~1types/get'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1import~1preview/post'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1import~1approve/post'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1export-csv/get'
+    - '#/paths/~1public-holidays~1calendars~1{id}~1import-csv/post'
+    - '#/paths/~1public-holidays~1my/get'
+    - '#/paths/~1base-item-categories~1stats/get'
+    - '#/paths/~1base-item-categories/get'
+    - '#/paths/~1base-item-categories/post'
+    - '#/paths/~1base-item-categories~1merge/post'
+    - '#/paths/~1base-item-categories~1{id}/delete'
+    - '#/paths/~1base-item-categories~1{id}/patch'
+    - '#/paths/~1base-item-categories~1{id}~1archive/post'
+    - '#/paths/~1base-item-categories~1{id}~1reorder/post'
+    - '#/paths/~1base-item-categories~1{id}~1base-items/get'
+    - '#/paths/~1base-items~1bulk-update-category/post'
+    - '#/paths/~1base-items~1bulk-update-type/post'
+    - '#/paths/~1base-items~1bulk-archive/post'
+    - '#/paths/~1base-items~1merge/post'
+    - '#/paths/~1base-items/get'
+    - '#/paths/~1base-items~1summary/get'
+    - '#/paths/~1base-items~1stock-alerts/get'
+    - '#/paths/~1base-items~1check-name/get'
+    - '#/paths/~1base-items~1{id}/get'
+    - '#/paths/~1base-items~1{id}/patch'
+    - '#/paths/~1products~1category-options/get'
+    - '#/paths/~1products~1summary/get'
+    - '#/paths/~1products~1{id}~1sales-history/get'
+    - '#/paths/~1products~1{id}~1cogs/get'
+    - '#/paths/~1base-items~1{id}~1duplicate/post'
+    - '#/paths/~1base-items~1{id}~1usage/get'
+    - '#/paths/~1base-items~1{id}~1products/get'
+    - '#/paths/~1base-items~1{id}~1location-statuses/get'
+    - '#/paths/~1base-items~1{id}~1location-statuses~1{locationId}/patch'
+    - '#/paths/~1base-items~1{id}~1location-stock~1{locationId}/patch'
+    - '#/paths/~1base-items~1{id}~1packages/get'
+    - '#/paths/~1base-items~1{id}~1packages/post'
+    - '#/paths/~1base-items~1{id}~1packages~1{packageId}/delete'
+    - '#/paths/~1base-items~1{id}~1packages~1{packageId}/patch'
+    - '#/paths/~1base-items~1{id}~1suppliers/get'
+    - '#/paths/~1base-items~1{id}~1suppliers/post'
+    - '#/paths/~1base-items~1{id}~1suppliers~1{supplierId}/delete'
+    - '#/paths/~1base-items~1{id}~1suppliers~1{supplierId}/patch'
+    - '#/paths/~1base-items~1{id}~1inventory-overview/get'
+    - '#/paths/~1base-items~1{id}~1stock-movements/get'
+    - '#/paths/~1base-items~1{id}~1country-thresholds/get'
+    - '#/paths/~1base-items~1{id}~1country-thresholds~1{country}/put'
+    - '#/paths/~1base-items~1{id}~1transfers/post'
+    - '#/paths/~1base-items~1{id}~1adjustments/get'
+    - '#/paths/~1base-items~1{id}~1adjustments/post'
+    - '#/paths/~1base-items~1{id}~1invoices/get'
+    - '#/paths/~1base-items~1{id}~1audit-log/get'
+    - '#/paths/~1base-items~1import~1template/get'
+    - '#/paths/~1base-items~1import/post'
+    - '#/paths/~1base-items~1deletion-history/get'
+    - '#/paths/~1roles/get'
+    - '#/paths/~1roles/post'
+    - '#/paths/~1roles~1{id}/delete'
+    - '#/paths/~1roles~1{id}/patch'
+    - '#/paths/~1roles~1{id}~1duplicate/post'
+    - '#/paths/~1suppliers/get'
+    - '#/paths/~1suppliers/post'
+    - '#/paths/~1suppliers~1bulk-assign/post'
+    - '#/paths/~1suppliers~1check-duplicate/get'
+    - '#/paths/~1suppliers~1{id}/get'
+    - '#/paths/~1suppliers~1{id}/delete'
+    - '#/paths/~1suppliers~1{id}/patch'
+    - '#/paths/~1suppliers~1{id}~1assignments/put'
+    - '#/paths/~1suppliers~1{id}~1items/get'
+    - '#/paths/~1suppliers~1{id}~1documents/get'
+    - '#/paths/~1suppliers~1{id}~1documents/post'
+    - '#/paths/~1suppliers~1{id}~1invoices/get'
+    - '#/paths/~1suppliers~1{id}~1invoices/post'
+    - '#/paths/~1suppliers~1{id}~1spend-trend/get'
+    - '#/paths/~1suppliers~1{id}~1invoices~1extract/post'
+    - '#/paths/~1suppliers~1{id}~1invoices~1duplicate-check/get'
+    - '#/paths/~1suppliers~1{id}~1invoices~1export/get'
+    - '#/paths/~1suppliers~1{id}~1invoices~1{invoiceId}/delete'
+    - '#/paths/~1suppliers~1{id}~1invoices~1{invoiceId}/patch'
+    - '#/paths/~1purchase-orders/get'
+    - '#/paths/~1purchase-orders/post'
+    - '#/paths/~1purchase-orders~1{id}/get'
+    - '#/paths/~1purchase-orders~1{id}/delete'
+    - '#/paths/~1purchase-orders~1{id}/patch'
+    - '#/paths/~1purchase-orders~1{id}~1line-items/get'
+    - '#/paths/~1purchase-orders~1{id}~1line-items/post'
+    - '#/paths/~1purchase-orders~1{id}~1send/post'
+    - '#/paths/~1purchase-orders~1{id}~1accept/post'
+    - '#/paths/~1purchase-orders~1{id}~1acceptance~1manual/post'
+    - '#/paths/~1po-accept~1{token}/get'
+    - '#/paths/~1po-accept~1{token}~1respond/post'
+    - '#/paths/~1purchase-orders~1{id}~1receive/post'
+    - '#/paths/~1purchase-orders~1{id}~1line-item-stocks/get'
+    - '#/paths/~1purchase-orders~1{id}~1receive-history/get'
+    - '#/paths/~1purchase-orders~1{id}~1activity/get'
+    - '#/paths/~1purchase-orders~1{id}~1invoices/get'
+    - '#/paths/~1purchase-orders~1{id}~1invoices/post'
+    - '#/paths/~1purchase-orders~1{id}~1invoices~1{invoiceId}/delete'
+    - '#/paths/~1purchase-orders~1{id}~1match/get'
+    - '#/paths/~1purchase-orders~1{id}~1line-items~1{lineItemId}/delete'
+    - '#/paths/~1purchase-orders~1{id}~1line-items~1{lineItemId}/patch'
+    - '#/paths/~1suppliers~1{supplierId}~1catalog-items/get'
+    - '#/paths/~1suppliers~1{supplierId}~1catalog-items/post'
+    - '#/paths/~1suppliers~1{supplierId}~1catalog-items~1{itemId}/get'
+    - '#/paths/~1suppliers~1{supplierId}~1catalog-items~1{itemId}/delete'
+    - '#/paths/~1suppliers~1{supplierId}~1catalog-items~1{itemId}/patch'
+    - '#/paths/~1suppliers~1{supplierId}~1catalog-items~1{itemId}~1stock-log/get'
+    - '#/paths/~1suppliers~1{id}~1documents~1{docId}/delete'
+    - '#/paths/~1suppliers~1{id}~1statements/get'
+    - '#/paths/~1suppliers~1{id}~1statements/post'
+    - '#/paths/~1suppliers~1{id}~1statements~1{statementId}/delete'
+    - '#/paths/~1tax-rules/get'
+    - '#/paths/~1tax-rules/post'
+    - '#/paths/~1tax-rules~1resolve/get'
+    - '#/paths/~1tax-rules~1{id}/delete'
+    - '#/paths/~1tax-rules~1{id}/patch'
+    - '#/paths/~1channel-product-dimensions/get'
+    - '#/paths/~1channel-product-dimensions/post'
+    - '#/paths/~1channel-product-dimensions~1{id}/put'
+    - '#/paths/~1channel-product-dimensions~1{id}/delete'
+    - '#/paths/~1channels~1{id}/get'
+    - '#/paths/~1channels~1{channelId}~1image-configs/post'
+    - '#/paths/~1channels~1{channelId}~1image-configs~1{configId}/put'
+    - '#/paths/~1channels~1{channelId}~1image-configs~1{configId}/delete'
+    - '#/paths/~1channels~1{channelId}~1contacts/post'
+    - '#/paths/~1channels~1{channelId}~1contacts~1{contactId}/put'
+    - '#/paths/~1channels~1{channelId}~1contacts~1{contactId}/delete'
+    - '#/paths/~1fleet~1docs/get'
+    - '#/paths/~1fleet~1spec/get'
+    - '#/paths/~1fleet~1drivers/get'
+    - '#/paths/~1fleet~1drivers/post'
+    - '#/paths/~1fleet~1drivers~1{id}/get'
+    - '#/paths/~1fleet~1drivers~1{id}/delete'
+    - '#/paths/~1fleet~1drivers~1{id}/patch'
+    - '#/paths/~1cash-sessions~1{id}~1bill~1invoice/post'
+    - '#/paths/~1cash-sessions~1{id}~1bill/post'
+    - '#/paths/~1cash-sessions~1{id}~1bill~1{txId}/delete'
+    - '#/paths/~1cash-sessions~1{id}~1bill~1{txId}/patch'
+    - '#/paths/~1cash-sessions~1{id}~1sale/post'
+    - '#/paths/~1cash-sessions~1{id}~1expense/post'
+    - '#/paths/~1cash-sessions~1{id}~1transactions~1{txId}~1reverse/post'
+    - '#/paths/~1fleet~1drivers~1{id}~1link-clerk/post'
+    - '#/paths/~1fleet~1drivers~1{id}~1vehicles/get'
+    - '#/paths/~1fleet~1drivers~1{id}~1vehicles/post'
+    - '#/paths/~1fleet~1drivers~1{id}~1vehicles~1{vehicleId}/delete'
+    - '#/paths/~1fleet~1drivers~1{id}~1availability/get'
+    - '#/paths/~1fleet~1drivers~1{id}~1availability/post'
+    - '#/paths/~1fleet~1drivers~1{id}~1availability/patch'
+    - '#/paths/~1fleet~1assignments/get'
+    - '#/paths/~1fleet~1assignments/post'
+    - '#/paths/~1fleet~1assignments~1{id}/patch'
+    - '#/paths/~1fleet~1delivery-events/get'
+    - '#/paths/~1fleet~1delivery-events/post'
+    - '#/paths/~1fleet~1proof-of-delivery/get'
+    - '#/paths/~1fleet~1proof-of-delivery/post'
+    - '#/paths/~1storefront~1homepage-banners/get'
+    - '#/paths/~1admin~1homepage-banners/get'
+    - '#/paths/~1admin~1homepage-banners/post'
+    - '#/paths/~1admin~1homepage-banners~1{id}/get'
+    - '#/paths/~1admin~1homepage-banners~1{id}/put'
+    - '#/paths/~1admin~1homepage-banners~1{id}/delete'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1duplicate/post'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1activate/post'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1deactivate/post'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1pause/post'
+    - '#/paths/~1admin~1homepage-banners~1{id}~1resume/post'
+    - '#/paths/~1admin~1storefront-workspace/get'
+    - '#/paths/~1admin~1storefront-workspace/put'
+    - '#/paths/~1admin~1storefront-workspace/delete'
+    - '#/paths/~1fleet~1auth~1send-otp/post'
+    - '#/paths/~1fleet~1auth~1verify-otp/post'
+    - '#/paths/~1fleet~1me~1transactions/post'
+    - '#/paths/~1fleet~1drivers~1{id}~1onboarding-status/patch'
+    - '#/paths/~1fleet~1drivers~1{id}~1rotate-token/post'
+    - '#/paths/~1fleet~1taxi-companies/get'
+    - '#/paths/~1fleet~1vehicle-types/get'
+    - '#/paths/~1fleet~1vehicle-types/post'
+    - '#/paths/~1fleet~1vehicle-types~1{id}/delete'
+    - '#/paths/~1fleet~1vehicle-types~1{id}/patch'
+    - '#/paths/~1fleet~1orders/get'
+    - '#/paths/~1fleet~1drivers~1{id}~1status/patch'
+    - '#/paths/~1fleet~1orders~1{id}/get'
+    - '#/paths/~1fleet~1orders~1{id}~1status/patch'
+    - '#/paths/~1fleet~1orders~1{id}~1proof-of-delivery/post'
+    - '#/paths/~1fleet~1orders~1{id}~1assign-driver/delete'
+    - '#/paths/~1fleet~1orders~1{id}~1assign-driver/patch'
+    - '#/paths/~1customers/get'
+    - '#/paths/~1customers~1{id}/get'
+    - '#/paths/~1customers~1{id}/patch'
+    - '#/paths/~1customers~1{id}~1orders/get'
+    - '#/paths/~1customers~1upsert-from-order/post'
+    - '#/paths/~1admin~1settings~1countries/get'
+    - '#/paths/~1admin~1settings~1countries~1{countryCode}~1delivery/patch'
+    - '#/paths/~1admin~1settings~1cities~1{id}/delete'
+    - '#/paths/~1admin~1settings~1cities~1{id}/patch'
+    - '#/paths/~1attendance~1push-token/post'
+    - '#/paths/~1attendance~1today/get'
+    - '#/paths/~1attendance~1clock-in/post'
+    - '#/paths/~1attendance~1clock-out/post'
+    - '#/paths/~1attendance~1start-break/post'
+    - '#/paths/~1attendance~1end-break/post'
+    - '#/paths/~1attendance~1my-timesheets/get'
+    - '#/paths/~1attendance~1my-requests/get'
+    - '#/paths/~1attendance~1requests/post'
+    - '#/paths/~1admin~1attendance~1live/get'
+    - '#/paths/~1admin~1attendance~1timesheets/get'
+    - '#/paths/~1admin~1attendance~1requests~1pending-count/get'
+    - '#/paths/~1admin~1attendance~1requests/get'
+    - '#/paths/~1admin~1attendance~1requests~1bulk-approve/post'
+    - '#/paths/~1admin~1attendance~1requests~1bulk-reject/post'
+    - '#/paths/~1admin~1attendance~1requests~1{id}~1approve/post'
+    - '#/paths/~1admin~1attendance~1requests~1{id}~1reject/post'
+    - '#/paths/~1admin~1attendance~1sessions~1{id}~1approve/post'
+    - '#/paths/~1admin~1attendance~1sessions~1{id}~1reject/post'
+    - '#/paths/~1admin~1attendance~1sessions~1{id}/patch'
+    - '#/paths/~1admin~1attendance~1sessions~1{id}~1lock/post'
+    - '#/paths/~1admin~1attendance~1sessions~1{id}~1audit-log/get'
+    - '#/paths/~1admin~1attendance~1export.csv/get'
+    - '#/paths/~1cities~1{id}~1express-settings/get'
+    - '#/paths/~1cities~1{id}~1express-settings/patch'
+    - '#/paths/~1cities~1{id}~1schedule-summary/get'
+    - '#/paths/~1cities~1{id}~1weekly-slots/get'
+    - '#/paths/~1cities~1{id}~1weekly-slots/post'
+    - '#/paths/~1cities~1{id}~1weekly-slots~1copy/post'
+    - '#/paths/~1cities~1{id}~1weekly-slots~1{slotId}/delete'
+    - '#/paths/~1cities~1{id}~1weekly-slots~1{slotId}/patch'
+    - '#/paths/~1delivery-overrides/get'
+    - '#/paths/~1delivery-overrides/post'
+    - '#/paths/~1delivery-overrides~1{overrideId}/get'
+    - '#/paths/~1delivery-overrides~1{overrideId}/delete'
+    - '#/paths/~1delivery-overrides~1{overrideId}/patch'
+    - '#/paths/~1delivery-overrides~1{overrideId}~1slots/get'
+    - '#/paths/~1delivery-overrides~1{overrideId}~1slots/post'
+    - '#/paths/~1delivery-overrides~1{overrideId}~1slots~1{slotId}/delete'
+    - '#/paths/~1delivery-overrides~1{overrideId}~1slots~1{slotId}/patch'
+    - '#/paths/~1delivery-availability/get'
+    - '#/paths/~1products~1{id}~1duplicate/post'
+    - '#/paths/~1coupons/get'
+    - '#/paths/~1coupons/post'
+    - '#/paths/~1coupons~1{id}/get'
+    - '#/paths/~1coupons~1{id}/delete'
+    - '#/paths/~1coupons~1{id}/patch'
+    - '#/paths/~1ad-spend/get'
+    - '#/paths/~1ad-spend/post'
+    - '#/paths/~1ad-spend~1{id}/delete'
+    - '#/paths/~1ad-spend~1{id}/patch'
+    - '#/paths/~1ad-platforms/get'
+    - '#/paths/~1ad-platforms~1{platform}~1connect/post'
+    - '#/paths/~1ad-platforms~1{platform}~1sync/post'
+    - '#/paths/~1ad-platforms~1{platform}/delete'
+    - '#/paths/~1seo-metrics/get'
+    - '#/paths/~1seo-metrics/post'
+    - '#/paths/~1seo-metrics~1{id}/delete'
+    - '#/paths/~1orders/get'
+    - '#/paths/~1orders~1manual/post'
+    - '#/paths/~1orders~1{id}/get'
+    - '#/paths/~1orders~1{id}/delete'
+    - '#/paths/~1orders~1{id}/patch'
+    - '#/paths/~1orders~1{id}~1contacts/patch'
+    - '#/paths/~1orders~1{id}~1contact-edits/get'
+    - '#/paths/~1orders~1{id}~1activity/get'
+    - '#/paths/~1orders~1{id}~1communications/get'
+    - '#/paths/~1orders~1{id}~1communications~1send/post'
+    - '#/paths/~1orders~1{id}~1internal-notes/post'
+    - '#/paths/~1orders~1{id}~1line-items/post'
+    - '#/paths/~1orders~1{id}~1line-items~1{itemId}/delete'
+    - '#/paths/~1orders~1{id}~1line-items~1{itemId}/patch'
+    - '#/paths/~1orders~1{id}~1card-pdf/get'
+    - '#/paths/~1orders~1{id}~1send-to-florist/post'
+    - '#/paths/~1orders~1{id}~1florist-assignment/get'
+    - '#/paths/~1florist-orders/get'
+    - '#/paths/~1florist-orders~1manual-review/get'
+    - '#/paths/~1florist-orders~1manual-review~1count/get'
+    - '#/paths/~1florist-orders~1manual-review~1slack-pending/get'
+    - '#/paths/~1florist-orders~1manual-review~1{id}~1approve/post'
+    - '#/paths/~1florist-orders~1manual-review~1{id}~1slack-retry/post'
+    - '#/paths/~1florist-orders~1{id}~1start/post'
+    - '#/paths/~1florist-orders~1{id}~1pause/post'
+    - '#/paths/~1florist-orders~1{id}~1complete/post'
+    - '#/paths/~1florist-orders~1{id}~1card-pdf/get'
+    - '#/paths/~1florist-orders~1{id}~1photos~1{slot}/put'
+    - '#/paths/~1florist-orders~1{id}~1photos~1{slot}/delete'
+    - '#/paths/~1florist-orders~1{id}~1verify/post'
+    - '#/paths/~1florist-orders~1{id}~1slack-retry/post'
+    - '#/paths/~1orders~1{id}~1refund/post'
+    - '#/paths/~1orders~1{id}~1mark-paid/post'
+    - '#/paths/~1orders~1{id}~1send-payment-instructions/post'
+    - '#/paths/~1orders~1backfill-tookan/post'
+    - '#/paths/~1orders~1{id}~1retry-tookan/post'
+    - '#/paths/~1country-flags~1{code}/put'
+    - '#/paths/~1country-flags~1{code}/delete'
+    - '#/paths/~1exchange-rates/get'
+    - '#/paths/~1exchange-rates~1refresh/post'
+    - '#/paths/~1exchange-rates~1convert/get'
+    - '#/paths/~1marketing-budgets/get'
+    - '#/paths/~1marketing-budgets/post'
+    - '#/paths/~1marketing-budgets~1{id}/get'
+    - '#/paths/~1marketing-budgets~1{id}/delete'
+    - '#/paths/~1marketing-budgets~1{id}/patch'
+    - '#/paths/~1occasion-campaigns~1occasions/get'
+    - '#/paths/~1occasion-campaigns~1occasions/post'
+    - '#/paths/~1occasion-campaigns~1occasions~1{id}/get'
+    - '#/paths/~1occasion-campaigns~1occasions~1{id}/delete'
+    - '#/paths/~1occasion-campaigns~1occasions~1{id}/patch'
+    - '#/paths/~1occasion-campaigns~1plans/get'
+    - '#/paths/~1occasion-campaigns~1plans/post'
+    - '#/paths/~1occasion-campaigns~1plans~1{id}/patch'
+    - '#/paths/~1occasion-campaigns~1actions/get'
+    - '#/paths/~1occasion-campaigns~1actions~1{id}/patch'
+    - '#/paths/~1occasion-campaigns~1summary/get'
+    - '#/paths/~1settings~1workspace-slug/patch'
+    - '#/paths/~1exchange-rate-settings/get'
+    - '#/paths/~1exchange-rate-settings/patch'
+    - '#/paths/~1public~1currency-rates/get'
+    - '#/paths/~1profile/get'
+    - '#/paths/~1profile/patch'
+    - '#/paths/~1security~1sessions/get'
+    - '#/paths/~1security~1sessions~1{sessionId}~1revoke/post'
+    - '#/paths/~1security~1sessions~1revoke-others/post'
+    - '#/paths/~1security~1alert-events/get'
+    - '#/paths/~1publish/post'
+    - '#/paths/~1publish~1products/post'
+    - '#/paths/~1webhook-endpoints/get'
+    - '#/paths/~1webhook-endpoints/post'
+    - '#/paths/~1webhook-endpoints~1{id}/get'
+    - '#/paths/~1webhook-endpoints~1{id}/delete'
+    - '#/paths/~1webhook-endpoints~1{id}/patch'
+    - '#/paths/~1webhook-endpoints~1{id}~1deliveries/get'
+    - '#/paths/~1webhook-endpoints~1{id}~1deliveries~1{deliveryId}~1retry/post'
+    - '#/paths/~1occasions/get'
+    - '#/paths/~1occasions/post'
+    - '#/paths/~1occasions~1{id}/get'
+    - '#/paths/~1occasions~1{id}/delete'
+    - '#/paths/~1occasions~1{id}/patch'
+    - '#/paths/~1occasions~1{id}~1city-availability/get'
+    - '#/paths/~1occasions~1{id}~1city-availability/put'
+    - '#/paths/~1occasions~1{id}~1city-availability~1bulk/patch'
+    - '#/paths/~1catalog_categories/get'
+    - '#/paths/~1catalog_categories/post'
+    - '#/paths/~1catalog_categories~1{id}/get'
+    - '#/paths/~1catalog_categories~1{id}/delete'
+    - '#/paths/~1catalog_categories~1{id}/patch'
+    - '#/paths/~1catalog_categories~1{id}~1city-availability/get'
+    - '#/paths/~1catalog_categories~1{id}~1city-availability/put'
+    - '#/paths/~1catalog_categories~1{id}~1city-availability~1bulk/patch'
+    - '#/paths/~1catalog_brands/get'
+    - '#/paths/~1catalog_brands/post'
+    - '#/paths/~1catalog_brands~1{id}/get'
+    - '#/paths/~1catalog_brands~1{id}/delete'
+    - '#/paths/~1catalog_brands~1{id}/patch'
+    - '#/paths/~1catalog_brands~1{id}~1city-availability/get'
+    - '#/paths/~1catalog_brands~1{id}~1city-availability/put'
+    - '#/paths/~1catalog_brands~1{id}~1city-availability~1bulk/patch'
+    - '#/paths/~1recipients/get'
+    - '#/paths/~1recipients/post'
+    - '#/paths/~1recipients~1{id}/get'
+    - '#/paths/~1recipients~1{id}/delete'
+    - '#/paths/~1recipients~1{id}/patch'
+    - '#/paths/~1recipients~1{id}~1city-availability/get'
+    - '#/paths/~1recipients~1{id}~1city-availability/put'
+    - '#/paths/~1recipients~1{id}~1city-availability~1bulk/patch'
+    - '#/paths/~1products~1{id}~1city-availability/get'
+    - '#/paths/~1products~1{id}~1city-availability/put'
+    - '#/paths/~1products~1{id}~1city-availability~1bulk/patch'
+    - '#/paths/~1products~1{id}~1country-availability/get'
+    - '#/paths/~1products~1{id}~1country-availability/put'
+    - '#/paths/~1products~1{id}~1country-availability~1bulk/patch'
+    - '#/paths/~1products~1bulk/patch'
+    - '#/paths/~1products~1bulk-delete/post'
+    - '#/paths/~1omnichannel~1conversations/get'
+    - '#/paths/~1omnichannel~1conversations~1{id}/get'
+    - '#/paths/~1omnichannel~1conversations~1{id}/patch'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1messages/post'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1notes/post'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1assign/post'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1resolve/post'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1reopen/post'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1pause-automation/post'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1resume-automation/post'
+    - '#/paths/~1omnichannel~1tags/get'
+    - '#/paths/~1omnichannel~1tags/post'
+    - '#/paths/~1omnichannel~1tags~1{id}/delete'
+    - '#/paths/~1omnichannel~1tags~1{id}/patch'
+    - '#/paths/~1omnichannel~1conversations~1{id}~1tags/put'
+    - '#/paths/~1omnichannel~1conversations~1bulk-action/post'
+    - '#/paths/~1omnichannel~1saved-replies/get'
+    - '#/paths/~1omnichannel~1ai~1draft-reply/post'
+    - '#/paths/~1omnichannel~1ai~1summarize/post'
+    - '#/paths/~1omnichannel~1ai~1classify/post'
+    - '#/paths/~1omnichannel~1knowledge-base/get'
+    - '#/paths/~1omnichannel~1knowledge-base/post'
+    - '#/paths/~1omnichannel~1knowledge-base~1{id}/delete'
+    - '#/paths/~1omnichannel~1knowledge-base~1{id}/patch'
+    - '#/paths/~1omnichannel~1channels/get'
+    - '#/paths/~1omnichannel~1channels/post'
+    - '#/paths/~1omnichannel~1channels~1{id}/get'
+    - '#/paths/~1omnichannel~1channels~1{id}/delete'
+    - '#/paths/~1omnichannel~1channels~1{id}/patch'
+    - '#/paths/~1omnichannel~1channels~1{id}~1test/post'
+    - '#/paths/~1omnichannel~1channels~1{id}~1reconnect/post'
+    - '#/paths/~1store-analytics~1customer-insights/get'
+    - '#/paths/~1store-analytics~1executive-overview/get'
+    - '#/paths/~1store-analytics~1net-revenue-breakdown/get'
+    - '#/paths/~1store-analytics~1performance-summary/get'
+    - '#/paths/~1store-analytics~1product-performance/get'
+    - '#/paths/~1store-analytics~1cart-checkout/get'
+    - '#/paths/~1store-analytics~1delivery/get'
+    - '#/paths/~1store-analytics~1operations/get'
+    - '#/paths/~1store-analytics~1funnel/get'
+    - '#/paths/~1store-analytics~1sales/get'
+    - '#/paths/~1store-analytics~1time-slots/get'
+    - '#/paths/~1store-analytics~1payment-methods/get'
+    - '#/paths/~1store-analytics~1marketing/get'
+    - '#/paths/~1store-analytics~1search-discovery/get'
+    - '#/paths/~1store-analytics~1seo/get'
+    - '#/paths/~1store-analytics~1inventory-cogs/get'
+    - '#/paths/~1inventory-analytics~1overview/get'
+    - '#/paths/~1inventory-analytics~1movements/get'
+    - '#/paths/~1inventory-analytics~1variance/get'
+    - '#/paths/~1inventory-analytics~1wastage/get'
+    - '#/paths/~1inventory-analytics~1procurement/get'
+    - '#/paths/~1inventory-analytics~1transfers/get'
+    - '#/paths/~1inventory-analytics~1theoretical-cost/get'
+    - '#/paths/~1inventory-analytics~1actual-cost/get'
+    - '#/paths/~1inventory-analytics~1cogs-target/get'
+    - '#/paths/~1inventory-analytics~1cogs-target/put'
+    - '#/paths/~1base-items~1wastage/post'
+    - '#/paths/~1store-analytics~1insights/get'
+    - '#/paths/~1store-analytics~1marketplace/get'
+    - '#/paths/~1store-analytics~1marketplace~1commission-rates/put'
+    - '#/paths/~1omnichannel~1analytics~1overview/get'
+    - '#/paths/~1omnichannel~1analytics~1channels/get'
+    - '#/paths/~1omnichannel~1analytics~1flows/get'
+    - '#/paths/~1omnichannel~1analytics~1agents/get'
+    - '#/paths/~1omnichannel~1contacts/get'
+    - '#/paths/~1omnichannel~1contacts~1{id}/get'
+    - '#/paths/~1omnichannel~1contacts~1{id}/patch'
+    - '#/paths/~1omnichannel~1contacts~1{id}~1tags/post'
+    - '#/paths/~1omnichannel~1contacts~1{id}~1tags~1{tagId}/delete'
+    - '#/paths/~1omnichannel~1contacts~1{id}~1anonymize/post'
+    - '#/paths/~1omnichannel~1audit-log/get'
+    - '#/paths/~1brands~1{brandId}~1marketplace-reports~1imports~1manual/post'
+    - '#/paths/~1brands~1{brandId}~1marketplace-report-imports/get'
+    - '#/paths/~1brands~1{brandId}~1marketplace-reports/get'
+    - '#/paths/~1marketplace-report-imports~1{importId}/get'
+    - '#/paths/~1marketplace-report-imports~1{importId}/patch'
+    - '#/paths/~1marketplace-report-imports~1{importId}~1match-products/post'
+    - '#/paths/~1marketplace-report-imports~1{importId}~1retry/post'
+    - '#/paths/~1marketplace-report-imports~1{importId}~1re-extract/post'
+    - '#/paths/~1marketplace-report-imports~1{importId}~1approve/post'
+    - '#/paths/~1marketplace-reports~1{reportId}/get'
+    - '#/paths/~1marketplace-reports~1{reportId}~1source-pdf/get'
+    - '#/paths/~1marketplace-brand-aliases/get'
+    - '#/paths/~1marketplace-brand-aliases/post'
+    - '#/paths/~1marketplace-brand-aliases~1{id}/patch'
+    - '#/paths/~1marketplace-brand-aliases~1{id}/delete'
+    - '#/paths/~1people/get'
+    - '#/paths/~1people/post'
+    - '#/paths/~1people~1{id}/get'
+    - '#/paths/~1people~1{id}/delete'
+    - '#/paths/~1people~1{id}/patch'
+    - '#/paths/~1workshop-sales/get'
+    - '#/paths/~1workshop-sales/post'
+    - '#/paths/~1workshop-sales~1{id}/get'
+    - '#/paths/~1workshop-sales~1{id}/delete'
+    - '#/paths/~1workshop-sales~1{id}/patch'
+    - '#/paths/~1workshop-sales~1{id}~1status/patch'
+    - '#/paths/~1workshop-sales~1{id}~1cancel/post'
+    - '#/paths/~1workshop-sales~1{id}~1items/post'
+    - '#/paths/~1workshop-sales~1{id}~1items~1{itemId}/delete'
+    - '#/paths/~1workshop-sales~1{id}~1items~1{itemId}/patch'
+    - '#/paths/~1workshop-sales~1{id}~1payments/post'
+    - '#/paths/~1workshop-sales~1{id}~1payments~1{paymentId}/delete'
+    - '#/paths/~1workshop-sales~1{id}~1photos/post'
+    - '#/paths/~1workshop-sales~1{id}~1photos~1{photoId}~1cover/patch'
+    - '#/paths/~1workshop-sales~1{id}~1photos~1{photoId}/delete'
+    - '#/paths/~1workshop-sales~1{id}~1photos~1{photoId}/patch'
+    - '#/paths/~1workshop-sales~1{id}~1cogs/patch'
+    - '#/paths/~1workshop-sales~1{id}~1inventory-usage/post'
+    - '#/paths/~1workshop-sales~1{id}~1inventory-usage~1{usageId}/delete'
+    - '#/paths/~1workshop-sales~1{id}~1receipt/get'
+    - '#/paths/~1workshop-sales~1{id}~1receipt~1email/post'
+    - '#/paths/~1contacts/get'
+    - '#/paths/~1contacts~1wizard-search/get'
+    - '#/paths/~1contacts~1wizard-duplicate-check/get'
+    - '#/paths/~1contacts~1wizard-create/post'
+    - '#/paths/~1contacts~1{id}/get'
+    - '#/paths/~1contacts~1{id}/patch'
+    - '#/paths/~1contacts~1{id}~1archive/post'
+    - '#/paths/~1contacts~1{id}~1unarchive/post'
+    - '#/paths/~1contacts~1summary/get'
+    - '#/paths/~1contacts~1{id}~1orders/get'
+    - '#/paths/~1contacts~1{id}~1tags/post'
+    - '#/paths/~1contacts~1{id}~1tags~1{tag}/delete'
+    - '#/paths/~1contacts~1{id}~1notes/get'
+    - '#/paths/~1contacts~1{id}~1notes/post'
+    - '#/paths/~1contacts~1{id}~1notes~1{noteId}/delete'
+    - '#/paths/~1contacts~1{id}~1notes~1{noteId}/patch'
+    - '#/paths/~1contacts~1{id}~1activity/get'
+    - '#/paths/~1contacts~1{id}~1duplicates/get'
+    - '#/paths/~1contacts~1{id}~1respondio-sync/post'
+    - '#/paths/~1contacts~1{id}~1respondio-sync/delete'
+    - '#/paths/~1contacts~1{id}~1merge/post'
+    - '#/paths/~1accounting~1months/get'
+    - '#/paths/~1accounting~1months/post'
+    - '#/paths/~1accounting~1months~1{id}/get'
+    - '#/paths/~1accounting~1months~1{id}~1overview/get'
+    - '#/paths/~1accounting~1months~1{monthId}~1source-months/get'
+    - '#/paths/~1accounting~1entity-months~1{id}~1checklist/get'
+    - '#/paths/~1accounting~1entity-months~1{id}~1checklist~1{itemId}/patch'
+    - '#/paths/~1accounting~1entity-months~1{id}~1close/post'
+    - '#/paths/~1accounting~1entity-months~1{id}~1reopen/post'
+    - '#/paths/~1accounting~1entity-months~1{id}~1audit/get'
+    - '#/paths/~1accounting~1entity-months~1{id}~1documents/get'
+    - '#/paths/~1accounting~1entity-months~1{id}~1documents/post'
+    - '#/paths/~1accounting~1documents~1{id}/delete'
+    - '#/paths/~1accounting~1source-months/get'
+    - '#/paths/~1accounting~1source-months~1ensure/post'
+    - '#/paths/~1accounting~1source-months~1{id}/get'
+    - '#/paths/~1accounting~1source-months~1{id}~1sync/post'
+    - '#/paths/~1accounting~1source-months~1{id}~1sync-runs/get'
+    - '#/paths/~1accounting~1source-months~1{id}~1lines/get'
+    - '#/paths/~1accounting~1source-months~1{id}~1reconcile/post'
+    - '#/paths/~1accounting~1months~1{id}~1exceptions/get'
+    - '#/paths/~1accounting~1exceptions~1{id}/patch'
+    - '#/paths/~1accounting~1exceptions~1bulk-assign/post'
+    - '#/paths/~1accounting~1sources~1{id}~1config/get'
+    - '#/paths/~1accounting~1sources~1{id}~1config/patch'
+    - '#/paths/~1accounting~1entity-months~1{id}~1journal-entry~1generate/post'
+    - '#/paths/~1accounting~1entity-months~1{id}~1journal-entry/get'
+    - '#/paths/~1accounting~1journal-entries~1{id}~1approve/patch'
+    - '#/paths/~1accounting~1journal-entries~1{id}~1export/get'
+    - '#/paths/~1accounting~1entity-months~1{id}~1vat-summary~1generate/post'
+    - '#/paths/~1accounting~1entity-months~1{id}~1vat-summary/get'
+    - '#/paths/~1base-items~1bulk-add-supplier/post'
+    - '#/paths/~1base-items~1bulk-remove-supplier/post'
+    - '#/paths/~1suppliers~1{supplierId}~1linked-base-items/get'

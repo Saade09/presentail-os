@@ -1,0 +1,37 @@
+{
+  "schema": "presentail.production-services.v1",
+  "domain": "os.presentail.com",
+  "services": [
+    {
+      "package": "@workspace/api-server",
+      "paths": ["/api", "/driver", "/driver/"],
+      "runtime": "node",
+      "publishValidation": "API TypeScript check plus esbuild production bundle and production-entry integration smoke test"
+    },
+    {
+      "package": "@workspace/print-agent-web",
+      "paths": ["/"],
+      "runtime": "static",
+      "publishValidation": "tsc with tsconfig.production.json plus Vite production bundle"
+    }
+  ],
+  "retainedSeparateArtifacts": [
+    {
+      "package": "@workspace/os-mobile",
+      "path": "/os-mobile/",
+      "reason": "Native/TestFlight workflows are documented; keep its independent artifact production contract until customer manifest usage is verified."
+    },
+    {
+      "package": "@workspace/pos",
+      "path": "/pos/",
+      "reason": "Keep its independent artifact production contract until native/customer manifest usage is verified."
+    }
+  ],
+  "excludedFromRootProductionBuild": [
+    "@workspace/os-mobile",
+    "@workspace/pos",
+    "@workspace/mockup-sandbox",
+    "@workspace/scanner-agent",
+    "@workspace/scripts"
+  ]
+}

@@ -1,0 +1,44 @@
+# EAS build upload excludes — keep the archive small.
+# Only exclude content the OS Mobile iOS build does not need.
+# NOTE: do NOT exclude other workspace packages' package.json / source,
+# because EAS runs `pnpm install` for the whole workspace and needs the
+# lockfile to resolve.
+
+# Dependencies (pruned so the archive walker never descends into them)
+**/node_modules/
+node_modules/
+
+# Large tracked assets unrelated to the mobile build
+attached_assets/
+
+# Build outputs / caches
+**/static-build/
+**/dist/
+**/.cache/
+.cache/
+**/test-results/
+**/playwright-report/
+**/.metro-cache/
+**/.expo/
+
+# Version control / agent scratch
+.git/
+.agents/
+.local/
+
+# Python print-agent + odoo addons (not part of the mobile build)
+print-agent/
+odoo-addons/
+
+# Secrets that must never be uploaded
+**/asc-api-key.p8
+**/credentials.json
+.env
+
+# Additional large dirs not needed for the iOS build
+.config/
+backups/
+exports/
+extensions/
+test-results/
+.husky/

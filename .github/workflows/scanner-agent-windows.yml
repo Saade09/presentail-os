@@ -1,0 +1,158 @@
+name: Scanner Agent Windows Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "scanner-agent-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows-installer:
+    name: Build and verify x64 NSIS installer
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.26.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install scanner agent dependencies
+        run: pnpm install --filter @workspace/scanner-agent --frozen-lockfile
+
+      - name: Verify tag, package, and runtime version parity
+        run: pnpm --filter @workspace/scanner-agent run verify-version
+
+      - name: Test configurable inbox and upload behavior
+        run: pnpm --filter @workspace/scanner-agent test
+
+      - name: Build unpacked application for dependency validation
+        run: |
+          pnpm --filter @workspace/scanner-agent run build
+          pnpm --filter @workspace/scanner-agent exec electron-builder --win --x64 --dir --publish never
+
+      - name: Build versioned NSIS installer
+        env:
+          CSC_LINK: ${{ secrets.SCANNER_AGENT_CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.SCANNER_AGENT_CSC_KEY_PASSWORD }}
+        run: pnpm --filter @workspace/scanner-agent run dist:win
+
+      - name: Verify installer and record checksum
+        run: pnpm --filter @workspace/scanner-agent run verify-release
+
+      - name: Install and smoke-test first-run pairing UI
+        shell: pwsh
+        run: |
+          $installer = Get-ChildItem `
+            ".\artifacts\scanner-agent\release\Presentail-Scanner-Agent-*-x64.exe" |
+            Select-Object -First 1
+          $installedExe = Join-Path `
+            $env:LOCALAPPDATA `
+            "Programs\Presentail Scanner Agent\Presentail Scanner Agent.exe"
+          $smokeResult = Join-Path `
+            $env:LOCALAPPDATA `
+            "PresentailScannerAgent\first-run-smoke.json"
+
+          Remove-Item $smokeResult -ErrorAction SilentlyContinue
+          $install = Start-Process `
+            -FilePath $installer.FullName `
+            -ArgumentList "/S" `
+            -Wait `
+            -PassThru
+          if ($install.ExitCode -ne 0 -or -not (Test-Path $installedExe)) {
+            throw "Scanner Agent installation failed or installed EXE is missing"
+          }
+
+          $agent = Start-Process `
+            -FilePath $installedExe `
+            -ArgumentList "--smoke-test-first-run" `
+            -PassThru
+
+          $deadline = (Get-Date).AddSeconds(30)
+          while ((Get-Date) -lt $deadline -and -not (Test-Path $smokeResult)) {
+            Start-Sleep -Milliseconds 500
+          }
+          if (-not (Test-Path $smokeResult)) {
+            if (-not $agent.HasExited) { Stop-Process -Id $agent.Id -Force }
+            throw "Installed agent did not report first-run UI readiness"
+          }
+
+          $result = Get-Content $smokeResult -Raw | ConvertFrom-Json
+          if ($agent.HasExited) {
+            throw "Installed agent exited before first-run verification"
+          }
+          if (
+            -not $result.setupWindowCreated `
+            -or -not $result.setupWindowVisible `
+            -or -not $result.rendererLoaded `
+            -or -not $result.trayInitialized `
+            -or $result.credentialExists
+          ) {
+            throw "Installed first-run state is invalid: $($result | ConvertTo-Json -Compress)"
+          }
+
+          Stop-Process -Id $agent.Id -Force
+
+      - name: Load native modules in packaged Electron runtime
+        shell: pwsh
+        run: |
+          $process = Start-Process `
+            -FilePath ".\artifacts\scanner-agent\release\win-unpacked\Presentail Scanner Agent.exe" `
+            -ArgumentList "--verify-packaged-runtime" `
+            -Wait `
+            -PassThru
+          if ($process.ExitCode -ne 0) {
+            throw "Packaged Electron runtime verification failed with exit code $($process.ExitCode)"
+          }
+
+      - name: Retain installer and update manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: scanner-agent-windows-${{ github.ref_name }}
+          path: |
+            artifacts/scanner-agent/release/Presentail-Scanner-Agent-*-x64.exe
+            artifacts/scanner-agent/release/latest.yml
+            artifacts/scanner-agent/release/SHA256SUMS.txt
+            artifacts/scanner-agent/release/RELEASE-METADATA.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Publish durable GitHub release assets
+        if: startsWith(github.ref, 'refs/tags/scanner-agent-v')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            artifacts/scanner-agent/release/Presentail-Scanner-Agent-*-x64.exe \
+            artifacts/scanner-agent/release/latest.yml \
+            artifacts/scanner-agent/release/SHA256SUMS.txt \
+            artifacts/scanner-agent/release/RELEASE-METADATA.json \
+            --verify-tag --generate-notes
+
+      - name: Update scanner-specific auto-update channel
+        if: startsWith(github.ref, 'refs/tags/scanner-agent-v')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view scanner-agent-current >/dev/null 2>&1; then
+            gh release create scanner-agent-current \
+              --target "$GITHUB_SHA" \
+              --title "Scanner Agent Current" \
+              --notes "Rolling update feed for packaged Presentail Scanner Agents."
+          fi
+          gh release upload scanner-agent-current \
+            artifacts/scanner-agent/release/Presentail-Scanner-Agent-*-x64.exe \
+            artifacts/scanner-agent/release/latest.yml \
+            artifacts/scanner-agent/release/SHA256SUMS.txt \
+            artifacts/scanner-agent/release/RELEASE-METADATA.json \
+            --clobber

@@ -1,0 +1,36 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node scripts/publish/preinstall.mjs",
+    "postinstall": "node scripts/publish/postinstall.mjs",
+    "prepare": "husky",
+    "build": "pnpm run build:production",
+    "build:production": "node scripts/publish/production-build.mjs",
+    "build:full": "node scripts/build-with-timing.cjs root",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+    "typecheck:production": "node scripts/publish/production-typecheck.mjs",
+    "validate:api-release-candidate": "bash scripts/validate-api-release-candidate.sh",
+    "check:deployment-context": "node scripts/publish/context-inventory.mjs --check",
+    "audit:deployment-context": "node scripts/publish/context-inventory.mjs --report",
+    "check:orphan-code": "pnpm --filter @workspace/scripts run check:orphan-code",
+    "publish:report": "node scripts/publish/publish-report.mjs",
+    "test:publish-tools": "node --test test/publish/pipeline-tools.test.mjs test/publish/transcript.test.mjs",
+    "publish:cache-maintenance": "node scripts/publish/cache-maintenance.mjs"
+  },
+  "private": true,
+  "packageManager": "pnpm@10.26.1",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "eas-cli": "^21.5.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  },
+  "dependencies": {
+    "google-auth-library": "^10.9.0",
+    "zod": "^4.4.3"
+  }
+}

@@ -1,0 +1,73 @@
+# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# compiled output
+dist
+tmp
+out-tsc
+*.tsbuildinfo
+.expo
+.expo-shared
+
+# dependencies
+node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+**/coverage/
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
+
+# Playwright e2e
+artifacts/print-agent-web/e2e/.auth-state.json
+artifacts/print-agent-web/test-results/
+artifacts/print-agent-web/playwright-report/
+artifacts/print-agent-web/.env.test
+
+# Replit
+.cache/
+.local/
+artifacts/print-agent-web/public/opengraph.jpg
+artifacts/os-mobile/test-results/.last-run.json
+
+# Apple private keys (never commit)
+*.p8
+AuthKey_*.p8
+
+# Uploaded JSON files (may contain credentials)
+attached_assets/*.json
+
+# Keep Replit-local configuration and developer environment values private.
+.replit
+.replitignore
+.env
+.env.*
+!.env.example
+!**/.env.example

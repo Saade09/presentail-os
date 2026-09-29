@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "hello": "tsx ./src/hello.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "fix-migrated-member-ids": "node src/fix-migrated-member-ids.cjs",
+    "fix-stuck-invites": "node src/fix-stuck-invites.cjs",
+    "seed:omnichannel": "tsx ./src/seed-omnichannel.ts",
+    "seed:branch-print-configs": "tsx ./src/seedBranchPrintConfigs.ts",
+    "simulate:webhook": "tsx ./src/simulate-webhook.ts",
+    "health-check": "tsx ./src/health-check.ts",
+    "smoke-test": "tsx ./src/smoke-test.ts",
+    "production-auth-gate": "tsx ./src/production-auth-gate.ts",
+    "audit:approved-odoo": "tsx ./src/audit-approved-odoo.ts",
+    "set-ledger-cutover": "tsx ./src/setLedgerCutover.ts",
+    "check:orphan-code": "node --test src/orphan-code-audit.test.mjs && node src/orphan-code-audit.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "^8.20.0",
+    "tsx": "catalog:"
+  },
+  "dependencies": {
+    "pg": "^8.20.0"
+  }
+}

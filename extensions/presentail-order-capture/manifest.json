@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Presentail Order Capture",
+  "version": "1.1.0",
+  "description": "Capture structured order data from the Toters Merchant Admin page with one click.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://merchant.totersapp.com/*",
+    "https://*.replit.app/*",
+    "https://*.replit.dev/*"
+  ],
+  "optional_host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Presentail Order Capture"
+  },
+  "content_scripts": [],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["https://merchant.totersapp.com/*"]
+    }
+  ]
+}

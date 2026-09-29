@@ -1,0 +1,26 @@
+appId: com.presentail.osmobile
+---
+- launchApp:
+    clearState: true
+
+- assertVisible:
+    id: "welcome-headline"
+
+- assertVisible: "Your workday, in one place."
+
+- tapOn: "Sign in"
+
+- assertVisible: "Email address"
+
+- assertVisible:
+    id: "email-input"
+
+- assertVisible: "Password"
+
+- assertVisible:
+    id: "password-input"
+
+- assertVisible: "Welcome back"
+
+- assertVisible:
+    id: "apple-sign-in-button"

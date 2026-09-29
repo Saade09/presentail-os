@@ -1,0 +1,88 @@
+{
+  "expo": {
+    "name": "Presentail OS Mobile",
+    "slug": "os-mobile",
+    "version": "1.0.1",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "os-mobile",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f9fafb"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.presentail.osmobile",
+      "buildNumber": "64",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "Presentail OS Mobile uses your location to verify where you clock in and out for attendance.",
+        "NSPhotoLibraryUsageDescription": "Presentail OS Mobile lets you choose a photo from your library for your profile.",
+        "NSCameraUsageDescription": "Presentail OS Mobile lets you take a photo for your profile."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#f9fafb"
+      },
+      "package": "com.presentail.osmobile",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      "expo-secure-store",
+      "expo-apple-authentication",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Presentail OS Mobile uses your location to verify where you clock in and out for attendance."
+        }
+      ],
+      "expo-notifications",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.528216136004-v5h4uhvqv7lo1lasqotbndhg6fb5fh5n"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0b397aef-d6de-490f-a6c5-65b790437d31"
+      },
+      "googleIosClientId": "528216136004-v5h4uhvqv7lo1lasqotbndhg6fb5fh5n.apps.googleusercontent.com",
+      "googleWebClientId": "528216136004-mqhbspj79luo27u42fj1llgppqsvsec0.apps.googleusercontent.com"
+    },
+    "owner": "saade01"
+  }
+}

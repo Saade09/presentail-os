@@ -1,0 +1,7 @@
+
+# E2E test auth session cache
+e2e/.auth-session.json
+e2e/.protected-route-ids.json
+
+# Playwright trace viewer output
+1/

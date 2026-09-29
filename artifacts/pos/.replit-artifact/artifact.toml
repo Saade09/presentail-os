@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/pos/"
+title = "Presentail POS"
+version = "1.0.0"
+id = "artifacts/pos"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/pos/" ]
+localPort = 22177
+
+[services.development]
+run = "pnpm --filter @workspace/pos run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pos", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/pos", "run", "serve" ]
+
+[services.env]
+PORT = "22177"
+BASE_PATH = "/pos/"

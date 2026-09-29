@@ -1,0 +1,49 @@
+# Exclude large workspace directories that are not needed for the os-mobile build.
+# EAS_NO_VCS=1 must be set so EAS archives the working dir (honoring .gitignore +
+# this file) instead of using git-archive (which pulls in all tracked files).
+
+# Monorepo siblings — not needed for the mobile build
+artifacts/api-server/
+artifacts/print-agent-web/
+artifacts/mockup-sandbox/
+artifacts/pos/
+# Scripts
+scripts/
+
+# Large asset dirs at repo root
+attached_assets/
+backups/
+exports/
+extensions/
+
+# Nix / npm caches (can be hundreds of MB)
+.config/
+.cache/
+.local/
+.agents/
+
+# Git internals
+.git/
+
+# node_modules at root (each artifact has its own)
+node_modules/
+
+# Build outputs
+dist/
+web-build/
+.expo/
+
+# Secrets — never upload to the EAS BUILD archive.
+# Note: google-services-account.json is used by `eas submit` which reads it
+# LOCALLY (not from the build archive), so excluding it here is correct and safe.
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.jks
+# google-services.json is intentionally NOT excluded here — the EAS build archive
+# must include it so Expo can configure FCM (expo-notifications) on Android.
+# It is gitignored so it is never committed to version control.
+google-services-account.json
+asc-api-key.p8
+credentials.json

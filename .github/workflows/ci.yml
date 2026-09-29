@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  print-agent-tests:
+    name: Print agent tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests (print-agent)
+        run: python -m unittest discover -s print-agent -p "test_*.py" -v
+
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check for reintroduced orphan code
+        run: pnpm run check:orphan-code
+
+      - name: Run unit tests (api-server) with coverage
+        run: pnpm --filter @workspace/api-server test --coverage
+
+      - name: Upload unit test coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-coverage-report
+          path: artifacts/api-server/coverage/unit/
+          retention-days: 14
+
+  integration-tests:
+    name: Integration tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/testdb
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create initDb-check database
+        run: |
+          PGPASSWORD=postgres psql \
+            -h localhost -U postgres \
+            -d testdb \
+            -c "CREATE DATABASE testdb_initdb_check;"
+
+      - name: Run initDb on fresh database (no Drizzle push)
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/testdb_initdb_check
+        run: pnpm --filter @workspace/api-server exec tsx ./src/scripts/run-initdb.ts
+
+      - name: Run integration tests (api-server) with coverage
+        env:
+          INITDB_CHECK_DATABASE_URL: postgres://postgres:postgres@localhost:5432/testdb_initdb_check
+        run: pnpm --filter @workspace/api-server test:integration --coverage
+
+      - name: Upload integration test coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-coverage-report
+          path: artifacts/api-server/coverage/integration/
+          retention-days: 14

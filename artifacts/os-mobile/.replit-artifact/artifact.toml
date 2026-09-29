@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/os-mobile/"
+title = "Presentail OS Mobile"
+version = "1.0.0"
+id = "artifacts/os-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/os-mobile/" ]
+localPort = 22179
+
+[services.development]
+run = "pnpm --filter @workspace/os-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/os-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/os-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "22179"
+BASE_PATH = "/os-mobile/"

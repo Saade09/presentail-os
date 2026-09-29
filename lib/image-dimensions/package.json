@@ -1,0 +1,10 @@
+{
+  "name": "@workspace/image-dimensions",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node --test index.test.cjs"
+  }
+}

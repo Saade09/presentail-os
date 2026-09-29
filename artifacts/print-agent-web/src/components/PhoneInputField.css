@@ -1,0 +1,159 @@
+/*
+ * Overrides for react-phone-number-input/style.css
+ *
+ * The parent <PhoneInput> element receives all shadcn Input classes
+ * (border, rounded-md, h-9, bg-transparent, shadow-sm, focus-within ring).
+ * These rules make the inner country-selector and text-input look like a
+ * single cohesive shadcn control instead of two separate widgets.
+ */
+
+/* ── Outer wrapper ────────────────────────────────────────────────────────── */
+
+/*
+ * Reinforce flex layout on the outer <PhoneInput> container.
+ * The library's style.css already sets these, but since PhoneInputField.css
+ * is the last unlayered stylesheet to load, restating them here ensures the
+ * flex row is preserved even in contexts such as overflow-y:auto wrappers or
+ * flex-column dialog layouts where cascade ordering could otherwise interfere.
+ */
+.PhoneInput {
+  display: flex;
+  align-items: center;
+}
+
+/* ── Inner text field ─────────────────────────────────────────────────────── */
+
+.PhoneInputInput {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+.PhoneInputInput::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.PhoneInputInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.PhoneInputInput:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ── Flag icon box ────────────────────────────────────────────────────────── */
+
+/*
+ * `.PhoneInputCountryIcon` is sized by the library's CSS variables
+ * (default: 1.5em wide × 1em tall). We make it a flex-stretch container so
+ * `.phone-flag-wrapper` fills it completely without needing explicit sizes.
+ */
+.PhoneInputCountryIcon {
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+/*
+ * `.phone-flag-wrapper` is the span rendered by PhoneFlagComponent. It fills
+ * `.PhoneInputCountryIcon` via flex-stretch above. overflow:hidden +
+ * border-radius clip the flag to a neat rounded rectangle.
+ */
+.phone-flag-wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/*
+ * EmbeddedFlagProps only accepts `title`, so we can't pass className/style to
+ * the FlagSvg component. Target the SVG via a descendant selector instead.
+ * SVG presentation attributes (width/height) lose to CSS in the cascade, so
+ * these rules reliably make the flag fill its wrapper.
+ */
+.phone-flag-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Country-selector column ──────────────────────────────────────────────── */
+
+.PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  /* Prevent the flag+dial-code column from shrinking away in any flex context */
+  flex-shrink: 0;
+  gap: 0.25rem;
+  /* Subtle separator between the flag section and the number field */
+  padding-inline-end: 0.5rem;
+  margin-inline-end: 0.375rem;
+  border-inline-end: 1px solid hsl(var(--border));
+  background: transparent;
+  /* Ensure the overlay <select> is positioned relative to this element */
+  position: relative;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Keep the flag/caret target visibly identifiable as the country selector. */
+.PhoneInputCountry::after {
+  content: "";
+  position: absolute;
+  inset: -0.25rem;
+  border-radius: 0.25rem;
+  pointer-events: none;
+}
+
+.PhoneInputCountry:focus-within::after {
+  border: 1px solid hsl(var(--ring));
+  box-shadow: 0 0 0 1px hsl(var(--ring));
+}
+
+/* The invisible <select> that intercepts clicks for the flag picker */
+.PhoneInputCountrySelect {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.PhoneInputCountrySelect:disabled {
+  cursor: not-allowed;
+}
+
+/* Dropdown caret — keep it subtle and teal-tinted to match the design */
+.PhoneInputCountrySelectArrow {
+  display: block;
+  width: 0.25em;
+  height: 0.25em;
+  border-style: solid;
+  border-color: hsl(var(--muted-foreground));
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-right-width: 1px;
+  transform: rotate(45deg);
+  margin-bottom: 0.15em;
+  opacity: 0.6;
+  flex-shrink: 0;
+}

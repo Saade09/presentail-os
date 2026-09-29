@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <title>Presentail Scanner Agent — Setup</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background: #1a56db;
+      color: #fff;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    main {
+      flex: 1;
+      padding: 28px 28px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      overflow-y: auto;
+    }
+
+    .intro {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    input[type="text"], input[type="url"] {
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 14px;
+      font-family: inherit;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.15s;
+      background: #fff;
+    }
+
+    input[type="text"]:focus, input[type="url"]:focus {
+      border-color: #1a56db;
+      box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.12);
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #777;
+    }
+
+    .actions {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s, opacity 0.15s;
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    #btn-pair {
+      background: #1a56db;
+      color: #fff;
+    }
+
+    #btn-pair:not(:disabled):hover {
+      background: #1648c0;
+    }
+
+    #error-banner {
+      display: none;
+      padding: 10px 14px;
+      background: #fff0f0;
+      border: 1px solid #f5b8b8;
+      border-radius: 5px;
+      font-size: 13px;
+      color: #c0392b;
+      line-height: 1.4;
+    }
+
+    #success-banner {
+      display: none;
+      padding: 10px 14px;
+      background: #eafbea;
+      border: 1px solid #a3d9a5;
+      border-radius: 5px;
+      font-size: 13px;
+      color: #217a3c;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <header>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="4" fill="rgba(255,255,255,0.2)"/>
+      <path d="M6 8h12M6 12h8M6 16h5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <h1>Presentail Scanner Agent — Setup</h1>
+  </header>
+
+  <main>
+    <p class="intro">
+      In Presentail OS, open <strong>Settings → Devices → Invoice Scanners</strong>,
+      enable the station, select an active default entity, then generate a fresh pairing code.
+    </p>
+
+    <div class="field">
+      <label for="server-url">Presentail OS URL</label>
+      <input
+        id="server-url"
+        type="url"
+        placeholder="https://os.presentail.com"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <span class="hint">Copy the exact URL shown in the Presentail OS pairing dialog.</span>
+    </div>
+
+    <div class="field">
+      <label for="pairing-code">Pairing Code</label>
+      <input
+        id="pairing-code"
+        type="text"
+        placeholder="e.g. AXBK7P3C"
+        maxlength="12"
+        autocomplete="off"
+        spellcheck="false"
+        style="text-transform: uppercase; letter-spacing: 0.15em; font-size: 18px;"
+      />
+      <span class="hint">Fresh 8-character code from Presentail OS › Scanner Stations. Single-use and valid for 15 minutes.</span>
+    </div>
+
+    <div class="field">
+      <label for="inbox-dir">HP Scan Destination Folder</label>
+      <input
+        id="inbox-dir"
+        type="text"
+        value="C:\PresentailScanner\Inbox"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <span class="hint">This must exactly match the destination folder configured in the HP Scan preset. Uploaded and Failed folders will be created beside it.</span>
+    </div>
+
+    <div id="error-banner" role="alert"></div>
+    <div id="success-banner"></div>
+
+    <p class="hint">
+      After pairing, save a PDF, JPG, or PNG to the HP Scan destination above.
+      Confirm it moves to the sibling Uploaded folder, appears in Presentail OS → Recent Imports, and the station's last-seen time updates. Reopen the agent from the
+      Start menu; when it is already running, look under the taskbar's hidden-icons arrow.
+    </p>
+
+    <div class="actions">
+      <button id="btn-pair" type="button">Pair this station</button>
+    </div>
+  </main>
+
+  <script src="setup.js"></script>
+</body>
+</html>
