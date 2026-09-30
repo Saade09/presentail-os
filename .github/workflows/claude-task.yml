@@ -1,0 +1,124 @@
+# Lets a Presentail Hive agent hand a coding task to Claude Code (the "claude_code" tool,
+# server/claudeCode.js in adnanammache/presentail-hive): Claude Code checks out this repo,
+# makes the change, and opens a pull request against main. It never merges or publishes
+# anything — a person reviews and merges.
+#
+# Commit this file to Saade09/presentail-os as .github/workflows/claude-task.yml
+#
+# Prerequisites in THIS repository (Settings):
+#   1. Secrets and variables → Actions → New repository secret:
+#        ANTHROPIC_API_KEY = <an Anthropic API key>
+#      (separate from the ANTHROPIC_API_KEY Railway variable Hive itself runs on)
+#   2. Actions → General → Workflow permissions → tick
+#        "Allow GitHub Actions to create and approve pull requests"
+#      Without it the job cannot open the PR.
+#   3. Secrets and variables → Actions → New repository secret:
+#        CLAUDE_PR_TOKEN = <fine-grained PAT, this repo only:
+#                           Contents read/write, Pull requests read/write, Issues read/write.
+#                           Do NOT grant Workflows — see the note at the end of this header.>
+#      Strongly recommended. GitHub never starts a workflow run from an event created by a
+#      repository's own GITHUB_TOKEN, and this repo's ci.yml runs on `push: ["**"]` AND
+#      `pull_request: ["**"]`. So with GITHUB_TOKEN alone, neither the branch push nor the
+#      pull request triggers CI: every Claude-opened PR shows "Checks: none reported" and
+#      you have to review it with no test results. With CLAUDE_PR_TOKEN set, CI runs
+#      normally. The line below falls back to GITHUB_TOKEN if the secret is absent, so the
+#      workflow still works either way.
+#
+# Adapted from adnanammache/presentail-hive's claude-task.yml for this repo's stack:
+# pnpm 10 workspace + Node 20, install steps copied from this repo's own ci.yml. There is no
+# root `test` script here, so the checks below are the ones ci.yml actually runs.
+#
+# Node version: this repo pins nothing (no .nvmrc, no `engines` field); all three of its
+# workflow jobs use Node 20, so that is what this file uses. Adding .nvmrc or `engines` to
+# the repo would stop this file and CI drifting apart.
+#
+# NOT reviewed by the Presentail OS owner: Sami Younes did not answer within Hive's window,
+# so the off-limits paths below are my own reading of the repo, not his. Get his sign-off
+# before committing this.
+#
+# Deliberately NOT granted: `workflows: write` — and for the same reason, do not tick
+# "Workflows" when creating CLAUDE_PR_TOKEN. A PAT's permissions override the
+# `permissions:` block below, so a PAT with Workflows would let Claude Code rewrite
+# this repo's CI and deployment workflows.
+# Claude Code therefore cannot add or edit
+# anything under .github/workflows/ — CI, deployment and release automation stay human-only.
+name: Claude Code task
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'What to build or fix'
+        required: true
+      title:
+        description: 'Short title (used in the pull request)'
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HUSKY: 0 # this repo installs husky git hooks via `prepare`; they must not block the commit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          # A PAT here means the branch push and the pull request are NOT authored by the
+          # repository's own GITHUB_TOKEN, so this repo's CI actually runs on them.
+          token: ${{ secrets.CLAUDE_PR_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.CLAUDE_PR_TOKEN || secrets.GITHUB_TOKEN }}
+          base_branch: main
+          prompt: |
+            ${{ github.event.inputs.title && format('# {0}', github.event.inputs.title) || '' }}
+            ${{ github.event.inputs.task }}
+
+            About this repository:
+            - It is a pnpm workspace (pnpm 10, Node 20). Use `pnpm`, never `npm` or `yarn`:
+              `npm ci` will fail here.
+            - Install with `pnpm install --frozen-lockfile`.
+            - There is no root `test` script. The checks CI runs, and that you should run for
+              any code you touch, are:
+                pnpm run check:orphan-code
+                pnpm --filter @workspace/api-server test
+                pnpm run typecheck
+              plus, if you changed anything under print-agent/:
+                python -m unittest discover -s print-agent -p "test_*.py"
+            - Do not run `pnpm run build` / `build:production`: it is a publish pipeline
+              (scripts/publish/production-build.mjs), not a plain compile. Use `pnpm run
+              typecheck` to prove the code compiles.
+            - Do not edit anything under .github/workflows/ — the token has no permission to
+              push it and the push will be rejected. If CI needs changing, say so in the pull
+              request description instead.
+            - Do not change pnpm-lock.yaml by hand; if a dependency is genuinely needed, let
+              pnpm update the lockfile and call it out clearly in the pull request.
+
+            How to deliver this:
+            1. Create a new branch off main named `hive/<short-slug>-${{ github.run_id }}`.
+            2. Make the change, run the relevant checks above, and commit.
+            3. Push the branch and open a pull request against main with
+               `gh pr create --base main --title "<title>" --body "<what changed and why, and which checks you ran>"`.
+            Do not merge it — a person reviews and merges every change here.
+          claude_args: |
+            --max-turns 100
+            --permission-mode acceptEdits
+            --allowedTools "Read,Grep,Glob,Bash(git:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(pnpm install:*),Bash(pnpm run:*),Bash(pnpm --filter:*),Bash(pnpm test:*),Bash(python:*),Bash(node:*),Bash(ls:*),Bash(cat:*),Bash(grep:*),Bash(find:*)"
