@@ -210,6 +210,9 @@ const basePlace = {
   verified_at: null,
   verified_by: null,
   coordinate_source: null,
+  verification_precision: null as "exact" | "landmark" | "street" | "locality" | null,
+  verification_method: null as string | null,
+  verification_source: null as string | null,
   location_conflict: null as boolean | null,
   city_country_code: null as string | null,
 };
