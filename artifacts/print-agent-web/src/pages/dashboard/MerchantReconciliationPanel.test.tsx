@@ -101,7 +101,7 @@ describe("MerchantReconciliationPanel migration gate", () => {
     expect(screen.getByTestId("execution-disabled-alert")).toHaveTextContent(/execution disabled/i);
     expect(screen.getByTestId("btn-apply-run")).toBeDisabled();
 
-    for (const [id, status] of [[1, "APPROVED"], [2, "PENDING"], [3, "DISAPPROVED"], [4, "TIMED_OUT"]]) {
+    for (const [id, status] of [[1, "APPROVED"], [2, "PENDING"], [3, "DISAPPROVED"], [4, "TIMED_OUT"]] as const) {
       expect(screen.getByTestId(`replacement-approval-${id}`)).toHaveTextContent(status);
     }
     expect(screen.getByTestId("replacement-approval-deadline-2")).toHaveTextContent(/evidence deadline/i);

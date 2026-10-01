@@ -63,6 +63,9 @@ const place = {
   verified_at: null as string | null,
   verified_by: null as string | null,
   coordinate_source: null as string | null,
+  verification_precision: null as "exact" | "landmark" | "street" | "locality" | null,
+  verification_method: null as string | null,
+  verification_source: null as string | null,
   location_conflict: null as boolean | null,
   city_country_code: null as string | null,
 };

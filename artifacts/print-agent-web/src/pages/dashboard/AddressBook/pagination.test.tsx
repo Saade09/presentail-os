@@ -8,7 +8,16 @@ const wouterState = vi.hoisted(() => ({
 }));
 
 const mockUseQuery = vi.fn();
-const mockUseMutation = vi.fn(() => ({ mutate: vi.fn(), isPending: false }));
+type MockMutationOptions = {
+  mutationFn: () => Promise<unknown>;
+  onSuccess?: (value: unknown) => void;
+  onError?: () => void;
+};
+type MockMutationResult = { mutate: () => void; isPending: boolean };
+const mockUseMutation = vi.fn<(options: MockMutationOptions) => MockMutationResult>(() => ({
+  mutate: vi.fn(),
+  isPending: false,
+}));
 const queryCalls: Array<{ queryKey: unknown[] }> = [];
 const uiState = vi.hoisted(() => ({
   realIsOwner: true,
@@ -116,7 +125,7 @@ vi.mock("@tanstack/react-query", () => ({
       refetch: vi.fn(),
     };
   },
-  useMutation: (options: unknown) => mockUseMutation(options),
+  useMutation: (options: MockMutationOptions) => mockUseMutation(options),
 }));
 
 vi.mock("@/lib/queryClient", () => ({
@@ -438,11 +447,7 @@ describe("Address Book bulk checkout activation", () => {
       skipped: 2,
       blockers: { verification_state: 1, location_conflict: 1, coordinates: 1 },
     });
-    mockUseMutation.mockImplementation((options: {
-      mutationFn: () => Promise<unknown>;
-      onSuccess?: (value: unknown) => void;
-      onError?: () => void;
-    }) => ({
+    mockUseMutation.mockImplementation((options: MockMutationOptions) => ({
       mutate: () => {
         void options.mutationFn().then(options.onSuccess).catch(options.onError);
       },
@@ -451,7 +456,7 @@ describe("Address Book bulk checkout activation", () => {
 
     render(<AddressBookPage />);
     await user.click(screen.getByRole("button", { name: "Activate checkout for verified places" }));
-    await user.click(screen.getByRole("button", { name: "Activate checkout", exact: true }));
+    await user.click(screen.getByRole("button", { name: "Activate checkout" }));
 
     await waitFor(() => {
       expect(mockToast).toHaveBeenCalledWith(expect.objectContaining({
@@ -469,11 +474,7 @@ describe("Address Book bulk checkout activation", () => {
   it("keeps a failed request visible through the destructive toast", async () => {
     const user = userEvent.setup();
     mockApiFetch.mockRejectedValue(new Error("request failed"));
-    mockUseMutation.mockImplementation((options: {
-      mutationFn: () => Promise<unknown>;
-      onSuccess?: (value: unknown) => void;
-      onError?: () => void;
-    }) => ({
+    mockUseMutation.mockImplementation((options: MockMutationOptions) => ({
       mutate: () => {
         void options.mutationFn().then(options.onSuccess).catch(options.onError);
       },
@@ -482,7 +483,7 @@ describe("Address Book bulk checkout activation", () => {
 
     render(<AddressBookPage />);
     await user.click(screen.getByRole("button", { name: "Activate checkout for verified places" }));
-    await user.click(screen.getByRole("button", { name: "Activate checkout", exact: true }));
+    await user.click(screen.getByRole("button", { name: "Activate checkout" }));
 
     await waitFor(() => {
       expect(mockToast).toHaveBeenCalledWith(expect.objectContaining({

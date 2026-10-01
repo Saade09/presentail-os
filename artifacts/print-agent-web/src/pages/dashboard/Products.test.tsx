@@ -264,9 +264,9 @@ describe("ProductsPage — Merchant Reconciliation", () => {
 
     mockUseMutation.mockImplementation((opts) => ({
       isPending: false,
-      mutate: (vars) => {
+      mutate: (vars: unknown) => {
         if (opts.mutationFn) {
-          opts.mutationFn(vars).then((res) => opts.onSuccess?.(res, vars)).catch(() => {});
+          opts.mutationFn(vars).then((res: unknown) => opts.onSuccess?.(res, vars)).catch(() => {});
         }
       }
     }));
@@ -308,8 +308,8 @@ describe("ProductsPage — Merchant Reconciliation", () => {
 
     await waitFor(() => {
       const call = mockApiFetch.mock.calls.find(c => c[0] === "/api/products/merchant-reconciliation/dry-run");
-      expect(call).toBeDefined();
-      expect(JSON.parse(call[1]?.body)).toEqual({ countries: ["LB"], contentLanguage: "en", includeGoogle: true });
+      if (!call) throw new Error("expected a request to /api/products/merchant-reconciliation/dry-run");
+      expect(JSON.parse(String(call[1]?.body))).toEqual({ countries: ["LB"], contentLanguage: "en", includeGoogle: true });
     });
   });
 
@@ -359,8 +359,8 @@ describe("ProductsPage — Merchant Reconciliation", () => {
 
     await waitFor(() => {
       const call = mockApiFetch.mock.calls.find(c => c[0] === "/api/products/merchant-reconciliation/2/approve-deletions");
-      expect(call).toBeDefined();
-      expect(JSON.parse(call[1]?.body)).toEqual({ itemIds: [100], approveLastOffer: true });
+      if (!call) throw new Error("expected a request to /api/products/merchant-reconciliation/2/approve-deletions");
+      expect(JSON.parse(String(call[1]?.body))).toEqual({ itemIds: [100], approveLastOffer: true });
     });
   });
 });
@@ -1460,10 +1460,10 @@ describe("ProductsPage — edit save outcomes", () => {
     });
     mockUseMutation.mockImplementation((opts) => ({
       isPending: false,
-      mutate: (variables) => {
+      mutate: (variables: unknown) => {
         void opts.mutationFn(variables)
-          .then((result) => opts.onSuccess?.(result, variables))
-          .catch((err) => opts.onError?.(err, variables));
+          .then((result: unknown) => opts.onSuccess?.(result, variables))
+          .catch((err: unknown) =>opts.onError?.(err, variables));
       },
     }));
   });
